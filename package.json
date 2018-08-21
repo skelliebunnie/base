@@ -17,7 +17,7 @@
   },
   "homepage": "",
   "dependencies": {
-    "autoprefixer": "latest",
+    "autoprefixer": "^9.1.2",
     "browser-sync": "latest",
     "debug": "latest",
     "gulp": "^4.x.x",
