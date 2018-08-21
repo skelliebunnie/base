@@ -1,14 +1,35 @@
 .grid {
 	display: grid;
-	background-color: red;
 	min-height: 100vh;
 	height: 100%;
+	grid-gap: 1em;
+	background-color: black;
 
-	grid-template-columns: repeat(2, 1fr);
-	grid-row-gap: 1em;
-	> div {
+	> div, > article, > section {
 		grid-column: span 2;
 	}
+}
+
+.row {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center; // vertical dimensions
+	align-items: stretch; // horizontal dimensions
+	width: 100%;
+	min-width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: getColor('tertiary', $coreColors);
+	color: white;
+}
+
+.col {
+	position: relative;
+	flex: 1;
+	margin: 0;
+	padding: 0;
+	border: 1px solid orchid;
 }
 
 @import "mq";

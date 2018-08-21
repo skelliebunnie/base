@@ -1,49 +1,35 @@
 $mq-breakpoints: (
-	mobile: 414px,
-	mobileLandscape: 736px,
-	tablet: 1024px,
-	desktop: 1280px,
-	wide: 1920px
+	'mobile': 414px,
+	'mobileLandscape': 736px,
+	'tablet': 1024px,
+	'desktop': 1280px,
+	'wide': 1920px
 );
 
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 
 @import "sass-mq";
 
-@mixin makeSimpleGrid($maxcol: 4) {
-	$tbl: $maxcol / ($maxcol / 2);
-	$dtp: $maxcol / ($maxcol / 4);
-
-	@include mq($from: tablet) {
-		grid-template-columns: repeat($tbl, 1fr);
-		grid-column-gap: 1em;
-		background-color: yellow;
-
-		> .block, div, section {
-			grid-column: span 2;
-		}
-	}
-	@include mq($from: desktop) {
-		grid-template-columns: repeat($dtp, 1fr);
-		background-color: chartreuse;
-
-		> .block, div, section {
-			grid-column: span 1;
-		}
-	}
-	@include mq($from: wide) {
-		grid-template-columns: repeat($maxcol, 1fr);
-		background-color: cyan;
-
+@include mq($from: 'tablet') {
+	.grid > div, .grid > article, .grid > section {
 		
 	}
+	.grid6,
+	.grid5,
+	.grid4,
+	.grid3,
+	.grid2 { grid-template-columns: repeat(2, 1fr); }
+	.grid1 { grid-template-columns: 1fr; }
+ }
+
+@include mq($from: 'desktop') {
+	.grid6,
+	.grid5,
+	.grid4 { grid-template-columns: repeat(4, 1fr); }
+	.grid3 { grid-template-columns: repeat(3, 1fr); }
 }
 
-.grid {
-	@include mq($from: mobileLandscape) {
-		background-color: orange;
-		grid-row-gap: 1em;
-	}
-
-	@include makeSimpleGrid();
+@include mq($from: 'wide') {
+	.grid6 { grid-template-columns: repeat(6, 1fr); }
+	.grid5 { grid-template-columns: repeat(5, 1fr); }
 }

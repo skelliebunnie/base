@@ -437,13 +437,43 @@ html, body {
 */
 .grid {
   display: grid;
-  background-color: red;
   min-height: 100vh;
   height: 100%;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 1em; }
+  grid-gap: 1em;
+  background-color: black; }
   .grid > div {
     grid-column: span 2; }
+
+.row {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #332A21;
+  color: white; }
+
+.col {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  padding: 0;
+  border: 1px solid orchid; }
 
 body:before {
   background-color: #FCF8E3;
@@ -473,83 +503,84 @@ body:before {
     body:before {
       content: "wide ≥ 1920px (120em)"; } }
 
-@media (min-width: 46em) {
-  .grid {
-    background-color: orange;
-    grid-row-gap: 1em; } }
-
 @media (min-width: 64em) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1em;
-    background-color: yellow; }
-    .grid > .block, .grid div, .grid section {
-      grid-column: span 2; } }
+  .grid6,
+  .grid5,
+  .grid4,
+  .grid3,
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr); }
+  .grid1 {
+    grid-template-columns: 1fr; }
+  .grid1 {
+    grid-template-columns: 1fr; } }
 
 @media (min-width: 80em) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-    background-color: chartreuse; }
-    .grid > .block, .grid div, .grid section {
-      grid-column: span 1; } }
+  .grid6,
+  .grid5,
+  .grid4 {
+    grid-template-columns: repeat(4, 1fr); }
+  .grid3 {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media (min-width: 120em) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-    background-color: cyan; } }
+  .grid6 {
+    grid-template-columns: repeat(6, 1fr); }
+  .grid5 {
+    grid-template-columns: repeat(5, 1fr); } }
 
 body {
   font-family: 'Montserrat', sans-serif; }
 
 p {
-  padding: 1em 1em;
-  margin: 0.75em; }
+  padding: 0.25em 1em;
+  margin: 0.5em; }
   p + p {
-    margin-bottom: 2.25em; }
+    margin-bottom: 1.5em; }
 
 h1, .h1 {
   font-family: 'Asap', sans-serif;
   font-size: 3em;
-  line-height: 2.55rem;
-  margin: 0.25em 0.5em;
-  padding: 0.375em 0.375em; }
+  line-height: 1.2em;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem; }
 
 h2, .h2 {
   font-family: 'Asap', sans-serif;
   font-size: 2.7em;
-  line-height: 2.295rem;
-  margin: 0.25em 0.5em;
-  padding: 0.375em 0.375em;
+  line-height: 1.2em;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   margin: 0;
-  padding: 1.107rem 1em; }
+  padding: 1.107rem 0.25em; }
 
 h3, .h3 {
   font-family: 'Asap', sans-serif;
   font-size: 2.43em;
-  line-height: 2.0655rem;
-  margin: 0.25em 0.5em;
-  padding: 0.375em 0.375em; }
+  line-height: 1.2em;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem; }
 
 h4, .h4 {
   font-family: 'Asap', sans-serif;
   font-size: 2.187em;
-  line-height: 1.85895rem;
-  margin: 0.25em 0.5em;
-  padding: 0.375em 0.375em; }
+  line-height: 1.2em;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem; }
 
 h5, .h5 {
   font-family: 'Asap', sans-serif;
   font-size: 1.9683em;
-  line-height: 1.67306rem;
-  margin: 0.25em 0.5em;
-  padding: 0.375em 0.375em; }
+  line-height: 1.2em;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem; }
 
 h6, .h6 {
   font-family: 'Asap', sans-serif;
   font-size: 1.77147em;
-  line-height: 1.50575rem;
-  margin: 0.25em 0.5em;
-  padding: 0.375em 0.375em; }
+  line-height: 1.2em;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 0.5rem; }
 
 h2, .h2 {
   background-color: #F25555;
@@ -557,8 +588,8 @@ h2, .h2 {
 
 h3, h4, h5,
 .h3, .h4, .h5 {
-  padding-left: 0.75em;
-  margin-left: 0.75em;
+  padding-left: 0.5em;
+  margin-left: 0.5em;
   border-left: 0.35em solid #F25555; }
 
 h6, .h6 {
@@ -580,13 +611,13 @@ h6, .h6 {
   h1, .h1 {
     font-family: 'Asap', sans-serif;
     font-size: 3em;
-    line-height: 2.55rem;
+    line-height: 1.2em;
     margin: 0.375em 0.25em;
     padding: 0.1875em 0.125em; }
   h2, .h2 {
     font-family: 'Asap', sans-serif;
     font-size: 2.55em;
-    line-height: 2.1675rem;
+    line-height: 1.2em;
     margin: 0.375em 0.25em;
     padding: 0.1875em 0.125em;
     margin: 0;
@@ -594,25 +625,25 @@ h6, .h6 {
   h3, .h3 {
     font-family: 'Asap', sans-serif;
     font-size: 2.1675em;
-    line-height: 1.84237rem;
+    line-height: 1.2em;
     margin: 0.375em 0.25em;
     padding: 0.1875em 0.125em; }
   h4, .h4 {
     font-family: 'Asap', sans-serif;
     font-size: 1.84237em;
-    line-height: 1.56602rem;
+    line-height: 1.2em;
     margin: 0.375em 0.25em;
     padding: 0.1875em 0.125em; }
   h5, .h5 {
     font-family: 'Asap', sans-serif;
     font-size: 1.56602em;
-    line-height: 1.33112rem;
+    line-height: 1.2em;
     margin: 0.375em 0.25em;
     padding: 0.1875em 0.125em; }
   h6, .h6 {
     font-family: 'Asap', sans-serif;
     font-size: 1.33112em;
-    line-height: 1.13145rem;
+    line-height: 1.2em;
     margin: 0.375em 0.25em;
     padding: 0.1875em 0.125em; }
   .title {
@@ -632,7 +663,8 @@ h6, .h6 {
 	- Grouped into: Inline, Input, Media, Messaging, Table, Lists
 */
 .block {
-  background-color: #cdd1d0; }
+  background-color: #cdd1d0;
+  overflow: auto; }
 
 /* 
 	MODULES 

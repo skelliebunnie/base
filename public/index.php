@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1 class="title">A Title</h1>
-<div class="grid">
+<div class="grid grid6">
 	<div class="block">
 		<h1>Heading 1</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse mollitia illo, dignissimos eius facere voluptatibus accusamus natus, cum tenetur eligendi illum odit fugiat similique impedit magni dolorem vero consectetur reprehenderit molestiae praesentium quidem adipisci. Quibusdam est incidunt quia aliquid quidem, vel. Nam doloribus ad modi consequuntur magni, placeat optio dicta. Totam dolorum explicabo neque, nihil repudiandae odit rem itaque modi doloribus excepturi quidem eum fugiat quos rerum facilis placeat quaerat omnis obcaecati distinctio sit nisi! Neque, animi quod sit.</p>
