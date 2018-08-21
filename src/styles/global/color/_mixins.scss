@@ -1,0 +1,62 @@
+@mixin palette($colorMap: $coreColors, $color: 'primary', $colorName: 'primary', $harmony: 'analogous', $rangeType: 'range', $scaleColors: 17) {
+
+	$primaryColor: getColor($color,$colorMap);
+
+	$colors: (); $primaryHarmonyRange: null; $mapRange: null;
+
+	@if $harmony == 'none' {
+		$colors: $colorMap;
+	} else {
+		$colors: harmony($color: $primaryColor, $colorName: $colorName, $harmony: $harmony);
+	}
+
+	@if $rangeType == 'range' {
+		$primaryHarmonyRange: range($map: $colors, $scaleColors: $scaleColors);
+		$mapRange: range($map: $colorMap, $scaleColors: $scaleColors);
+	} @else {
+		$primaryHarmonyRange: tintShade($map: $colors, $scaleColors: $scaleColors);
+		$mapRange: tintShade($map: $colorMap, $scaleColors: $scaleColors);
+	}
+
+	$palette: map-merge($mapRange, $primaryHarmonyRange) !global;
+}
+
+@mixin newPalette($baseColor: getColor('primary', $coreColors), $map: $coreColors) {
+	$newPalette: () !global;
+	$colors: map-values($coreColors);
+
+	@for $i from 1 through length($colors) {
+		$color: nth($colors, $i);
+		$diff: colorDiff($color, $baseColor);
+		@each $function, $value in $diff {
+			$color: (call($function, $color, $value));
+
+		}
+		$newPalette: append($newPalette, $color) !global;
+	}
+}
+
+@mixin singleRange($color: getColor('primary', $coreColors), $colorName: 'single') {
+	$singleRange: singleRange($color, $colorName) !global;
+}
+
+// provide a BACKGROUND color the link text will need to contrast with
+// returns colors for a, a:hover a:focus, a:active, a:visited
+@mixin linkColors($bgColor) {
+	$color: getContrast($bgColor, 'link');
+	$l: null; $s: null;
+
+	@if lightness($color) < 65% { $l: 15%; } @else { $l: -15%; }
+	@if saturation($color) < 65% { $s: 15%; } @else { $s: -15%; }
+
+	a { color: $color; }
+	a:hover, a:focus {
+		color: adjust-color($color, $hue: 45deg, $saturation: $s, $lightness: $l);
+	}
+	a:active { 
+		color: adjust-color($color, $hue: 90deg, $saturation: $s, $lightness: $l);
+	}
+	a:visited { 
+		color: adjust-color($color, $hue: 135deg, $saturation: $s, $lightness: $l);
+	}
+}

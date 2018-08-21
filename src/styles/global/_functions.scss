@@ -1,0 +1,3 @@
+@function getValue($val, $map) {
+	@return map-get($map, $val);
+}

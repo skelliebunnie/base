@@ -1,0 +1,64 @@
+@import 'functions';
+/*
+	COLORS
+*/
+$colorNames: map-keys($palette);
+$colors: map-values($palette);
+
+@for $n from 1 through length($colorNames) {
+	$name: nth($colorNames, $n);
+	$val: nth($colors, $n);
+	.bg-#{$name} { background-color: $val; }
+	.border-#{$name} { border: 1px solid $val; }
+	.text-#{$name} { color: $val; }
+}
+
+
+
+/*
+	TYPOGRAPHY & ALIGNMENT
+*/
+.text {
+	&-left { text-align: left; }
+	&-center { text-align: center; }
+	&-right { text-align: right; }
+}
+
+.justify {
+	&-left { justify-content: flex-start; }
+	&-center { justify-content: center; }
+	&-right { justify-content: flex-end; }
+}
+
+.align {
+	&-left { align-items: flex-start; }
+	&-center { align-items: center; }
+	&-right { align-items: flex-end; }
+}
+
+.space {
+	&-between { justify-content: space-between; }
+	&-around { justify-content: space-around; }
+}
+
+.no {
+	&-pad { padding: 0; }
+	&-margin { margin: 0; }
+}
+
+.pad {
+	&-around { padding: 0.5rem; }
+
+	&-top { padding-top: 0.5rem; }
+	&-bottom { padding-bottom: 0.5rem; }
+	&-left { padding-left: 0.5rem; }
+	&-right { padding-right: 0.5rem; }
+	&-top-bottom { 
+		padding-top: 0.5rem; 
+		padding-bottom: 0.5rem; 
+	}
+	&-sides { 
+		padding-left: 0.5rem; 
+		padding-right: 0.5rem; 
+	}
+}

@@ -1,0 +1,36 @@
+@import "global";
+
+@import "settings";
+
+@import "global/typography";
+
+/* 
+	COMPONENTS 
+	- Small "pieces", e.g. button, code, pre; also table
+	- Only items that can be used in various contexts
+	- Grouped into: Inline, Input, Media, Messaging, Table, Lists
+*/
+@import "components/image",
+				"components/inline",
+				"components/input",
+				"components/lists",
+				"components/media",
+				"components/messaging",
+				"components/table";
+
+/* 
+	MODULES 
+	- Collections of pieces (not always Components)
+	- 'Blocks' that contain multiple elements, e.g. figure, form
+	- Grouped into: Blocks, Block-Lists, Nav, Form, Figure
+*/
+@import "modules/figure",
+				"modules/form",
+				"modules/module-lists",
+				"modules/nav",
+				"modules/tile";
+
+// has to be imported after everything else or
+// anything defined in the helper classes will be overridden
+// by corresponding definitions in subsequent classes
+@import "global/helpers";

@@ -1,0 +1,17 @@
+@import "global/normalize/import-now";
+// BOX-SIZING RESET
+html, body {
+	box-sizing: border-box;
+	& *, & *:before, & *:after {
+		box-sizing: inherit;
+	}
+}
+
+// includes functions & mixins related to colors
+// Define palette to use in SETTINGS
+@import "global/color/color";
+
+// VARIABLES - apply to grid, mostly
+$maxcol: 12;
+
+@import "global/grid/grid";

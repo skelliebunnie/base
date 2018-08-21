@@ -1,0 +1,38 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "base framework - modular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "autoprefixer": "latest",
+    "browser-sync": "latest",
+    "debug": "latest",
+    "gulp": "^4.x.x",
+    "gulp-concat": "latest",
+    "gulp-image": "latest",
+    "gulp-newer": "latest",
+    "gulp-postcss": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-wait": "latest"
+  },
+  "devDependencies": {
+    "gulp-jshint": "latest",
+    "jshint": "latest"
+  }
+}
