@@ -1,6 +1,11 @@
 @import "round-dec", "pow",
 				"luminance";
 
+//stackoverflow 40389319, Kodie Grantham
+@function endsWith($string, $find) {
+	@return str-slice($string, (str-length($string) - str-length($find) + 1)) == $find;
+}
+
 @function clamp($number, $min: -100, $max: 100) {
 	$m1: max($number, $min);
 	$m2: min($m1, $max);
@@ -32,7 +37,107 @@
 	@return $clr;
 }
 
-@function getContrast($color, $map: $palette, $type: 'copy') {
+@function getLightest($color, $map: $palette) {
+	$colornames: map-keys($map);
+	$colors: map-values($map);
+	$clr: null; $match: null;
+
+	@if (type_of($color) == string) and (str-slice($color, 0, str-length($color) - (str-length($color) - 1)) != "#") {
+		@if endsWith($color, '-100') == true {
+			@debug "$color is already the lightest available!";
+			$clr: getColor($color, $map);
+		} @else if str-slice($color, (str-length($color) - 4 + 1), (str-length($color) - 4 + 1)) == "-" {
+			$c: str-slice($color, 0, (str-length($color) - 4));
+			$clr: getColor("#{$c}-100");
+		} @else {
+			$clr: getColor($color, $map);
+			@debug "That's not a color with a defined 'lightest' variant.";
+		}
+	} @else {
+		@each $c in $colors {
+			@if $c == $color {
+				$match: true;
+				$i: index($colors, $c);
+				$cname: nth($colornames, $i);
+				$found: str-slice($cname, 0, (str-length($cname) - 4));
+				$lightest: "#{$found}-100";
+				$clr: getColor($lightest, $map);
+			}
+		}
+
+		@if $match == false {
+			$clr: $color;
+			@debug "The color #{$color} doesn't match any colors in palette.";
+		}
+	}
+
+	@return $clr;
+}
+
+@function getDarkest($color, $map: $palette) {
+	$colornames: map-keys($map);
+	$colors: map-values($map);
+	$clr: null; $match: null;
+
+	@if (type_of($color) == string) and (str-slice($color, 0, str-length($color) - (str-length($color) - 1)) != "#") {
+		@if endsWith($color, '-700') == true {
+			@debug "$color is already the darkest available!";
+			$clr: getColor($color, $map);
+		} @else if str-slice($color, (str-length($color) - 4 + 1), (str-length($color) - 4 + 1)) == "-" {
+			$c: str-slice($color, 0, (str-length($color) - 4));
+			$clr: getColor("#{$c}-700");
+		} @else {
+			$clr: getColor($color, $map);
+			@debug "That's not a color with a defined 'darkest' variant.";
+		}
+	} @else {
+		@each $c in $colors {
+			@if $c == $color {
+				$match: true;
+				$i: index($colors, $c);
+				$cname: nth($colornames, $i);
+				$found: str-slice($cname, 0, (str-length($cname) - 4));
+				$lightest: "#{$found}-700";
+				$clr: getColor($lightest, $map);
+			}
+		}
+
+		@if $match == false {
+			$clr: $color;
+			@debug "The color #{$color} doesn't match any colors in palette.";
+		}
+	}
+
+	@return $clr;
+}
+
+// just returns near-white or near-black based on luminance of color provided
+@function getContrast($color, $map: $palette) {
+	$luminance: null; $clr: null;
+
+	@if type_of($color) == color {
+		$luminance: luminance($color);
+		@if lightness($color) > 50% {
+			$clr: scale-color($color, $lightness: -95);
+		} @else {
+			$clr: scale-color($color, $lightness: 95);
+		}
+	} @else {
+		$color: getColor($color, $map);
+		$luminance: luminance($color);
+	}
+
+	@if $luminance >= 0.375 {
+		$clr: #000;
+	} @else {
+		$clr: #fff;
+	}
+
+	@return $clr;
+}
+
+// returns different colors based on type - copy [default], heading, sub-heading, link
+@function getContrastMulti($color, $map: $palette, $type: 'copy') {
 	$clr: null; $luminance: null;
 	$l: '400'; $c: null;
 
@@ -52,6 +157,7 @@
 		} @else {
 			$l: '100';
 		}
+
 		// GET COLOR BASED ON TYPE
 		@if $type == 'copy' {
 			$c: 'neutral-#{$l}';
@@ -82,9 +188,9 @@
 
 		$clight: luminance($clr);
 		@if $clight >= ($luminance + .15) {
-			$clr: lightenColor($clr, .15);
+			$clr: lightenColor($clr, .25);
 		} @else if $clight <= ($luminance - .15) {
-			$clr: darkenColor($clr, .15);
+			$clr: darkenColor($clr, .25);
 		}
 	}
 

@@ -3,7 +3,6 @@
 	min-height: 100vh;
 	height: 100%;
 	grid-gap: 1em;
-	background-color: black;
 
 	> div, > article, > section {
 		grid-column: span 2;
@@ -20,7 +19,6 @@
 	min-width: 100%;
 	padding: 0;
 	margin: 0;
-	background-color: getColor('tertiary', $coreColors);
 	color: white;
 }
 
@@ -29,7 +27,6 @@
 	flex: 1;
 	margin: 0;
 	padding: 0;
-	border: 1px solid orchid;
 }
 
 @import "mq";

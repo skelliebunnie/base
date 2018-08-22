@@ -12,7 +12,7 @@ $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 
 @include mq($from: 'tablet') {
 	.grid > div, .grid > article, .grid > section {
-		
+		grid-column: span 1;
 	}
 	.grid6,
 	.grid5,

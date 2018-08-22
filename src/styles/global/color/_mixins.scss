@@ -17,8 +17,10 @@
 		$primaryHarmonyRange: tintShade($map: $colors, $scaleColors: $scaleColors);
 		$mapRange: tintShade($map: $colorMap, $scaleColors: $scaleColors);
 	}
-
-	$palette: map-merge($mapRange, $primaryHarmonyRange) !global;
+	$originalList: map-remove($coreColors, $color);
+	$originalRange: range($originalList, $scaleColors: $scaleColors);
+	$rangeMaps: map-merge($originalRange, $mapRange);
+	$palette: map-merge($rangeMaps, $primaryHarmonyRange) !global;
 }
 
 @mixin newPalette($baseColor: getColor('primary', $coreColors), $map: $coreColors) {
