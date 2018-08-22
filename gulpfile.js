@@ -1,7 +1,8 @@
 // DON'T FORGET TO GIT INIT! //
 // Oh, and change the PROXY.
 var PROXY, PORT;
-PROXY = 'base.framework';
+//PROXY = 'base.framework'; // for Windows dev
+PROXY = 'base.framework.lfx'; // for Mac / Linux dev
 PORT = 3000;
 
 // requires
