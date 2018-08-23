@@ -4,10 +4,11 @@
 
 	$colors: (); $primaryHarmonyRange: null; $mapRange: null;
 
-	@if $harmony == 'none' {
-		$colors: $colorMap;
-	} else {
+	// if you do this if statement the other way around, it fails on 'none' b/c it tries to run the harmony anyway ... ?
+	@if $harmony != 'none' {
 		$colors: harmony($color: $primaryColor, $colorName: $colorName, $harmony: $harmony);
+	} else {
+		$colors: $colorMap;
 	}
 
 	@if $rangeType == 'range' {
@@ -17,10 +18,17 @@
 		$primaryHarmonyRange: tintShade($map: $colors, $scaleColors: $scaleColors);
 		$mapRange: tintShade($map: $colorMap, $scaleColors: $scaleColors);
 	}
-	$originalList: map-remove($coreColors, $color);
-	$originalRange: range($originalList, $scaleColors: $scaleColors);
-	$rangeMaps: map-merge($originalRange, $mapRange);
-	$palette: map-merge($rangeMaps, $primaryHarmonyRange) !global;
+
+	// if a harmony was generated, add the range of the core colors (less the one used for the harmony)
+	@if $harmony != 'none' {
+		$originalList: map-remove($coreColors, $color);
+		$originalRange: range($originalList, $scaleColors: $scaleColors);
+		$rangeMaps: map-merge($originalRange, $mapRange);
+		$palette: map-merge($rangeMaps, $primaryHarmonyRange) !global;
+	// otherwise (no harmony generated) just merge the mapRange since that *is* the coreColors
+	} @else {
+		$palette: map-merge($mapRange, $primaryHarmonyRange) !global;
+	}
 }
 
 @mixin newPalette($baseColor: getColor('primary', $coreColors), $map: $coreColors) {

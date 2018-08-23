@@ -1,0 +1,15 @@
+@import "header", "navigation", "sidebar", "content", "footer";
+
+.page-container {
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	width: 100%;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 15% 1fr;
+	grid-template-areas: "site-sidebar site-header"
+											 "site-sidebar site-nav"
+											 "site-sidebar site-content"
+											 "site-footer site-footer";
+}

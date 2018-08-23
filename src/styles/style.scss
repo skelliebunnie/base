@@ -30,6 +30,8 @@
 				"modules/nav",
 				"modules/tile";
 
+@import "layout/layout";
+
 // has to be imported after everything else or
 // anything defined in the helper classes will be overridden
 // by corresponding definitions in subsequent classes

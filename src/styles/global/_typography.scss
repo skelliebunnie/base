@@ -30,25 +30,23 @@ $m: $n * 0.17; $p: $n * 0.08;
 	$n: $n * 0.9;
 }
 
-h2, .h2 {
+.h2 {
 	background-color: $heading-color;
 	color: getContrast($heading-color);
-	//margin: 0;
 }
 
-h3, h4, h5,
 .h3, .h4, .h5 {
 	padding-left: $margin;
 	margin-left: $margin;
 	border-left: 0.35em solid $heading-color;
 }
 
-h6, .h6 {
+.h6 {
 	color: getDarkest($heading-color);
 }
 
 .title {
-	font-size: 3.5em;
+	//font-size: 3.5em;
 	padding-left: 1em;
 	margin-left: 0.15em;
 	margin-right: 0.15em;

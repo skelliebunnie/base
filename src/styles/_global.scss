@@ -7,6 +7,13 @@ html, body {
 	}
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	width: 100%;
+}
+
 // includes functions & mixins related to colors
 // Define palette to use in SETTINGS
 @import "global/color/color";

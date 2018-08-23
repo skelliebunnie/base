@@ -1,0 +1,65 @@
+COLOR PALETTES:
+$HeatherSpring: (
+	primary: #92b4a7,
+	secondary: #bdc4a7,
+	tertiary: #f3f9d2,
+	accent: #93827f,
+	neutral: #2f2f2f,
+);
+
+$Mondays: (
+	primary: #b7b6c1,
+	secondary: #d5cfe1,
+	tertiary: #eddfef,
+	accent: #94958b,
+	neutral: #464655,
+);
+
+$SoftlyRosy: (
+	primary: #bbd686,
+	secondary: #eef1bd,
+	tertiary: #c4a381,
+	accent: #b2675e,
+	neutral: #644536,
+);
+
+$PinkCircus: (
+	primary: #d90368,
+	secondary: #820263,
+	tertiary: #04a777,
+	accent: #f75c03,
+	neutral: #291720,
+);
+
+$YV-Contrast: (
+	primary: #f6f7eb,
+	secondary: #fffc31,
+	tertiary: #5c415d,
+	accent: #e94f37,
+	neutral: #393e41,
+);
+
+$BoldCold: (
+	primary: #deefb7,
+	secondary: #98dfaf,
+	tertiary: #5fb49c,
+	accent: #414288,
+	neutral: #682d63,
+);
+
+$SoftNeutralSpring: (
+	primary: #eaf7cf,
+	secondary: #ebefbf,
+	tertiary: #ceb5a7,
+	accent: #adaabf,
+	neutral: #92828d,
+);
+
+$FadedCircus: (
+	primary: #cae7b9,
+	secondary: #adaabf,
+	tertiary: #eb9486,
+	accent: #f3de8a,
+	neutral: #ceb5a7,
+);
+
