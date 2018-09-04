@@ -2,16 +2,14 @@
 	COLORS
 	* Palette defined in SETTINGS file
 	* Remember to update @include palette in SETTINGS if you change the color names in the map, or if you switch to using an alternate naming scheme! Otherwise the mixin won't be able to find the colors and you'll get an error.
-
-	pit pony gray: #626266
 */
 
 $coreColors: (
-	'primary': #C5CF3C,
-	'secondary': #DFE3AF,
-	'tertiary': #332A21,
-	'accent': #F25555,
-	'neutral': #B1B7B6,
+	primary: #92b4a7,
+	secondary: #bdc4a7,
+	tertiary: #f3f9d2,
+	accent: #93827f,
+	neutral: #2f2f2f,
 );
 
 // $coreColors: (

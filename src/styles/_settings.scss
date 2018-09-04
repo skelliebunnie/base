@@ -7,5 +7,12 @@ $fonts: (
 	'heading': unquote("'Asap', sans-serif")
 );
 
-@include palette($coreColors, $harmony: 'compound', $scaleColors: 12);
+@include palette($coreColors, $color: 'primary', $harmony: 'none', $scaleColors: 12);
 //@include palette($colorMap: $coreColors, $color: 'green', $harmony: 'compound', $rangeType: 'tintshade');
+
+//@debug $palette;
+
+/*
+	TYPOGRAPHY VARIABLES
+*/
+$heading-color: getColor('accent-500');
