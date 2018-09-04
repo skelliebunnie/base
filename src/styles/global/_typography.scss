@@ -94,3 +94,8 @@ $m: $n * 0.17; $p: $n * 0.08;
 		padding-bottom: 1.5em;
 	}
 }
+
+a {
+	text-decoration: none;
+	color: getColor('primary-triad1-400');
+}

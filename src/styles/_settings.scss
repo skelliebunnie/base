@@ -16,3 +16,11 @@ $fonts: (
 	TYPOGRAPHY VARIABLES
 */
 $heading-color: getColor('accent-500');
+
+// SITE HEADER
+$site-header--bg-color: getColor('primary', $coreColors);
+
+// SITE NAVIGATION
+$site-nav--bg-color: getColor('accent', $coreColors);
+$site-nav-hover--bg-color: getColor('accent-200');
+$site-nav-active--bg-color: getColor('primary-400');
