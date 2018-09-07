@@ -14,22 +14,23 @@ $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 	.grid > div, .grid > article, .grid > section {
 		grid-column: span 1;
 	}
-	.grid6,
-	.grid5,
-	.grid4,
-	.grid3,
-	.grid2 { grid-template-columns: repeat(2, 1fr); }
-	.grid1 { grid-template-columns: 1fr; }
+	.row { flex-flow: row wrap; }
+	.row6 > *,
+	.row5 > *,
+	.row4 > *,
+	.row3 > *,
+	.row2 > * { width: 50%; }
+	.row1 > * { width: 100%; }
  }
 
 @include mq($from: 'desktop') {
 	.grid6,
 	.grid5,
-	.grid4 { grid-template-columns: repeat(4, 1fr); }
-	.grid3 { grid-template-columns: repeat(3, 1fr); }
+	.grid4 { width: 25%; }
+	.grid3 { width: 33%; }
 }
 
 @include mq($from: 'wide') {
-	.grid6 { grid-template-columns: repeat(6, 1fr); }
-	.grid5 { grid-template-columns: repeat(5, 1fr); }
+	.grid6 { width: (100 / 6) * 1%; }
+	.grid5 { width: (100 / 5) * 1%; }
 }

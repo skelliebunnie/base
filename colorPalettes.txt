@@ -63,3 +63,34 @@ $FadedCircus: (
 	neutral: #ceb5a7,
 );
 
+$PaleGreenGrowing: (
+	primary: #92b4a7,
+	secondary: #bdc4a7,
+	tertiary: #2f2f2f,
+	accent: #93827f,
+	neutral: #f3f9d2,
+);
+
+$Succulent: (
+	primary: #4f759b,
+	secondary: #5d5179,
+	tertiary: #571f4e,
+	accent: #a2faa3,
+	neutral: #92c9b1,
+);
+
+$MintyFlower: (
+	primary: #d9d7dd,
+	secondary: #b07bac,
+	tertiary: #5f7367,
+	accent: #dbf9f4,
+	neutral: #e6fdff,
+);
+
+$TomatoEggplant: (
+	primary: #d0e3c4,
+	secondary: #adc698,
+	tertiary: #503047,
+	accent: #c05746,
+	neutral: #faf3dd,
+);
