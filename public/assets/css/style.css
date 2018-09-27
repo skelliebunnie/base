@@ -677,6 +677,15 @@ a {
   .block-padding {
     padding: 1em; }
 
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse; }
+  table tr:nth-child(odd) {
+    background-color: gainsboro; }
+  table tr:nth-child(even) {
+    background-color: white; }
+
 /* 
 	MODULES 
 	- Collections of pieces (not always Components)

@@ -1,3 +1,4 @@
+<?php header('Access-Control-Allow-Origin: *'); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,11 +10,10 @@
 <body>
 <div class="page-container">
 	<header class="site-header">
-		<h1><a href="./index.php">BASE FRAMEWORK</a></h1>
+		<h1><a href="./index.php">UNICORN PROJECT</a></h1>
 	</header>
 	<nav class="site-nav">
 		<ul>
-			<li><a href="./grid-layout.php">Grid Layout</a></li>
-			<li><a href="./info.php">PHP Info</a></li>
+			<li><a href="./grid-layout.php">7 Days</a></li>
 		</ul>
 	</nav>

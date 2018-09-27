@@ -1,0 +1,222 @@
+<xml xmlns:s='uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882'
+	xmlns:dt='uuid:C2F41010-65B3-11d1-A29F-00AA00C14882'
+	xmlns:rs='urn:schemas-microsoft-com:rowset'
+	xmlns:z='#RowsetSchema'>
+<s:Schema id='RowsetSchema'>
+	<s:ElementType name='row' content='eltOnly' rs:updatable='true'>
+		<s:AttributeType name='category' rs:number='1' rs:nullable='true'
+			 rs:maydefer='true' rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='ckmax4sale' rs:number='2' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='boolean' dt:maxLength='2' rs:precision='0'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='ckpts4sale' rs:number='3' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='boolean' dt:maxLength='2' rs:precision='0'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='department' rs:number='4' rs:nullable='true'
+			 rs:maydefer='true' rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='descrip' rs:number='5' rs:nullable='true'
+			 rs:maydefer='true' rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='dw_bnsrule' rs:number='6' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='dw_prel' rs:number='7' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='float' dt:maxLength='8' rs:precision='19'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='invent_id' rs:number='8' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='item' rs:number='9' rs:nullable='true'
+			 rs:maydefer='true' rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='item_descrip' rs:number='10'
+			 rs:nullable='true' rs:maydefer='true' rs:write='true'
+			 rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='item_id' rs:number='11' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='limit' rs:number='12' rs:nullable='true'
+			 rs:maydefer='true' rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='node_id' rs:number='13' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='parent_id' rs:number='14' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='pts4saledp' rs:number='15' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='qty_rem' rs:number='16' rs:nullable='true'
+			 rs:maydefer='true' rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='qty_res' rs:number='17' rs:nullable='true'
+			 rs:maydefer='true' rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='qty_sold' rs:number='18' rs:nullable='true'
+			 rs:maydefer='true' rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='string' rs:dbtype='str' dt:maxLength='2147483647'
+			 rs:precision='0' rs:long='true'/>
+		</s:AttributeType>
+		<s:AttributeType name='sort_order' rs:number='19' rs:nullable='true'
+			 rs:write='true' rs:writeunknown='true'>
+			<s:datatype dt:type='int' dt:maxLength='4' rs:precision='10'
+			 rs:fixedlength='true'/>
+		</s:AttributeType>
+		<s:extends type='rs:rowbase'/>
+	</s:ElementType>
+</s:Schema>
+<rs:data>
+	<z:row category='IM:AMAZON ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:PA:NS  ' descrip='Amazon Adv 3D 10:15am    '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:AA1015 '
+		 item_descrip='Amazon Adv 3D 10:15am' item_id='6254' limit='215'
+		 node_id='940009' parent_id='15575' pts4saledp='0' qty_rem='211'
+		 qty_res='0' qty_sold='4' sort_order='2'/>
+	<z:row category='IM:PANDA  ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:PA:NS  ' descrip='Pandas 3D 11:30am        '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:PA1130 '
+		 item_descrip='Pandas 3D 11:30am' item_id='6252' limit='215'
+		 node_id='940016' parent_id='15575' pts4saledp='0' qty_rem='215'
+		 qty_res='0' qty_sold='0' sort_order='7'/>
+	<z:row category='IM:OCEANS ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:PA:NS  ' descrip='Oceans 3D 12:45pm        '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:OC1245 '
+		 item_descrip='Oceans 3D 12:45pm' item_id='6246' limit='215'
+		 node_id='939067' parent_id='15575' pts4saledp='0' qty_rem='215'
+		 qty_res='0' qty_sold='0' sort_order='10'/>
+	<z:row category='IM:PANDA  ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:PA:NS  ' descrip='Pandas 3D 2:00pm         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:PA1400 '
+		 item_descrip='Pandas 3D 2:00pm' item_id='6253' limit='215'
+		 node_id='940017' parent_id='15575' pts4saledp='0' qty_rem='213'
+		 qty_res='0' qty_sold='2' sort_order='13'/>
+	<z:row category='IM:AMAZON ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:PA:NS  ' descrip='Amazon Adv 3D 3:15pm     '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:AA1515 '
+		 item_descrip='Amazon Adv 3D 3:15pm' item_id='6250' limit='215'
+		 node_id='940010' parent_id='15575' pts4saledp='0' qty_rem='212'
+		 qty_res='0' qty_sold='3' sort_order='15'/>
+	<z:row category='IM:OCEANS ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:PA:NS  ' descrip='Oceans 3D 4:30pm         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:OC1630 '
+		 item_descrip='Oceans 3D 4:30pm' item_id='6247' limit='215'
+		 node_id='939068' parent_id='15575' pts4saledp='0' qty_rem='215'
+		 qty_res='0' qty_sold='0' sort_order='20'/>
+	<z:row category='BLANKS    ' ckmax4sale='False' ckpts4sale='False'
+		 department='**MISC**  ' descrip='                         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='BLANK02   '
+		 item_descrip='' item_id='15' limit='' node_id='517498'
+		 parent_id='15575' pts4saledp='0' qty_rem='-' qty_res=''
+		 qty_sold='' sort_order='23'/>
+	<z:row category='BLANKS    ' ckmax4sale='False' ckpts4sale='False'
+		 department='**MISC**  ' descrip='                         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='BLANK11   '
+		 item_descrip='' item_id='24' limit='' node_id='62937'
+		 parent_id='15575' pts4saledp='0' qty_rem='-' qty_res=''
+		 qty_sold='' sort_order='24'/>
+	<z:row category='BLANKS    ' ckmax4sale='False' ckpts4sale='False'
+		 department='**MISC**  ' descrip='                         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='BLANK12   '
+		 item_descrip='' item_id='25' limit='' node_id='62938'
+		 parent_id='15575' pts4saledp='0' qty_rem='-' qty_res=''
+		 qty_sold='' sort_order='25'/>
+	<z:row category='BLANKS    ' ckmax4sale='False' ckpts4sale='False'
+		 department='**MISC**  ' descrip='                         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='BLANK10   '
+		 item_descrip='' item_id='23' limit='' node_id='62936'
+		 parent_id='15575' pts4saledp='0' qty_rem='-' qty_res=''
+		 qty_sold='' sort_order='26'/>
+	<z:row category='BLANKS    ' ckmax4sale='False' ckpts4sale='False'
+		 department='**MISC**  ' descrip='                         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='BLANK09   '
+		 item_descrip='' item_id='22' limit='' node_id='62935'
+		 parent_id='15575' pts4saledp='0' qty_rem='-' qty_res=''
+		 qty_sold='' sort_order='27'/>
+	<z:row category='BLANKS    ' ckmax4sale='False' ckpts4sale='False'
+		 department='**MISC**  ' descrip='                         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='BLANK08   '
+		 item_descrip='' item_id='21' limit='' node_id='62934'
+		 parent_id='15575' pts4saledp='0' qty_rem='-' qty_res=''
+		 qty_sold='' sort_order='28'/>
+	<z:row category='IM:AMJ3D  ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:BO:NS  ' descrip='Am Music Jrny 3D 10:30am '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:AMJ1030'
+		 item_descrip='Am Music Jrny 3D 10:30am' item_id='6346'
+		 limit='369' node_id='965568' parent_id='15575' pts4saledp='0'
+		 qty_rem='369' qty_res='0' qty_sold='0' sort_order='32'/>
+	<z:row category='IM:AMJ3D  ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:BO:NS  ' descrip='Am Music Jrny 3D 11:45am '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:AMJ1145'
+		 item_descrip='Am Music Jrny 3D 11:45am' item_id='6347'
+		 limit='369' node_id='965569' parent_id='15575' pts4saledp='0'
+		 qty_rem='369' qty_res='0' qty_sold='0' sort_order='33'/>
+	<z:row category='IM:AMJ3D  ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:BO:NS  ' descrip='Am Music Jrny 3D 1:00pm  '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:AMJ1300'
+		 item_descrip='Am Music Jrny 3D 1:00pm' item_id='6351'
+		 limit='369' node_id='967637' parent_id='15575' pts4saledp='0'
+		 qty_rem='369' qty_res='0' qty_sold='0' sort_order='34'/>
+	<z:row category='IM:HWCIW  ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:BO:ST  ' descrip='House w Clock 2D 2:15pm  '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:HWC1415'
+		 item_descrip='House w Clock 2D 2:15pm' item_id='6376'
+		 limit='369' node_id='981088' parent_id='15575' pts4saledp='0'
+		 qty_rem='369' qty_res='0' qty_sold='0' sort_order='43'/>
+	<z:row category='IM:HWCIW  ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:BO:ST  ' descrip='House w Clock 2D 4:45pm  '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:HWC1645'
+		 item_descrip='House w Clock 2D 4:45pm' item_id='6377'
+		 limit='369' node_id='981089' parent_id='15575' pts4saledp='0'
+		 qty_rem='367' qty_res='0' qty_sold='2' sort_order='55'/>
+	<z:row category='IM:HWCIW  ' ckmax4sale='True' ckpts4sale='False'
+		 department='IM:BO:ST  ' descrip='House w Clock 2D 7:15pm  '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='IM:HWC1915'
+		 item_descrip='House w Clock 2D 7:15pm' item_id='6378'
+		 limit='369' node_id='981090' parent_id='15575' pts4saledp='0'
+		 qty_rem='369' qty_res='0' qty_sold='0' sort_order='67'/>
+	<z:row category='BLANKS    ' ckmax4sale='False' ckpts4sale='False'
+		 department='**MISC**  ' descrip='                         '
+		 dw_bnsrule='0' dw_prel='0' invent_id='0' item='BLANK01   '
+		 item_descrip='' item_id='14' limit='' node_id='236879'
+		 parent_id='15575' pts4saledp='0' qty_rem='-' qty_res=''
+		 qty_sold='' sort_order='85'/>
+</rs:data>
+</xml>

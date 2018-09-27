@@ -1,0 +1,12 @@
+table {
+	width: 90%;
+	margin: 0 auto;
+	border-collapse: collapse;
+
+	tr:nth-child(odd) {
+		background-color: gainsboro;
+	}
+	tr:nth-child(even) {
+		background-color: white;
+	}
+}
