@@ -2,6 +2,10 @@
 
 @import "settings";
 
+@import "global/grid/grid",
+				"global/grid/sass-mq",
+			  "global/grid/mq";
+
 @import "global/typography";
 
 /* 
@@ -29,8 +33,6 @@
 				"modules/module-lists",
 				"modules/nav",
 				"modules/tile";
-
-@import "layout/layout";
 
 // has to be imported after everything else or
 // anything defined in the helper classes will be overridden

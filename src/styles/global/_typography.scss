@@ -1,101 +1,101 @@
-body {
-	font-family: getVal('copy', $fonts);
-}
+// body {
+// 	font-family: getVal('copy', $fonts);
+// }
 
-$padding: 0.25em;
-$margin: 0.5em;
+// $padding: 0.25em;
+// $margin: 0.5em;
 
-p {
-	padding: $padding 1em;
-	margin: $margin;
-	& + & {
-		margin-bottom: ($margin * 3);
-	}
-}
+// p {
+// 	padding: $padding 1em;
+// 	margin: $margin;
+// 	& + & {
+// 		margin-bottom: ($margin * 3);
+// 	}
+// }
 
-$n: 3;
-@for $i from 1 through 6 {
-$m: $n * 0.17; $p: $n * 0.08;
-	h#{$i}, .h#{$i} {
-		font-family: getVal('heading', $fonts);
-		font-size: $n * 1em;
-		line-height: 1.2em;
-		margin: 1rem 0.5rem;
-		padding: 0.5rem 0.5rem;
-		@if $i == 2 {
-			margin: 0;
-			padding: ($m + $p * 3rem) $padding;
-		}
-	}
-	$n: $n * 0.9;
-}
+// $n: 3;
+// @for $i from 1 through 6 {
+// $m: $n * 0.17; $p: $n * 0.08;
+// 	h#{$i}, .h#{$i} {
+// 		font-family: getVal('heading', $fonts);
+// 		font-size: $n * 1em;
+// 		line-height: 1.2em;
+// 		margin: 1rem 0.5rem;
+// 		padding: 0.5rem 0.5rem;
+// 		@if $i == 2 {
+// 			margin: 0;
+// 			padding: ($m + $p * 3rem) $padding;
+// 		}
+// 	}
+// 	$n: $n * 0.9;
+// }
 
-.h2 {
-	background-color: $heading-color;
-	color: getContrast($heading-color);
-}
+// .h2 {
+// 	background-color: $heading-color;
+// 	color: getContrast($heading-color);
+// }
 
-.h3, .h4, .h5 {
-	padding-left: $margin;
-	margin-left: $margin;
-	border-left: 0.35em solid $heading-color;
-}
+// .h3, .h4, .h5 {
+// 	padding-left: $margin;
+// 	margin-left: $margin;
+// 	border-left: 0.35em solid $heading-color;
+// }
 
-.h6 {
-	color: getDarkest($heading-color);
-}
+// .h6 {
+// 	color: getDarkest($heading-color);
+// }
 
-.title {
-	//font-size: 3.5em;
-	padding-left: 1em;
-	margin-left: 0.15em;
-	margin-right: 0.15em;
-	border-top: 3px solid $heading-color;
-	border-bottom: 3px solid $heading-color;
-	@include mq($from: tablet) {
-		margin-left: 0.5em;
-		margin-right: 0.5em;
-	}
-}
+// .title {
+// 	//font-size: 3.5em;
+// 	padding-left: 1em;
+// 	margin-left: 0.15em;
+// 	margin-right: 0.15em;
+// 	border-top: 3px solid $heading-color;
+// 	border-bottom: 3px solid $heading-color;
+// 	@include mq($from: tablet) {
+// 		margin-left: 0.5em;
+// 		margin-right: 0.5em;
+// 	}
+// }
 
-// MEDIA QUERIES
-@include mq($from: desktop) {
-	$padding: 0.5em;
-	$margin: 0.25em;
-	$n: 3;
-	@for $i from 1 through 6 {
-		$m: $n * 0.17; $p: $n * 0.08;
-		h#{$i}, .h#{$i} {
-			font-family: getVal('heading', $fonts);
-			font-size: $n * 1em;
-			line-height: 1.2em;
-			margin: ($padding * 0.75) ($padding / 2);
-			padding: ($margin * 0.75) ($margin / 2);
-			@if $i == 2 {
-				margin: 0;
-				padding: ($m + $p * 3rem) $padding;
-			}
-		}
-		$n: $n * 0.85;
-	}
+// // MEDIA QUERIES
+// @include mq($from: desktop) {
+// 	$padding: 0.5em;
+// 	$margin: 0.25em;
+// 	$n: 3;
+// 	@for $i from 1 through 6 {
+// 		$m: $n * 0.17; $p: $n * 0.08;
+// 		h#{$i}, .h#{$i} {
+// 			font-family: getVal('heading', $fonts);
+// 			font-size: $n * 1em;
+// 			line-height: 1.2em;
+// 			margin: ($padding * 0.75) ($padding / 2);
+// 			padding: ($margin * 0.75) ($margin / 2);
+// 			@if $i == 2 {
+// 				margin: 0;
+// 				padding: ($m + $p * 3rem) $padding;
+// 			}
+// 		}
+// 		$n: $n * 0.85;
+// 	}
 
-	.title {
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
-	}
+// 	.title {
+// 		padding-top: 0.5em;
+// 		padding-bottom: 0.5em;
+// 	}
 
-	p {
-		padding: $padding / 2;
-		& + & {
-			margin-bottom: $margin * 1.5;
-		}
-	}
-	p + p:last-child {
-		padding-bottom: 1.5em;
-	}
-}
+// 	p {
+// 		padding: $padding / 2;
+// 		& + & {
+// 			margin-bottom: $margin * 1.5;
+// 		}
+// 	}
+// 	p + p:last-child {
+// 		padding-bottom: 1.5em;
+// 	}
+// }
 
-a {
-	text-decoration: none;
-	color: getColor('primary-triad2-400');
-}
+// a {
+// 	text-decoration: none;
+// 	color: getColor('primary-triad2-400');
+// }

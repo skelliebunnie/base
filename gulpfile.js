@@ -1,9 +1,9 @@
 // DON'T FORGET TO GIT INIT! //
 // Oh, and change the PROXY.
 var PROXY, PORT;
-//PROXY = 'unicorn.site'; // for Windows dev
-PROXY = 'unicornproject.site.lfx'; // for Mac / Linux dev
-PORT = 4000;
+
+PROXY = 'base.framework.lfx';
+PORT = 3000;
 
 // requires
 var gulp = require('gulp'),

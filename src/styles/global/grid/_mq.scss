@@ -1,36 +1,72 @@
-$mq-breakpoints: (
-	'mobile': 414px,
-	'mobileLandscape': 736px,
-	'tablet': 1024px,
-	'desktop': 1280px,
-	'wide': 1920px
-);
+/*
+	col-xs-N = mobile size
+	col-sm-N = mobile-landscape size
+	col-md-N = tablet size
+	col-lg-N = desktop size
+	col-xl-N = wide size
+*/
 
-$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
-
-@import "sass-mq";
+@include mq($from: 'mobileLandscape') {
+	@for $i from 1 through $max-columns {
+		.row#{$i}-sm > .col,
+		.col-sm-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+	}
+}
 
 @include mq($from: 'tablet') {
-	.grid > div, .grid > article, .grid > section {
-		grid-column: span 1;
-	}
 	.row { flex-flow: row wrap; }
-	.row6 > *,
-	.row5 > *,
-	.row4 > *,
-	.row3 > *,
-	.row2 > * { width: 50%; }
-	.row1 > * { width: 100%; }
- }
+
+	@for $i from 1 through $max-columns {
+		.row#{$i} {
+			flex-flow: row wrap;
+		}
+	}
+
+	@for $i from 1 through ($max-columns / 2) {
+		.row#{$i} > .col,
+		.col-#{$i} {
+			flex: 1 0 100%;
+		}
+	}
+
+	@for $i from ($max-columns / 2 + 1) through $max-columns {
+		.row#{$i} > .col,
+		.col-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+	}
+
+	@for $i from 1 through $max-columns {
+		.row#{$i}-md > .col,
+		.col-md-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+	}
+}
 
 @include mq($from: 'desktop') {
-	.grid6,
-	.grid5,
-	.grid4 { width: 25%; }
-	.grid3 { width: 33%; }
+	@for $i from 1 through $max-columns {
+		.row#{$i} > .col,
+		.col-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+	}
+
+	@for $i from 1 through $max-columns {
+		.row#{$i}-lg > .col,
+		.col-lg-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+	}
 }
 
 @include mq($from: 'wide') {
-	.grid6 { width: (100 / 6) * 1%; }
-	.grid5 { width: (100 / 5) * 1%; }
+	@for $i from 1 through $max-columns {
+		.row#{$i}-xl > .col,
+		.col-xl-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+	}
 }
