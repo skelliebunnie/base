@@ -16,7 +16,10 @@
 }
 
 @include mq($from: 'tablet') {
-	.row { flex-flow: row wrap; }
+	.row {
+		flex-flow: row wrap;
+		align-items: stretch;
+	}
 
 	@for $i from 1 through $max-columns {
 		.row#{$i} {
@@ -32,41 +35,31 @@
 	}
 
 	@for $i from ($max-columns / 2 + 1) through $max-columns {
-		.row#{$i} > .col,
-		.col-#{$i} {
-			flex: 1 0 (100% / $i);
-		}
+		.row#{$i} > .col { flex: 1 0 (100% / $i); }
+		.col-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
 	}
 
 	@for $i from 1 through $max-columns {
-		.row#{$i}-md > .col,
-		.col-md-#{$i} {
-			flex: 1 0 (100% / $i);
-		}
+		.row#{$i}-md > .col { flex: 1 0 (100% / $i); }
+		.col-md-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
 	}
 }
 
 @include mq($from: 'desktop') {
-	@for $i from 1 through $max-columns {
-		.row#{$i} > .col,
-		.col-#{$i} {
-			flex: 1 0 (100% / $i);
-		}
+	@for $i from 1 through ($max-columns / 2) {
+		.row#{$i} > .col { flex: 1 0 (100% / $i); }
+		.col-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
 	}
 
 	@for $i from 1 through $max-columns {
-		.row#{$i}-lg > .col,
-		.col-lg-#{$i} {
-			flex: 1 0 (100% / $i);
-		}
+		.row#{$i}-lg > .col{ flex: 1 0 (100% / $i); }
+		.col-lg-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
 	}
 }
 
 @include mq($from: 'wide') {
 	@for $i from 1 through $max-columns {
-		.row#{$i}-xl > .col,
-		.col-xl-#{$i} {
-			flex: 1 0 (100% / $i);
-		}
+		.row#{$i}-xl > .col { flex: 1 0 (100% / $i); }
+		.col-xl-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
 	}
 }

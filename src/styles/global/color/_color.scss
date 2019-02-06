@@ -5,20 +5,13 @@
 */
 
 $coreColors: (
-	primary: #FF9B85,
-	secondary: #ee6055,
-	tertiary: #b33f62,
-	accent: #AAF683,
-	neutral: #4a6c6f,
+	primary: #4f759b,
+	secondary: #5d5179,
+	tertiary: #571f4e,
+	accent: #a2faa3,
+	accent2: #92c9b1,
+	neutral: #333,
 );
-
-// $coreColors: (
-// 	'green': #C5CF3C,
-// 	'sand': #DFE3AF,
-// 	'brown1': #855D35,
-// 	'brown2': #4F3C26,
-// 	'brown3': #332A21
-// );
 
 @import "functions";
 @import "mixins";

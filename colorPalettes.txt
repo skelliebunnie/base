@@ -94,3 +94,11 @@ $TomatoEggplant: (
 	accent: #c05746,
 	neutral: #faf3dd,
 );
+
+$floweringCactus: (
+	primary: #ee6055,
+	secondary: #b33f62,
+	tertiary: #4a6c6f,
+	accent: #AAF683,
+	neutral: #c0bcb5,
+);

@@ -8,13 +8,16 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="page-container">
+<div id="page-container" class="sidebar-left sidebar-fullheight">
 	<header class="site-header row">
-		<h1 class='col col-12'><a href="./index.php">BASE FRAMEWORK</a></h1>
+		<div class="col col-12">
+			<h1 class='site-title'><a href="./index.php">BASE FRAMEWORK</a></h1>
+			
+		</div>
 	</header>
 	<nav class="site-nav">
-		<ul>
-			<li><a href="./index.php">Home</a></li>
-			<li><a href="./grid-layout.php">Grid</a></li>
+		<ul class="nav nav-horizontal">
+			<li class='nav-item'><a href="./index.php">Home</a></li>
+			<li class='nav-item'><a href="./grid-layout.php">Grid</a></li>
 		</ul>
 	</nav>

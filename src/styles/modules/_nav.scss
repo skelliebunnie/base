@@ -1,0 +1,48 @@
+nav {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.site-nav {
+	background-color: $site-nav--bg-color;
+}
+
+.nav {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	width: 100%;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: stretch;
+
+	&-horizontal {
+		flex-flow: row wrap;
+	}
+}
+
+.nav-item {
+	flex: 1;
+	text-align: center;
+	padding: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	a {
+		flex: 1;
+		padding: map-get($defaults, 'padding');
+		color: getContrast($site-nav--bg-color);
+	}
+
+	&:hover {
+		cursor: pointer;
+		background-color: $site-nav-hover--bg-color;
+		a { color: getContrast($site-nav-hover--bg-color); }
+	}
+	&:active {
+		background-color: $site-nav-active--bg-color;
+		//a { color: getContrast($site-nav-active--bg-color); }
+	}
+}

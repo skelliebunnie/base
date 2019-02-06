@@ -1,14 +1,27 @@
+#page-container {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
 .grid,
 .row {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: stretch;
 	align-items: start;
+	max-width: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 .col {
 	flex: 1;
 	width: 100%;
+	padding: 1rem;
 }
 
 // allows for setting less than 50% width for columns on mobile sizes

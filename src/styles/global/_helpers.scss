@@ -1,4 +1,3 @@
-@import 'functions';
 /*
 	COLORS
 */
@@ -8,35 +7,67 @@ $colors: map-values($palette);
 @for $n from 1 through length($colorNames) {
 	$name: nth($colorNames, $n);
 	$val: nth($colors, $n);
-	.bg-#{$name} { background-color: $val; }
+	.bg-#{$name} {
+		background-color: $val;
+		color: getContrast($val);
+	}
+
 	.border-#{$name} { border: 1px solid $val; }
 	.text-#{$name} { color: $val; }
 }
 
+.text-white { color: white; }
+.text-black { color: black; }
+
+.text-dark { color: getVal('text-dark', $defaults); }
+.text-light { color: getVal('text-light', $defaults); }
+
 /*
 	TYPOGRAPHY & ALIGNMENT
 */
+$pad: map-get($defaults, 'padding');
+$margin: map-get($defaults, 'margin');
+
+$text-positions: ('left', 'center', 'right');
+$border-sides: ('top', 'right', 'bottom', 'left');
+$border-corners: ('top-left', 'top-right', 'bottom-right', 'bottom-left');
+$other: ('around', 'x', 'y');
+
+$padding-sizes: (
+	'xs': $pad * 0.75,
+	'sm': $pad * 1,
+	'md': $pad * 1.5,
+	'lg': $pad * 2.25,
+	'xl': $pad * 3
+);
+
+$margin-sizes: (
+	'xs': $margin * 0.75,
+	'sm': $margin * 1,
+	'md': $margin * 1.5,
+	'lg': $margin * 2.25,
+	'xl': $margin * 3
+);
+
+$justify: ('start', 'center', 'end', 'space-between', 'space-around', 'space-evenly');
+$align: ('stretch','center', 'start', 'end');
+
 .text {
-	&-left { text-align: left; }
-	&-center { text-align: center; }
-	&-right { text-align: right; }
+	@each $position in $text-positions {
+		.text-#{$position} { text-align: $position; }
+	}
 }
 
 .justify {
-	&-left { justify-content: flex-start; }
-	&-center { justify-content: center; }
-	&-right { justify-content: flex-end; }
+	@each $type in $justify {
+		&-#{$type} { justify-content: $type; }
+	}
 }
 
 .align {
-	&-left { align-items: flex-start; }
-	&-center { align-items: center; }
-	&-right { align-items: flex-end; }
-}
-
-.space {
-	&-between { justify-content: space-between; }
-	&-around { justify-content: space-around; }
+	@each $type in $align {
+		&-#{$type} { align-items: $type; }
+	}
 }
 
 .no {
@@ -45,18 +76,88 @@ $colors: map-values($palette);
 }
 
 .pad {
-	&-around { padding: 0.5rem; }
-
-	&-top { padding-top: 0.5rem; }
-	&-bottom { padding-bottom: 0.5rem; }
-	&-left { padding-left: 0.5rem; }
-	&-right { padding-right: 0.5rem; }
-	&-top-bottom { 
-		padding-top: 0.5rem; 
-		padding-bottom: 0.5rem; 
+	@each $position in $border-sides {
+		&-#{$position} {
+			padding-#{$position}: $pad;
+		}
 	}
-	&-sides { 
-		padding-left: 0.5rem; 
-		padding-right: 0.5rem; 
+
+	@each $position in $other {
+		&-#{$position} {
+			@if $position == 'around' { padding: $pad; }
+			@if $position == 'x' { 
+				padding-left: $pad;
+				padding-right: $pad;
+			}
+			@if $position == 'y' {
+				padding-top: $pad;
+				padding-bottom: $pad;
+			}
+		}
+	}
+
+	@each $size,$value in $padding-sizes {
+		@each $position in $border-sides {
+			&-#{$size}-#{$position} {
+				padding: $value;
+			}
+		}
+
+		@each $position in $other {
+			&-#{$size}-#{$position} {
+				@if $position == 'around' { padding: $value; }
+				@if $position == 'x' { 
+					padding-left: $value;
+					padding-right: $value;
+				}
+				@if $position == 'y' {
+					padding-top: $value;
+					padding-bottom: $value;
+				}
+			}
+		}
+	}
+}
+
+.margin {
+	@each $position in $border-sides {
+		&-#{$position} {
+			padding-#{$position}: $margin;
+		}
+	}
+
+	@each $position in $other {
+		&-#{$position} {
+			@if $position == 'around' { padding: $margin; }
+			@if $position == 'x' { 
+				padding-left: $margin;
+				padding-right: $margin;
+			}
+			@if $position == 'y' {
+				padding-top: $margin;
+				padding-bottom: $margin;
+			}
+		}
+	}
+
+	@each $size,$value in $margin-sizes {
+		@each $position in $border-sides {
+			&-#{$size}-#{$position} {
+				padding: $value;
+			}
+		}
+		@each $position in $other {
+			&-#{$size}-#{$position} {
+				@if $position == 'around' { padding: $value; }
+				@if $position == 'x' { 
+					padding-left: $value;
+					padding-right: $value;
+				}
+				@if $position == 'y' {
+					padding-top: $value;
+					padding-bottom: $value;
+				}
+			}
+		}
 	}
 }

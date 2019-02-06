@@ -114,10 +114,11 @@
 // just returns near-white or near-black based on luminance of color provided
 @function getContrast($color, $map: $palette) {
 	$luminance: null; $clr: null;
+	$luminance-comp: 0.37;
 
 	@if type_of($color) == color {
 		$luminance: luminance($color);
-		@if lightness($color) > 50% {
+		@if lightness($color) > $luminance-comp {
 			$clr: scale-color($color, $lightness: -95);
 		} @else {
 			$clr: scale-color($color, $lightness: 95);
@@ -127,11 +128,13 @@
 		$luminance: luminance($color);
 	}
 
-	@if $luminance >= 0.375 {
-		$clr: #000;
+	@if $luminance >= $luminance-comp {
+		$clr: darkenColor(getColor('neutral-700'), 80);
 	} @else {
-		$clr: #fff;
+		$clr: lightenColor(getColor('neutral-100'), 80);
 	}
+
+	//@debug $color $luminance $luminance-comp $clr;
 
 	@return $clr;
 }
