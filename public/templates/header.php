@@ -11,8 +11,8 @@
 <div id="page-container" class="sidebar-left sidebar-fullheight">
 	<header class="site-header row">
 		<div class="col col-12">
-			<h1 class='site-title'><a href="./index.php">BASE FRAMEWORK</a></h1>
-			
+			<h1 class="site-title"><a href="./index.php">BASE FRAMEWORK</a></h1>
+			<h3 class="sub-title text-light">This is a subtitle!</h3>
 		</div>
 	</header>
 	<nav class="site-nav">

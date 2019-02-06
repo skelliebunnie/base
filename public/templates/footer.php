@@ -1,5 +1,7 @@
-	<footer class="site-footer bg-neutral-400">
-		<p>Site Footer</p>
+	<footer class="site-footer row bg-neutral-400">
+		<div class="col">
+			<p>Site Footer</p>
+		</div>
 	</footer>
 </div>
 
