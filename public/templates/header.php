@@ -5,15 +5,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo($page_title); ?></title>
-	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="page-container">
-	<header class="site-header">
-		<h1><a href="./index.php">UNICORN PROJECT</a></h1>
+<div id="page-container" class="sidebar-left sidebar-fullheight">
+	<header class="site-header row">
+		<div class="col col-12">
+			<h1 class='site-title'><a href="./index.php">BASE FRAMEWORK</a></h1>
+			
+		</div>
 	</header>
 	<nav class="site-nav">
-		<ul>
-			<li><a href="./grid-layout.php">7 Days</a></li>
+		<ul class="nav nav-horizontal">
+			<li class='nav-item'><a href="./index.php">Home</a></li>
+			<li class='nav-item'><a href="./grid-layout.php">Grid</a></li>
 		</ul>
 	</nav>

@@ -13,14 +13,46 @@ $fonts: (
 //@debug $palette;
 
 /*
+	GENERAL DEFAULTS
+*/
+$defaults: (
+	'padding': 0.5rem,
+	'margin': 0.5rem,
+	'gutter': 0.5rem,
+	'border-width': 1px,
+	'text-light': lightenColor(getColor('neutral-100'), 80),
+	'text-dark': darkenColor(getColor('neutral-700'), 80)
+) !default;
+
+/*
+	GRID & MEDIA-QUERY VARIABLES
+*/
+$mq-breakpoints: (
+	'mobile': 414px,
+	'mobileLandscape': 736px,
+	'tablet': 1024px,
+	'desktop': 1280px,
+	'wide': 1920px
+);
+
+$max-columns: 12;
+$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+
+/*
 	TYPOGRAPHY VARIABLES
 */
+
 $heading-color: getColor('accent-500');
 
-// SITE HEADER
+/*
+	SITE HEADER
+*/
 $site-header--bg-color: getColor('primary', $coreColors);
 
-// SITE NAVIGATION
-$site-nav--bg-color: getColor('accent', $coreColors);
-$site-nav-hover--bg-color: getColor('accent-200');
+/*
+	SITE NAV
+*/
+$site-nav--bg-color: getColor('tertiary-400');
+$site-nav-hover--bg-color: getColor('accent-400');
 $site-nav-active--bg-color: getColor('primary-400');
+

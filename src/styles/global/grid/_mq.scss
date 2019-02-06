@@ -1,16 +1,22 @@
-$mq-breakpoints: (
-	'mobile': 414px,
-	'mobileLandscape': 736px,
-	'tablet': 1024px,
-	'desktop': 1280px,
-	'wide': 1920px
-);
+/*
+	col-xs-N = mobile size
+	col-sm-N = mobile-landscape size
+	col-md-N = tablet size
+	col-lg-N = desktop size
+	col-xl-N = wide size
+*/
 
-$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
-
-@import "sass-mq";
+@include mq($from: 'mobileLandscape') {
+	@for $i from 1 through $max-columns {
+		.row#{$i}-sm > .col,
+		.col-sm-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+	}
+}
 
 @include mq($from: 'tablet') {
+<<<<<<< HEAD
 	.grid > div, .grid > article, .grid > section {
 		grid-column: span 1;
 	}
@@ -39,10 +45,39 @@ $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 		&-4-12 { max-width: (4/12) * 100%; }
 		&-5-12 { max-width: (5/12) * 100%; }
 		&-6-12 { max-width: 100%; }
+=======
+	.row {
+		flex-flow: row wrap;
+		align-items: stretch;
+	}
+
+	@for $i from 1 through $max-columns {
+		.row#{$i} {
+			flex-flow: row wrap;
+		}
+	}
+
+	@for $i from 1 through ($max-columns / 2) {
+		.row#{$i} > .col,
+		.col-#{$i} {
+			flex: 1 0 100%;
+		}
+	}
+
+	@for $i from ($max-columns / 2 + 1) through $max-columns {
+		.row#{$i} > .col { flex: 1 0 (100% / $i); }
+		.col-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+	}
+
+	@for $i from 1 through $max-columns {
+		.row#{$i}-md > .col { flex: 1 0 (100% / $i); }
+		.col-md-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+>>>>>>> f905bf266e557ca6c0569d18d08b3613b31dd15f
 	}
 }
 
 @include mq($from: 'desktop') {
+<<<<<<< HEAD
 	.grid6,
 	.grid5,
 	.grid4 { width: 25%; }
@@ -53,10 +88,22 @@ $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 	}
 	@for $i from 1 through 6 {
 		.col-#{$i}-12 { max-width: ($i/12) * 100%; }
+=======
+	@for $i from 1 through ($max-columns / 2) {
+		.row#{$i} > .col { flex: 1 0 (100% / $i); }
+		.col-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+	}
+
+	@for $i from 1 through $max-columns {
+		.row#{$i}-lg > .col{ flex: 1 0 (100% / $i); }
+		.col-lg-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+>>>>>>> f905bf266e557ca6c0569d18d08b3613b31dd15f
 	}
 }
 
 @include mq($from: 'wide') {
-	.grid6 { width: (100 / 6) * 1%; }
-	.grid5 { width: (100 / 5) * 1%; }
+	@for $i from 1 through $max-columns {
+		.row#{$i}-xl > .col { flex: 1 0 (100% / $i); }
+		.col-xl-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+	}
 }

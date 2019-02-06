@@ -1,6 +1,17 @@
 @import "global";
 
+// includes functions & mixins related to colors
+// Define palette to use in SETTINGS
+@import "global/color/color";
+
+@import "global/functions",
+				"global/mixins";
+
 @import "settings";
+
+@import "global/grid/grid",
+				"global/grid/sass-mq",
+			  "global/grid/mq";
 
 @import "global/typography";
 
@@ -17,6 +28,8 @@
 				"components/media",
 				"components/messaging",
 				"components/table";
+				
+@import "components/site-header";
 
 /* 
 	MODULES 
@@ -30,7 +43,7 @@
 				"modules/nav",
 				"modules/tile";
 
-@import "layout/layout";
+@import "layout/page-container";
 
 // has to be imported after everything else or
 // anything defined in the helper classes will be overridden

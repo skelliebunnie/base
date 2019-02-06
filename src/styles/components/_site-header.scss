@@ -1,0 +1,12 @@
+.site-header {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+	@include bgImage();
+	@include overlay();
+}
+
+.site-title a {
+	color: getVal('text-light', $defaults);
+}

@@ -114,10 +114,11 @@
 // just returns near-white or near-black based on luminance of color provided
 @function getContrast($color, $map: $palette) {
 	$luminance: null; $clr: null;
+	$luminance-comp: 0.37;
 
 	@if type_of($color) == color {
 		$luminance: luminance($color);
-		@if lightness($color) > 50% {
+		@if lightness($color) > $luminance-comp {
 			$clr: scale-color($color, $lightness: -95);
 		} @else {
 			$clr: scale-color($color, $lightness: 95);
@@ -127,11 +128,13 @@
 		$luminance: luminance($color);
 	}
 
-	@if $luminance >= 0.375 {
-		$clr: #000;
+	@if $luminance >= $luminance-comp {
+		$clr: darkenColor(getColor('neutral-700'), 80);
 	} @else {
-		$clr: #fff;
+		$clr: lightenColor(getColor('neutral-100'), 80);
 	}
+
+	//@debug $color $luminance $luminance-comp $clr;
 
 	@return $clr;
 }
@@ -276,7 +279,7 @@
 	@return $tsRange;
 }
 
-@function range($map, $scaleColors: 17) {
+@function rangeAdaptive($map, $scaleColors: 17) {
 	$r: (); $range: (); 
 	// scale, for lightening/darkening: (-100 - 100[%]) scale
 	// luminance comparison: 0 - 1 scale
@@ -361,6 +364,52 @@
 			$c6: darkenColor($color, ($scale * 5));
 			$c7: darkenColor($color, ($scale * 6));
 		}
+		$r: (
+			unquote("#{$name}")-100: $c1,
+			unquote("#{$name}")-200: $c2,
+			unquote("#{$name}")-300: $c3,
+			unquote("#{$name}")-400: $c4,
+			unquote("#{$name}")-500: $c5,
+			unquote("#{$name}")-600: $c6,
+			unquote("#{$name}")-700: $c7
+		);
+
+		$range: map-merge($range, $r);
+	}
+
+	@return $range;
+}
+
+@function rangeDefault($map, $scaleColors: 17) {
+	$r: (); $range: (); 
+	// scale, for lightening/darkening: (-100 - 100[%]) scale
+	// luminance comparison: 0 - 1 scale
+	$scale: $scaleColors; $luminanceComparison: $scale / 100;
+
+	$values: map-values($map);
+	$names: map-keys($map);
+	$c1: null; $c2: null; $c3: null; $c4: null;
+	$c5: null; $c6: null; $c7: null;
+
+	@for $i from 1 through length($names) {
+		$color: nth($values,$i);
+		$l: luminance($color);
+		$name: nth($names,$i);
+		// make sure colors don't "duplicate"
+		@for $n from 2 through 6 {
+			@if(($scale * $n) > 100) {
+				$scale: $scale * 0.87;
+			} 
+		}
+
+		$c1: lightenColor($color, ($scale * 3)); 
+		$c2: lightenColor($color, ($scale * 2));
+		$c3: lightenColor($color, ($scale * 1)); 
+		$c4: $color;
+		$c5: darkenColor($color, ($scale * 1)); 
+		$c6: darkenColor($color, ($scale * 2));
+		$c7: darkenColor($color, ($scale * 3));
+
 		$r: (
 			unquote("#{$name}")-100: $c1,
 			unquote("#{$name}")-200: $c2,
