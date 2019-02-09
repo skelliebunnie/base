@@ -20,8 +20,8 @@ $defaults: (
 	'margin': 0.5rem,
 	'gutter': 0.5rem,
 	'border-width': 1px,
-	'text-light': lightenColor(getColor('neutral-100'), 80),
-	'text-dark': darkenColor(getColor('neutral-700'), 80)
+	'color-light': lightenColor(getColor('neutral-100'), 80),
+	'color-dark': darkenColor(getColor('neutral-700'), 80)
 ) !default;
 
 /*

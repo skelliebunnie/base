@@ -1317,8 +1317,7 @@ body:before {
             columns: 6; } }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: #070707; }
+  font-family: 'Montserrat', sans-serif; }
 
 a {
   text-decoration: none;
@@ -1510,9 +1509,6 @@ h6, .h6 {
     height: 100%;
     z-index: -1;
     background: rgba(0, 0, 0, 0.5); }
-
-.site-title a {
-  color: #e5e5e5; }
 
 /* 
 	MODULES 
@@ -2033,11 +2029,19 @@ nav {
 .text-neutral-700 {
   color: #212121; }
 
-.text-white {
-  color: white; }
+.bg-dark {
+  background-color: #070707;
+  color: #e5e5e5; }
 
-.text-black {
-  color: black; }
+.bg-light {
+  background-color: #e5e5e5;
+  color: #070707; }
+
+.border-dark {
+  border-color: #070707; }
+
+.border-light {
+  border-color: #e5e5e5; }
 
 .text-dark {
   color: #070707; }

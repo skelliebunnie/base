@@ -16,11 +16,20 @@ $colors: map-values($palette);
 	.text-#{$name} { color: $val; }
 }
 
-.text-white { color: white; }
-.text-black { color: black; }
+.bg-dark {
+	background-color: getVal('color-dark', $defaults);
+	color: getContrast(getVal('color-dark', $defaults));
+}
+.bg-light {
+	background-color: getVal('color-light', $defaults);
+	color: getContrast(getVal('color-light', $defaults));
+}
 
-.text-dark { color: getVal('text-dark', $defaults); }
-.text-light { color: getVal('text-light', $defaults); }
+.border-dark { border-color: getVal('color-dark', $defaults); }
+.border-light { border-color: getVal('color-light', $defaults); }
+
+.text-dark { color: getVal('color-dark', $defaults); }
+.text-light { color: getVal('color-light', $defaults); }
 
 /*
 	TYPOGRAPHY & ALIGNMENT
