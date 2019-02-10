@@ -1291,29 +1291,29 @@ body {
 	content: "neutral-400"; }
 
 #colors-400 p:nth-child(6) {
-	background-color: #e0a8bd;
+	background-color: #dce8c8;
 	color: #0a0709; }
 
 #colors-400 p:nth-child(6):after {
-	content: "primary-analogous1-400"; }
+	content: "primary-compound1-400"; }
 
 #colors-400 p:nth-child(7) {
-	background-color: #e0afa8;
-	color: #0a0709; }
+	background-color: #5eaf44;
+	color: #eee8ed; }
 
 #colors-400 p:nth-child(7):after {
-	content: "primary-analogous2-400"; }
+	content: "primary-compound2-400"; }
 
 #colors-400 p:nth-child(8) {
-	background-color: #d9e0a8;
-	color: #0a0709; }
+	background-color: #3b9097;
+	color: #eee8ed; }
 
 #colors-400 p:nth-child(8):after {
-	content: "primary-analogous3-400"; }
+	content: "primary-compound3-400"; }
 
 #colors-400 p:nth-child(9) {
-	background-color: #bde0a8;
-	color: #0a0709; }
+	background-color: #326e73;
+	color: #eee8ed; }
 
 #colors-400 p:nth-child(9):after {
-	content: "primary-analogous4-400"; }
+	content: "primary-compound4-400"; }

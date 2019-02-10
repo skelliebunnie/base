@@ -429,7 +429,7 @@
 @function harmony($color, $colorName: "primary", $harmony: "analogous") {
 	$colors: ();
 	$main: $color; $complement: complement($color);
-	$compound: adjust-hue($main, 142deg);
+	$compound: adjust-hue($main, 147deg);
 	$palette: ();
 
 	// tetrad = rectangular tetradic harmony
@@ -442,8 +442,9 @@
 		$harmony: 'tetrad';
 	}
 
-	$luminanceComparison: saturation($color); $l: luminance($color);
-	$sScale: null; $lScale: null;
+	// Compound: determine amount to scale saturation
+	$luminanceComparison: saturation($color);
+	$sScale: null;
 	@if($luminanceComparison < 45%) {
 		$sScale: 9;
 	} @else if($luminanceComparison >= 45% and $luminanceComparison < 70%) {
@@ -451,19 +452,24 @@
 	} @else {
 		$sScale: 45;
 	}
+
+	$sScale1: $sScale * -1; $sScale2: $sScale * -0.53;
+	$sScale3: $sScale * -0.54; $sScale4: $sScale * -1.24;
+
+	// Compound: determine amount to scale lightness
+	$l: luminance($color);
+	$lScale: null;
 	@if($l < 0.45) {
-		$lScale: 63;
+		$lScale: 49;
 	} @else if($l >= 0.45 and $l < 0.7) {
-		$lScale: 45;
+		$lScale: 34;
 	} @else {
-		$lScale: 21;
+		$lScale: 22;
 	}
 
-	$sScale1: $sScale * -1; $sScale2: $sScale * -0.63;
-	$sScale3: $sScale * -0.64; $sScale4: $sScale * -1.44;
-
-	$lScale2: $lScale * -1.2; $lScale3: $lScale * -1.7; $lScale4: $lScale * -2;
-
+	$lScale2: $lScale * -1.12; $lScale3: $lScale * -1.37; $lScale4: $lScale * -1.7;
+	
+	// Compound: make sure lightness scale is between -100 & 100 for adjust-hue
 	@if $lScale2 < -100 { $lScale2: -100 - $lScale2; }
 	@if $lScale2 > 100 { $lScale2: $lScale2 / 100; }
 
@@ -496,13 +502,13 @@
 		"compound": (
 			unquote("#{$colorName}-compound1"): scale-color(
 				$main, 
-				$hue: 7, 
+				$hue: 14, 
 				$lightness: $lScale, 
 				$saturation: $sScale1
 			),
 			unquote("#{$colorName}-compound2"): scale-color(
 				$main, 
-				$hue: 14, 
+				$hue: 21, 
 				$lightness: $lScale2, 
 				$saturation: $sScale2
 			),

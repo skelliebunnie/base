@@ -129,7 +129,7 @@ $h: 'quad';
 }
 
 #colors-400 {
-	@include palette($coreColors, $color: 'primary', $harmony: 'analogous', $rangeType: 'default');
+	@include palette($coreColors, $color: 'primary', $harmony: 'compound', $rangeType: 'default');
 
 	$n: 1;
 	p {
