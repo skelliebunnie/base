@@ -34,28 +34,27 @@ $colors: map-values($palette);
 /*
 	TYPOGRAPHY & ALIGNMENT
 */
-$pad: map-get($defaults, 'padding');
-$margin: map-get($defaults, 'margin');
-
 $text-positions: ('left', 'center', 'right');
 $border-sides: ('top', 'right', 'bottom', 'left');
 $border-corners: ('top-left', 'top-right', 'bottom-right', 'bottom-left');
 $other: ('around', 'x', 'y');
 
+$pad: map-get($defaults, 'padding');
 $padding-sizes: (
-	'xs': $pad * 0.75,
-	'sm': $pad * 1,
-	'md': $pad * 1.5,
-	'lg': $pad * 2.25,
-	'xl': $pad * 3
+	'xs': $pad * 0.5,
+	'sm': $pad * 0.8,
+	'md': $pad,
+	'lg': $pad * 1.5,
+	'xl': $pad * 2
 );
 
+$margin: map-get($defaults, 'margin');
 $margin-sizes: (
-	'xs': $margin * 0.75,
-	'sm': $margin * 1,
-	'md': $margin * 1.5,
-	'lg': $margin * 2.25,
-	'xl': $margin * 3
+	'xs': $margin * 0.5,
+	'sm': $margin * 0.8,
+	'md': $margin,
+	'lg': $margin * 1.5,
+	'xl': $margin * 2
 );
 
 $justify: ('start', 'center', 'end', 'space-between', 'space-around', 'space-evenly');
@@ -63,19 +62,19 @@ $align: ('stretch','center', 'start', 'end');
 
 .text {
 	@each $position in $text-positions {
-		.text-#{$position} { text-align: $position; }
+		&-#{$position} { text-align: unquote($position); }
 	}
 }
 
 .justify {
 	@each $type in $justify {
-		&-#{$type} { justify-content: $type; }
+		&-#{$type} { justify-content: unquote($type); }
 	}
 }
 
 .align {
 	@each $type in $align {
-		&-#{$type} { align-items: $type; }
+		&-#{$type} { align-items: unquote($type); }
 	}
 }
 
@@ -83,6 +82,9 @@ $align: ('stretch','center', 'start', 'end');
 	&-pad { padding: 0; }
 	&-margin { margin: 0; }
 }
+
+.row.col-no-pad > .col { padding: 0; }
+.row.col-no-margin > .col { margin: 0; }
 
 .pad {
 	@each $position in $border-sides {
@@ -93,7 +95,9 @@ $align: ('stretch','center', 'start', 'end');
 
 	@each $position in $other {
 		&-#{$position} {
-			@if $position == 'around' { padding: $pad; }
+			@if $position == 'around' { 
+				padding: $pad; 
+			}
 			@if $position == 'x' { 
 				padding-left: $pad;
 				padding-right: $pad;
@@ -105,23 +109,30 @@ $align: ('stretch','center', 'start', 'end');
 		}
 	}
 
-	@each $size,$value in $padding-sizes {
+	@each $size,$pad in $padding-sizes {
 		@each $position in $border-sides {
 			&-#{$size}-#{$position} {
-				padding: $value;
+				padding-#{$position}: $pad;
 			}
 		}
 
 		@each $position in $other {
 			&-#{$size}-#{$position} {
-				@if $position == 'around' { padding: $value; }
+				@if $position == 'top' { padding-top: $pad; }
+				@if $position == 'left' { padding-left: $pad; }
+				@if $position == 'bottom' { padding-bottom: $pad; }
+				@if $position == 'right' { padding-right: $pad; }
+
+				@if $position == 'around' { 
+					padding: $pad; 
+				}
 				@if $position == 'x' { 
-					padding-left: $value;
-					padding-right: $value;
+					padding-left: $pad;
+					padding-right: $pad;
 				}
 				@if $position == 'y' {
-					padding-top: $value;
-					padding-bottom: $value;
+					padding-top: $pad;
+					padding-bottom: $pad;
 				}
 			}
 		}
@@ -149,22 +160,24 @@ $align: ('stretch','center', 'start', 'end');
 		}
 	}
 
-	@each $size,$value in $margin-sizes {
+	@each $size,$margin in $margin-sizes {
 		@each $position in $border-sides {
 			&-#{$size}-#{$position} {
-				padding: $value;
+				margin: $margin;
 			}
 		}
 		@each $position in $other {
 			&-#{$size}-#{$position} {
-				@if $position == 'around' { padding: $value; }
+				@if $position == 'around' { 
+					margin: $margin; 
+				}
 				@if $position == 'x' { 
-					padding-left: $value;
-					padding-right: $value;
+					margin-left: $margin;
+					margin-right: $margin;
 				}
 				@if $position == 'y' {
-					padding-top: $value;
-					padding-bottom: $value;
+					margin-top: $margin;
+					margin-bottom: $margin;
 				}
 			}
 		}

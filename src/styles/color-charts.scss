@@ -1,0 +1,161 @@
+$coreColors: (
+	primary: #E0CBA8,
+	secondary: #779FA1,
+	tertiary: #88498F,
+	accent: #FF6542,
+	neutral: #564154,
+);
+
+@import 'settings';
+@import 'global';
+
+$colors: map-values($palette);
+
+%colors {
+	// display: flex;
+	// flex-flow: row wrap;
+	// justify-content: center;
+	// align-items: start;
+
+	& p {
+		position: relative;
+		flex: 1 0 (100% / 7);
+		padding: 0;
+		margin: 0;
+		line-height: 1rem;
+		font-size: 1rem;
+		min-height: 3rem;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+}
+$clr: 'primary';
+$h: 'quad';
+
+#colors-default {
+	@include palette($coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'default');
+	@extend %colors;
+	$n: 1;
+	@each $name,$color in $palette {
+		p:nth-child(#{$n}) {
+			background-color: $color;
+			color: getContrast($color);
+
+			@if endsWith($name, '400') and map-has-key($coreColors, str-slice($name,1, (str-length($name) - 4))) {
+				border: 2px solid black;
+			}
+
+			@if map-has-key($coreColors, str-slice($name, 1, (str-length($name) - 4))) {
+				&:after {
+					content: "#{$name}";
+				}
+			} @else {
+				@if endsWith($name, '100') {
+					&:before {
+						text-align: center;
+						content: "FROM HARMONY FUNCTION";
+						position: relative;
+						display: block;
+						width: 100%;
+						font-weight: bold;
+						margin-bottom: 0.25rem;
+					}
+					&:after {
+						text-align: center;
+						content: "#{$name}";
+						display: block;
+						width: 100%;
+						position: relative;
+					}
+				} @else {
+					&:after {
+						content: "#{$name}";
+					}
+				}
+			}
+
+		}
+
+		$n: $n + 1;
+	}
+}
+
+#colors-adaptive {
+	@include palette($coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'adaptive');
+	@extend %colors;
+	$n: 1;
+	@each $name,$color in $palette {
+		p:nth-child(#{$n}) {
+			background-color: $color;
+			color: getContrast($color);
+			
+			@if hasValue($coreColors, $color) and map-has-key($coreColors, str-slice($name,1, (str-length($name) - 4))) {
+				border: 2px solid black;
+			}
+
+			@if map-has-key($coreColors, str-slice($name, 1, (str-length($name) - 4))) {
+				&:after {
+					content: "#{$name}";
+				}
+			} @else {
+				@if endsWith($name, '100') {
+					&:before {
+						text-align: center;
+						content: "FROM HARMONY FUNCTION";
+						position: relative;
+						display: block;
+						width: 100%;
+						font-weight: bold;
+						margin-bottom: 0.25rem;
+					}
+					&:after {
+						text-align: center;
+						content: "#{$name}";
+						display: block;
+						width: 100%;
+						position: relative;
+					}
+				} @else {
+					&:after {
+						content: "#{$name}";
+					}
+				}
+			}
+		}
+		$n: $n + 1;
+	}
+}
+
+#colors-400 {
+	@include palette($coreColors, $color: 'primary', $harmony: 'analogous', $rangeType: 'default');
+
+	$n: 1;
+	p {
+		padding: 0;
+		margin: 0;
+		min-height: 3rem;
+		text-align: center;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+
+		&:after {
+			line-height: 1rem;
+			font-size: 1rem;
+		}
+	}
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}

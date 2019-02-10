@@ -18,7 +18,7 @@ p {
 	padding: 0 1em $pad;
 	margin: 0 $margin $margin;
 	& + & {
-		margin-bottom: (map-get($defaults, 'margin') * 3);
+		margin-bottom: (map-get($defaults, 'margin') * 1.5);
 	}
 }
 
@@ -27,13 +27,17 @@ $n: 3;
 $m: $n * 0.17; $p: $n * 0.08;
 	h#{$i}, .h#{$i} {
 		font-family: getVal('heading', $fonts);
-		font-size: $n * 1em;
+		font-size: $n * 0.8em;
 		line-height: 1.2em;
-		margin: 1rem 0.5rem;
-		padding: 0.5rem 0.5rem;
-		@if $i == 2 {
+		margin: ($m * 1.15rem) (map-get($defaults, 'margin') * 0.8) ($m * 1em);
+		padding: ($p * 1.15rem) (map-get($defaults, 'padding') * 0.8) ($p * 1em);
+		vertical-align: middle;
+	}
+
+	@if($i == 2) {
+		.h2 {
 			margin: 0;
-			padding: ($m + $p * 3rem) map-get($defaults, 'padding');
+			//padding: (($m + $p) * 3rem) map-get($defaults, 'padding');
 		}
 	}
 	$n: $n * 0.9;
@@ -75,12 +79,12 @@ $m: $n * 0.17; $p: $n * 0.08;
 		h#{$i}, .h#{$i} {
 			font-family: getVal('heading', $fonts);
 			font-size: $n * 1em;
-			line-height: 1.2em;
-			margin: (map-get($defaults, 'padding') * 0.75) (map-get($defaults, 'padding') / 2);
-			padding: (map-get($defaults, 'margin') * 0.75) (map-get($defaults, 'margin') / 2);
-			@if $i == 2 {
+			vertical-align: middle;
+		}
+		@if($i == 2) {
+			.h2 {
 				margin: 0;
-				padding: ($m + $p * 3rem) map-get($defaults, 'padding');
+				//padding: (($m + $p) * 1.5rem) map-get($defaults, 'padding');
 			}
 		}
 		$n: $n * 0.85;

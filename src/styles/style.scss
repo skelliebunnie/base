@@ -1,19 +1,12 @@
 @import "global";
 
-// includes functions & mixins related to colors
-// Define palette to use in SETTINGS
-@import "global/color/color";
-
-@import "global/functions",
-				"global/mixins";
-
 @import "settings";
 
-@import "global/grid/grid",
-				"global/grid/sass-mq",
-			  "global/grid/mq";
+@import "grid/grid",
+				"grid/sass-mq",
+			  "grid/mq";
 
-@import "global/typography";
+@import "typography/typography";
 
 /* 
 	COMPONENTS 
@@ -21,7 +14,8 @@
 	- Only items that can be used in various contexts
 	- Grouped into: Inline, Input, Media, Messaging, Table, Lists
 */
-@import "components/image",
+@import "components/hr",
+				"components/image",
 				"components/inline",
 				"components/input",
 				"components/lists",

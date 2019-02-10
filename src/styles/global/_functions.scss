@@ -1,3 +1,24 @@
 @function getValue($val, $map) {
 	@return map-get($map, $val);
 }
+
+@function endsWith($string, $find) {
+  @return str-slice($string, (str-length($string) - str-length($find) + 1)) == $find;
+}
+
+@function beginsWith($string, $find) {
+	$test: str-slice($string, 1, str-length($find));
+	@debug $test;
+  @return str-slice($string, 1, str-length($find)) == $find;
+}
+
+@function hasValue($map, $find) {
+	$values: map-values($map);
+	$check: index($values, $find);
+
+	@if $check == null {
+		@return false;
+	} @else {
+		@return true;
+	}
+}

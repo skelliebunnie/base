@@ -10,10 +10,10 @@
 		<div class="col bg-secondary-400">Column 2</div>
 		<div class="col bg-tertiary-400">Column 3</div>
 		<div class="col bg-accent-400">Column 4</div>
-		<div class="col bg-accent2-400">Column 5</div>
-		<div class="col bg-neutral-400">Column 6</div>
-		<div class="col bg-primary-400">Column 7</div>
-		<div class="col bg-secondary-400">Column 8</div>
+		<div class="col bg-neutral-400">Column 5</div>
+		<div class="col bg-primary-tetrad1-400">Column 6</div>
+		<div class="col bg-primary-tetrad2-400">Column 7</div>
+		<div class="col bg-primary-tetrad3-400">Column 8</div>
 	</div>
 	<div class="row">
 		<div class="col col-8 bg-primary-100">

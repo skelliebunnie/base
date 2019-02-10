@@ -3,10 +3,15 @@
 	margin: 0;
 	box-sizing: border-box;
 	max-width: 100%;
+	text-align: center;
 	@include bgImage();
 	@include overlay();
+
+	@include mq($from: 'tablet') {
+		text-align: $site-header--text-position;
+	}
 }
 
 .site-title a {
-	color: getVal('text-light', $defaults);
+	color: $site-title-a--color;
 }

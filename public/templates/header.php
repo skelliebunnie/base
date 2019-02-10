@@ -19,5 +19,6 @@
 		<ul class="nav nav-horizontal">
 			<li class='nav-item'><a href="./index.php">Home</a></li>
 			<li class='nav-item'><a href="./grid-layout.php">Grid</a></li>
+			<li class='nav-item'><a href="./colors.php">Colors</a></li>
 		</ul>
 	</nav>

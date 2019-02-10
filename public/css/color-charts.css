@@ -1,0 +1,1319 @@
+/* ====================================
+	FONTS
+ * ==================================== */
+@import url("https://fonts.googleapis.com/css?family=Asap:700|Montserrat");
+/* ====================================
+	COLORS
+ * ==================================== */
+/* ====================================
+	GENERAL DEFAULTS
+ * ==================================== */
+/* ====================================
+	GRID & MEDIA QUERIES
+ * ==================================== */
+/* ====================================
+	TYPOGRAPHY VARIABLES
+ * ==================================== */
+/* ====================================
+	SITE HEADER
+ * ==================================== */
+/* ====================================
+	SITE-WIDE NAV
+ * ==================================== */
+/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
+/* Document
+       ========================================================================== */
+/**
+     * 1. Change the default font family in all browsers (opinionated).
+     * 2. Correct the line height in all browsers.
+     * 3. Prevent adjustments of font size after orientation changes in
+     *    IE on Windows Phone and in iOS.
+     */
+html {
+	font-family: sans-serif;
+	/* 1 */
+	line-height: 1.15;
+	/* 2 */
+	-ms-text-size-adjust: 100%;
+	/* 3 */
+	-webkit-text-size-adjust: 100%;
+	/* 3 */ }
+
+/* Sections
+       ========================================================================== */
+/**
+     * Remove the margin in all browsers (opinionated).
+     */
+body {
+	margin: 0; }
+
+/**
+     * Add the correct display in IE 9-.
+     */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block; }
+
+/**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0; }
+
+/* Grouping content
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+figcaption,
+figure {
+	display: block; }
+
+/**
+     * Add the correct margin in IE 8.
+     */
+figure {
+	margin: 1em 40px; }
+
+/**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+hr {
+	-webkit-box-sizing: content-box;
+	        box-sizing: content-box;
+	/* 1 */
+	height: 0;
+	/* 1 */
+	overflow: visible;
+	/* 2 */ }
+
+/**
+     * Add the correct display in IE.
+     */
+main {
+	display: block; }
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+pre {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */ }
+
+/* Links
+       ========================================================================== */
+/**
+     * 1. Remove the gray background on active links in IE 10.
+     * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+     */
+a {
+	background-color: transparent;
+	/* 1 */
+	-webkit-text-decoration-skip: objects;
+	/* 2 */ }
+
+/**
+     * Remove the outline on focused links when they are also active or hovered
+     * in all browsers (opinionated).
+     */
+a:active,
+a:hover {
+	outline-width: 0; }
+
+/* Text-level semantics
+       ========================================================================== */
+/**
+     * 1. Remove the bottom border in Firefox 39-.
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+abbr[title] {
+	border-bottom: none;
+	/* 1 */
+	text-decoration: underline;
+	/* 2 */
+	-webkit-text-decoration: underline dotted;
+	        text-decoration: underline dotted;
+	/* 2 */ }
+
+/**
+     * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+     */
+b,
+strong {
+	font-weight: inherit; }
+
+/**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+b,
+strong {
+	font-weight: bolder; }
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */ }
+
+/**
+     * Add the correct font style in Android 4.3-.
+     */
+dfn {
+	font-style: italic; }
+
+/**
+     * Add the correct background and color in IE 9-.
+     */
+mark {
+	background-color: #ff0;
+	color: #000; }
+
+/**
+     * Add the correct font size in all browsers.
+     */
+small {
+	font-size: 80%; }
+
+/**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline; }
+
+sub {
+	bottom: -0.25em; }
+
+sup {
+	top: -0.5em; }
+
+/* Embedded content
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+audio,
+video {
+	display: inline-block; }
+
+/**
+     * Add the correct display in iOS 4-7.
+     */
+audio:not([controls]) {
+	display: none;
+	height: 0; }
+
+/**
+     * Remove the border on images inside links in IE 10-.
+     */
+img {
+	border-style: none; }
+
+/**
+     * Hide the overflow in IE.
+     */
+svg:not(:root) {
+	overflow: hidden; }
+
+/* Forms
+       ========================================================================== */
+/**
+     * 1. Change the font styles in all browsers (opinionated).
+     * 2. Remove the margin in Firefox and Safari.
+     */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: sans-serif;
+	/* 1 */
+	font-size: 100%;
+	/* 1 */
+	line-height: 1.15;
+	/* 1 */
+	margin: 0;
+	/* 2 */ }
+
+/**
+     * Show the overflow in IE.
+     */
+button {
+	overflow: visible; }
+
+/**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+button,
+select {
+	/* 1 */
+	text-transform: none; }
+
+/**
+     * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+     *    controls in Android 4.
+     * 2. Correct the inability to style clickable types in iOS and Safari.
+     */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+	/* 2 */ }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	/**
+       * Remove the inner border and padding in Firefox.
+       */
+	/**
+       * Restore the focus styles unset by the previous rule.
+       */ }
+	button::-moz-focus-inner,
+	[type="button"]::-moz-focus-inner,
+	[type="reset"]::-moz-focus-inner,
+	[type="submit"]::-moz-focus-inner {
+		border-style: none;
+		padding: 0; }
+	button:-moz-focusring,
+	[type="button"]:-moz-focusring,
+	[type="reset"]:-moz-focusring,
+	[type="submit"]:-moz-focusring {
+		outline: 1px dotted ButtonText; }
+
+/**
+     * Show the overflow in Edge.
+     */
+input {
+	overflow: visible; }
+
+/**
+     * 1. Add the correct box sizing in IE 10-.
+     * 2. Remove the padding in IE 10-.
+     */
+[type="checkbox"],
+[type="radio"] {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */ }
+
+/**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto; }
+
+/**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	outline-offset: -2px;
+	/* 2 */
+	/**
+       * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+       */ }
+	[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+		-webkit-appearance: none; }
+
+/**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */ }
+
+/**
+     * Change the border, margin, and padding in all browsers (opinionated).
+     */
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em; }
+
+/**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+legend {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	/* 1 */
+	display: table;
+	/* 1 */
+	max-width: 100%;
+	/* 1 */
+	padding: 0;
+	/* 3 */
+	color: inherit;
+	/* 2 */
+	white-space: normal;
+	/* 1 */ }
+
+/**
+     * 1. Add the correct display in IE 9-.
+     * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+progress {
+	display: inline-block;
+	/* 1 */
+	vertical-align: baseline;
+	/* 2 */ }
+
+/**
+     * Remove the default vertical scrollbar in IE.
+     */
+textarea {
+	overflow: auto; }
+
+/* Interactive
+       ========================================================================== */
+/*
+     * Add the correct display in Edge, IE, and Firefox.
+     */
+details {
+	display: block; }
+
+/*
+     * Add the correct display in all browsers.
+     */
+summary {
+	display: list-item; }
+
+/*
+     * Add the correct display in IE 9-.
+     */
+menu {
+	display: block; }
+
+/* Scripting
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+canvas {
+	display: inline-block; }
+
+/**
+     * Add the correct display in IE.
+     */
+template {
+	display: none; }
+
+/* Hidden
+       ========================================================================== */
+/**
+     * Add the correct display in IE 10-.
+     */
+[hidden] {
+	display: none; }
+
+html, body {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box; }
+	html *, html *:before, html *:after, body *, body *:before, body *:after {
+		-webkit-box-sizing: inherit;
+		        box-sizing: inherit; }
+
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	max-width: 100%;
+	width: 100%; }
+
+#colors-default p, #colors-adaptive p {
+	position: relative;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 14.28571%;
+	        flex: 1 0 14.28571%;
+	padding: 0;
+	margin: 0;
+	line-height: 1rem;
+	font-size: 1rem;
+	min-height: 3rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; }
+
+#colors-default p:nth-child(1) {
+	background-color: #eee2cf;
+	color: #0a0709; }
+	#colors-default p:nth-child(1):after {
+		content: "primary-100"; }
+
+#colors-default p:nth-child(2) {
+	background-color: #e9dac2;
+	color: #0a0709; }
+	#colors-default p:nth-child(2):after {
+		content: "primary-200"; }
+
+#colors-default p:nth-child(3) {
+	background-color: #e5d3b5;
+	color: #0a0709; }
+	#colors-default p:nth-child(3):after {
+		content: "primary-300"; }
+
+#colors-default p:nth-child(4) {
+	background-color: #E0CBA8;
+	color: #0a0709;
+	border: 2px solid black; }
+	#colors-default p:nth-child(4):after {
+		content: "primary-400"; }
+
+#colors-default p:nth-child(5) {
+	background-color: #d1b17d;
+	color: #0a0709; }
+	#colors-default p:nth-child(5):after {
+		content: "primary-500"; }
+
+#colors-default p:nth-child(6) {
+	background-color: #c29853;
+	color: #eee8ed; }
+	#colors-default p:nth-child(6):after {
+		content: "primary-600"; }
+
+#colors-default p:nth-child(7) {
+	background-color: #a17a39;
+	color: #eee8ed; }
+	#colors-default p:nth-child(7):after {
+		content: "primary-700"; }
+
+#colors-default p:nth-child(8) {
+	background-color: #b3cacb;
+	color: #0a0709; }
+	#colors-default p:nth-child(8):after {
+		content: "secondary-100"; }
+
+#colors-default p:nth-child(9) {
+	background-color: #9fbbbd;
+	color: #0a0709; }
+	#colors-default p:nth-child(9):after {
+		content: "secondary-200"; }
+
+#colors-default p:nth-child(10) {
+	background-color: #8badaf;
+	color: #0a0709; }
+	#colors-default p:nth-child(10):after {
+		content: "secondary-300"; }
+
+#colors-default p:nth-child(11) {
+	background-color: #779FA1;
+	color: #eee8ed;
+	border: 2px solid black; }
+	#colors-default p:nth-child(11):after {
+		content: "secondary-400"; }
+
+#colors-default p:nth-child(12) {
+	background-color: #628b8d;
+	color: #eee8ed; }
+	#colors-default p:nth-child(12):after {
+		content: "secondary-500"; }
+
+#colors-default p:nth-child(13) {
+	background-color: #517375;
+	color: #eee8ed; }
+	#colors-default p:nth-child(13):after {
+		content: "secondary-600"; }
+
+#colors-default p:nth-child(14) {
+	background-color: #405b5c;
+	color: #eee8ed; }
+	#colors-default p:nth-child(14):after {
+		content: "secondary-700"; }
+
+#colors-default p:nth-child(15) {
+	background-color: #c293c8;
+	color: #eee8ed; }
+	#colors-default p:nth-child(15):after {
+		content: "tertiary-100"; }
+
+#colors-default p:nth-child(16) {
+	background-color: #b276b9;
+	color: #eee8ed; }
+	#colors-default p:nth-child(16):after {
+		content: "tertiary-200"; }
+
+#colors-default p:nth-child(17) {
+	background-color: #a259aa;
+	color: #eee8ed; }
+	#colors-default p:nth-child(17):after {
+		content: "tertiary-300"; }
+
+#colors-default p:nth-child(18) {
+	background-color: #88498F;
+	color: #eee8ed;
+	border: 2px solid black; }
+	#colors-default p:nth-child(18):after {
+		content: "tertiary-400"; }
+
+#colors-default p:nth-child(19) {
+	background-color: #743e7a;
+	color: #eee8ed; }
+	#colors-default p:nth-child(19):after {
+		content: "tertiary-500"; }
+
+#colors-default p:nth-child(20) {
+	background-color: #603365;
+	color: #eee8ed; }
+	#colors-default p:nth-child(20):after {
+		content: "tertiary-600"; }
+
+#colors-default p:nth-child(21) {
+	background-color: #4c2950;
+	color: #eee8ed; }
+	#colors-default p:nth-child(21):after {
+		content: "tertiary-700"; }
+
+#colors-default p:nth-child(22) {
+	background-color: #ffa996;
+	color: #0a0709; }
+	#colors-default p:nth-child(22):after {
+		content: "accent-100"; }
+
+#colors-default p:nth-child(23) {
+	background-color: #ff937a;
+	color: #0a0709; }
+	#colors-default p:nth-child(23):after {
+		content: "accent-200"; }
+
+#colors-default p:nth-child(24) {
+	background-color: #ff7c5e;
+	color: #eee8ed; }
+	#colors-default p:nth-child(24):after {
+		content: "accent-300"; }
+
+#colors-default p:nth-child(25) {
+	background-color: #FF6542;
+	color: #eee8ed;
+	border: 2px solid black; }
+	#colors-default p:nth-child(25):after {
+		content: "accent-400"; }
+
+#colors-default p:nth-child(26) {
+	background-color: #ff3e13;
+	color: #eee8ed; }
+	#colors-default p:nth-child(26):after {
+		content: "accent-500"; }
+
+#colors-default p:nth-child(27) {
+	background-color: #e22a00;
+	color: #eee8ed; }
+	#colors-default p:nth-child(27):after {
+		content: "accent-600"; }
+
+#colors-default p:nth-child(28) {
+	background-color: #b32100;
+	color: #eee8ed; }
+	#colors-default p:nth-child(28):after {
+		content: "accent-700"; }
+
+#colors-default p:nth-child(29) {
+	background-color: #a98da6;
+	color: #eee8ed; }
+	#colors-default p:nth-child(29):after {
+		content: "neutral-100"; }
+
+#colors-default p:nth-child(30) {
+	background-color: #926f8f;
+	color: #eee8ed; }
+	#colors-default p:nth-child(30):after {
+		content: "neutral-200"; }
+
+#colors-default p:nth-child(31) {
+	background-color: #745872;
+	color: #eee8ed; }
+	#colors-default p:nth-child(31):after {
+		content: "neutral-300"; }
+
+#colors-default p:nth-child(32) {
+	background-color: #564154;
+	color: #eee8ed;
+	border: 2px solid black; }
+	#colors-default p:nth-child(32):after {
+		content: "neutral-400"; }
+
+#colors-default p:nth-child(33) {
+	background-color: #493748;
+	color: #eee8ed; }
+	#colors-default p:nth-child(33):after {
+		content: "neutral-500"; }
+
+#colors-default p:nth-child(34) {
+	background-color: #3d2e3b;
+	color: #eee8ed; }
+	#colors-default p:nth-child(34):after {
+		content: "neutral-600"; }
+
+#colors-default p:nth-child(35) {
+	background-color: #30242f;
+	color: #eee8ed; }
+	#colors-default p:nth-child(35):after {
+		content: "neutral-700"; }
+
+#colors-default p:nth-child(36) {
+	background-color: #cfeed2;
+	color: #0a0709; }
+	#colors-default p:nth-child(36):before {
+		text-align: center;
+		content: "FROM HARMONY FUNCTION";
+		position: relative;
+		display: block;
+		width: 100%;
+		font-weight: bold;
+		margin-bottom: 0.25rem; }
+	#colors-default p:nth-child(36):after {
+		text-align: center;
+		content: "primary-tetrad1-100";
+		display: block;
+		width: 100%;
+		position: relative; }
+
+#colors-default p:nth-child(37) {
+	background-color: #c2e9c7;
+	color: #0a0709; }
+	#colors-default p:nth-child(37):after {
+		content: "primary-tetrad1-200"; }
+
+#colors-default p:nth-child(38) {
+	background-color: #b5e5bb;
+	color: #0a0709; }
+	#colors-default p:nth-child(38):after {
+		content: "primary-tetrad1-300"; }
+
+#colors-default p:nth-child(39) {
+	background-color: #a8e0af;
+	color: #0a0709; }
+	#colors-default p:nth-child(39):after {
+		content: "primary-tetrad1-400"; }
+
+#colors-default p:nth-child(40) {
+	background-color: #7dd188;
+	color: #0a0709; }
+	#colors-default p:nth-child(40):after {
+		content: "primary-tetrad1-500"; }
+
+#colors-default p:nth-child(41) {
+	background-color: #53c260;
+	color: #0a0709; }
+	#colors-default p:nth-child(41):after {
+		content: "primary-tetrad1-600"; }
+
+#colors-default p:nth-child(42) {
+	background-color: #39a146;
+	color: #eee8ed; }
+	#colors-default p:nth-child(42):after {
+		content: "primary-tetrad1-700"; }
+
+#colors-default p:nth-child(43) {
+	background-color: #cfdaee;
+	color: #0a0709; }
+	#colors-default p:nth-child(43):before {
+		text-align: center;
+		content: "FROM HARMONY FUNCTION";
+		position: relative;
+		display: block;
+		width: 100%;
+		font-weight: bold;
+		margin-bottom: 0.25rem; }
+	#colors-default p:nth-child(43):after {
+		text-align: center;
+		content: "primary-tetrad2-100";
+		display: block;
+		width: 100%;
+		position: relative; }
+
+#colors-default p:nth-child(44) {
+	background-color: #c2d1e9;
+	color: #0a0709; }
+	#colors-default p:nth-child(44):after {
+		content: "primary-tetrad2-200"; }
+
+#colors-default p:nth-child(45) {
+	background-color: #b5c7e5;
+	color: #0a0709; }
+	#colors-default p:nth-child(45):after {
+		content: "primary-tetrad2-300"; }
+
+#colors-default p:nth-child(46) {
+	background-color: #a8bde0;
+	color: #0a0709; }
+	#colors-default p:nth-child(46):after {
+		content: "primary-tetrad2-400"; }
+
+#colors-default p:nth-child(47) {
+	background-color: #7d9dd1;
+	color: #eee8ed; }
+	#colors-default p:nth-child(47):after {
+		content: "primary-tetrad2-500"; }
+
+#colors-default p:nth-child(48) {
+	background-color: #537cc2;
+	color: #eee8ed; }
+	#colors-default p:nth-child(48):after {
+		content: "primary-tetrad2-600"; }
+
+#colors-default p:nth-child(49) {
+	background-color: #3960a1;
+	color: #eee8ed; }
+	#colors-default p:nth-child(49):after {
+		content: "primary-tetrad2-700"; }
+
+#colors-default p:nth-child(50) {
+	background-color: #eecfea;
+	color: #0a0709; }
+	#colors-default p:nth-child(50):before {
+		text-align: center;
+		content: "FROM HARMONY FUNCTION";
+		position: relative;
+		display: block;
+		width: 100%;
+		font-weight: bold;
+		margin-bottom: 0.25rem; }
+	#colors-default p:nth-child(50):after {
+		text-align: center;
+		content: "primary-tetrad3-100";
+		display: block;
+		width: 100%;
+		position: relative; }
+
+#colors-default p:nth-child(51) {
+	background-color: #e9c2e4;
+	color: #0a0709; }
+	#colors-default p:nth-child(51):after {
+		content: "primary-tetrad3-200"; }
+
+#colors-default p:nth-child(52) {
+	background-color: #e5b5df;
+	color: #0a0709; }
+	#colors-default p:nth-child(52):after {
+		content: "primary-tetrad3-300"; }
+
+#colors-default p:nth-child(53) {
+	background-color: #e0a8d9;
+	color: #0a0709; }
+	#colors-default p:nth-child(53):after {
+		content: "primary-tetrad3-400"; }
+
+#colors-default p:nth-child(54) {
+	background-color: #d17dc6;
+	color: #eee8ed; }
+	#colors-default p:nth-child(54):after {
+		content: "primary-tetrad3-500"; }
+
+#colors-default p:nth-child(55) {
+	background-color: #c253b4;
+	color: #eee8ed; }
+	#colors-default p:nth-child(55):after {
+		content: "primary-tetrad3-600"; }
+
+#colors-default p:nth-child(56) {
+	background-color: #a13994;
+	color: #eee8ed; }
+	#colors-default p:nth-child(56):after {
+		content: "primary-tetrad3-700"; }
+
+#colors-adaptive p:nth-child(1) {
+	background-color: #eee2cf;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(1):after {
+		content: "primary-100"; }
+
+#colors-adaptive p:nth-child(2) {
+	background-color: #e9dac2;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(2):after {
+		content: "primary-200"; }
+
+#colors-adaptive p:nth-child(3) {
+	background-color: #e5d3b5;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(3):after {
+		content: "primary-300"; }
+
+#colors-adaptive p:nth-child(4) {
+	background-color: #E0CBA8;
+	color: #110d11;
+	border: 2px solid black; }
+	#colors-adaptive p:nth-child(4):after {
+		content: "primary-400"; }
+
+#colors-adaptive p:nth-child(5) {
+	background-color: #d1b17d;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(5):after {
+		content: "primary-500"; }
+
+#colors-adaptive p:nth-child(6) {
+	background-color: #c29853;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(6):after {
+		content: "primary-600"; }
+
+#colors-adaptive p:nth-child(7) {
+	background-color: #a17a39;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(7):after {
+		content: "primary-700"; }
+
+#colors-adaptive p:nth-child(8) {
+	background-color: #dce6e7;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(8):after {
+		content: "secondary-100"; }
+
+#colors-adaptive p:nth-child(9) {
+	background-color: #c7d8d9;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(9):after {
+		content: "secondary-200"; }
+
+#colors-adaptive p:nth-child(10) {
+	background-color: #b3cacb;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(10):after {
+		content: "secondary-300"; }
+
+#colors-adaptive p:nth-child(11) {
+	background-color: #9fbbbd;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(11):after {
+		content: "secondary-400"; }
+
+#colors-adaptive p:nth-child(12) {
+	background-color: #8badaf;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(12):after {
+		content: "secondary-500"; }
+
+#colors-adaptive p:nth-child(13) {
+	background-color: #779FA1;
+	color: #fbfafb;
+	border: 2px solid black; }
+	#colors-adaptive p:nth-child(13):after {
+		content: "secondary-600"; }
+
+#colors-adaptive p:nth-child(14) {
+	background-color: #628b8d;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(14):after {
+		content: "secondary-700"; }
+
+#colors-adaptive p:nth-child(15) {
+	background-color: #f1e6f2;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(15):after {
+		content: "tertiary-100"; }
+
+#colors-adaptive p:nth-child(16) {
+	background-color: #e3cce5;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(16):after {
+		content: "tertiary-200"; }
+
+#colors-adaptive p:nth-child(17) {
+	background-color: #d3b0d6;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(17):after {
+		content: "tertiary-300"; }
+
+#colors-adaptive p:nth-child(18) {
+	background-color: #c293c8;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(18):after {
+		content: "tertiary-400"; }
+
+#colors-adaptive p:nth-child(19) {
+	background-color: #b276b9;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(19):after {
+		content: "tertiary-500"; }
+
+#colors-adaptive p:nth-child(20) {
+	background-color: #a259aa;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(20):after {
+		content: "tertiary-600"; }
+
+#colors-adaptive p:nth-child(21) {
+	background-color: #88498F;
+	color: #fbfafb;
+	border: 2px solid black; }
+	#colors-adaptive p:nth-child(21):after {
+		content: "tertiary-700"; }
+
+#colors-adaptive p:nth-child(22) {
+	background-color: #ffd7ce;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(22):after {
+		content: "accent-100"; }
+
+#colors-adaptive p:nth-child(23) {
+	background-color: #ffc0b2;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(23):after {
+		content: "accent-200"; }
+
+#colors-adaptive p:nth-child(24) {
+	background-color: #ffa996;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(24):after {
+		content: "accent-300"; }
+
+#colors-adaptive p:nth-child(25) {
+	background-color: #ff937a;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(25):after {
+		content: "accent-400"; }
+
+#colors-adaptive p:nth-child(26) {
+	background-color: #ff7c5e;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(26):after {
+		content: "accent-500"; }
+
+#colors-adaptive p:nth-child(27) {
+	background-color: #FF6542;
+	color: #fbfafb;
+	border: 2px solid black; }
+	#colors-adaptive p:nth-child(27):after {
+		content: "accent-600"; }
+
+#colors-adaptive p:nth-child(28) {
+	background-color: #ff3e13;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(28):after {
+		content: "accent-700"; }
+
+#colors-adaptive p:nth-child(29) {
+	background-color: #ebe4ea;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(29):after {
+		content: "neutral-100"; }
+
+#colors-adaptive p:nth-child(30) {
+	background-color: #d7cad6;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(30):after {
+		content: "neutral-200"; }
+
+#colors-adaptive p:nth-child(31) {
+	background-color: #c0abbe;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(31):after {
+		content: "neutral-300"; }
+
+#colors-adaptive p:nth-child(32) {
+	background-color: #a98da6;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(32):after {
+		content: "neutral-400"; }
+
+#colors-adaptive p:nth-child(33) {
+	background-color: #926f8f;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(33):after {
+		content: "neutral-500"; }
+
+#colors-adaptive p:nth-child(34) {
+	background-color: #745872;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(34):after {
+		content: "neutral-600"; }
+
+#colors-adaptive p:nth-child(35) {
+	background-color: #564154;
+	color: #fbfafb;
+	border: 2px solid black; }
+	#colors-adaptive p:nth-child(35):after {
+		content: "neutral-700"; }
+
+#colors-adaptive p:nth-child(36) {
+	background-color: #cfeed2;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(36):before {
+		text-align: center;
+		content: "FROM HARMONY FUNCTION";
+		position: relative;
+		display: block;
+		width: 100%;
+		font-weight: bold;
+		margin-bottom: 0.25rem; }
+	#colors-adaptive p:nth-child(36):after {
+		text-align: center;
+		content: "primary-tetrad1-100";
+		display: block;
+		width: 100%;
+		position: relative; }
+
+#colors-adaptive p:nth-child(37) {
+	background-color: #c2e9c7;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(37):after {
+		content: "primary-tetrad1-200"; }
+
+#colors-adaptive p:nth-child(38) {
+	background-color: #b5e5bb;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(38):after {
+		content: "primary-tetrad1-300"; }
+
+#colors-adaptive p:nth-child(39) {
+	background-color: #a8e0af;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(39):after {
+		content: "primary-tetrad1-400"; }
+
+#colors-adaptive p:nth-child(40) {
+	background-color: #7dd188;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(40):after {
+		content: "primary-tetrad1-500"; }
+
+#colors-adaptive p:nth-child(41) {
+	background-color: #53c260;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(41):after {
+		content: "primary-tetrad1-600"; }
+
+#colors-adaptive p:nth-child(42) {
+	background-color: #39a146;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(42):after {
+		content: "primary-tetrad1-700"; }
+
+#colors-adaptive p:nth-child(43) {
+	background-color: #dbe4f2;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(43):before {
+		text-align: center;
+		content: "FROM HARMONY FUNCTION";
+		position: relative;
+		display: block;
+		width: 100%;
+		font-weight: bold;
+		margin-bottom: 0.25rem; }
+	#colors-adaptive p:nth-child(43):after {
+		text-align: center;
+		content: "primary-tetrad2-100";
+		display: block;
+		width: 100%;
+		position: relative; }
+
+#colors-adaptive p:nth-child(44) {
+	background-color: #cfdaee;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(44):after {
+		content: "primary-tetrad2-200"; }
+
+#colors-adaptive p:nth-child(45) {
+	background-color: #c2d1e9;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(45):after {
+		content: "primary-tetrad2-300"; }
+
+#colors-adaptive p:nth-child(46) {
+	background-color: #b5c7e5;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(46):after {
+		content: "primary-tetrad2-400"; }
+
+#colors-adaptive p:nth-child(47) {
+	background-color: #a8bde0;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(47):after {
+		content: "primary-tetrad2-500"; }
+
+#colors-adaptive p:nth-child(48) {
+	background-color: #7d9dd1;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(48):after {
+		content: "primary-tetrad2-600"; }
+
+#colors-adaptive p:nth-child(49) {
+	background-color: #537cc2;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(49):after {
+		content: "primary-tetrad2-700"; }
+
+#colors-adaptive p:nth-child(50) {
+	background-color: #f2dbef;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(50):before {
+		text-align: center;
+		content: "FROM HARMONY FUNCTION";
+		position: relative;
+		display: block;
+		width: 100%;
+		font-weight: bold;
+		margin-bottom: 0.25rem; }
+	#colors-adaptive p:nth-child(50):after {
+		text-align: center;
+		content: "primary-tetrad3-100";
+		display: block;
+		width: 100%;
+		position: relative; }
+
+#colors-adaptive p:nth-child(51) {
+	background-color: #eecfea;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(51):after {
+		content: "primary-tetrad3-200"; }
+
+#colors-adaptive p:nth-child(52) {
+	background-color: #e9c2e4;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(52):after {
+		content: "primary-tetrad3-300"; }
+
+#colors-adaptive p:nth-child(53) {
+	background-color: #e5b5df;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(53):after {
+		content: "primary-tetrad3-400"; }
+
+#colors-adaptive p:nth-child(54) {
+	background-color: #e0a8d9;
+	color: #110d11; }
+	#colors-adaptive p:nth-child(54):after {
+		content: "primary-tetrad3-500"; }
+
+#colors-adaptive p:nth-child(55) {
+	background-color: #d17dc6;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(55):after {
+		content: "primary-tetrad3-600"; }
+
+#colors-adaptive p:nth-child(56) {
+	background-color: #c253b4;
+	color: #fbfafb; }
+	#colors-adaptive p:nth-child(56):after {
+		content: "primary-tetrad3-700"; }
+
+#colors-400 p {
+	padding: 0;
+	margin: 0;
+	min-height: 3rem;
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column nowrap;
+	        flex-flow: column nowrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center; }
+	#colors-400 p:after {
+		line-height: 1rem;
+		font-size: 1rem; }
+
+#colors-400 p:nth-child(1) {
+	background-color: #E0CBA8;
+	color: #0a0709; }
+
+#colors-400 p:nth-child(1):after {
+	content: "primary-400"; }
+
+#colors-400 p:nth-child(2) {
+	background-color: #779FA1;
+	color: #eee8ed; }
+
+#colors-400 p:nth-child(2):after {
+	content: "secondary-400"; }
+
+#colors-400 p:nth-child(3) {
+	background-color: #88498F;
+	color: #eee8ed; }
+
+#colors-400 p:nth-child(3):after {
+	content: "tertiary-400"; }
+
+#colors-400 p:nth-child(4) {
+	background-color: #FF6542;
+	color: #eee8ed; }
+
+#colors-400 p:nth-child(4):after {
+	content: "accent-400"; }
+
+#colors-400 p:nth-child(5) {
+	background-color: #564154;
+	color: #eee8ed; }
+
+#colors-400 p:nth-child(5):after {
+	content: "neutral-400"; }
+
+#colors-400 p:nth-child(6) {
+	background-color: #e0a8bd;
+	color: #0a0709; }
+
+#colors-400 p:nth-child(6):after {
+	content: "primary-analogous1-400"; }
+
+#colors-400 p:nth-child(7) {
+	background-color: #e0afa8;
+	color: #0a0709; }
+
+#colors-400 p:nth-child(7):after {
+	content: "primary-analogous2-400"; }
+
+#colors-400 p:nth-child(8) {
+	background-color: #d9e0a8;
+	color: #0a0709; }
+
+#colors-400 p:nth-child(8):after {
+	content: "primary-analogous3-400"; }
+
+#colors-400 p:nth-child(9) {
+	background-color: #bde0a8;
+	color: #0a0709; }
+
+#colors-400 p:nth-child(9):after {
+	content: "primary-analogous4-400"; }

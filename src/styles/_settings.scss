@@ -1,58 +1,76 @@
 // FOR DEFINING VARIABLES THAT CAN BE CHANGED
-// E.G. header bg color
 
+/* ====================================
+	FONTS
+ * ==================================== */
 @import url('https://fonts.googleapis.com/css?family=Asap:700|Montserrat');
 $fonts: (
 	'copy': unquote("'Montserrat', sans-serif"),
 	'heading': unquote("'Asap', sans-serif")
-);
+) !default;
 
-@include palette($coreColors, $color: 'primary', $harmony: 'none', $scaleColors: 12);
-//@include palette($colorMap: $coreColors, $color: 'green', $harmony: 'compound', $rangeType: 'tintshade');
+/* ====================================
+	COLORS
+ * ==================================== */
+// if using a different name for the map, update @include palette();
+$coreColors: (
+	primary: #E0CBA8,
+	secondary: #779FA1,
+	tertiary: #88498F,
+	accent: #FF6542,
+	neutral: #564154,
+) !default;
 
-//@debug $palette;
+// MUST be imported AFTER defining $coreColors!
+@import "color/functions";
+@import "color/mixins";
+// quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
+@include palette($coreColors, $color: 'primary', $harmony: 'split', $rangeType: 'default');
 
-/*
+/* ====================================
 	GENERAL DEFAULTS
-*/
+ * ==================================== */
 $defaults: (
-	'padding': 0.5rem,
-	'margin': 0.5rem,
+	'padding': 0.75rem,
+	'margin': 0.75rem,
 	'gutter': 0.5rem,
 	'border-width': 1px,
 	'color-light': lightenColor(getColor('neutral-100'), 80),
 	'color-dark': darkenColor(getColor('neutral-700'), 80)
 ) !default;
 
-/*
-	GRID & MEDIA-QUERY VARIABLES
-*/
+/* ====================================
+	GRID & MEDIA QUERIES
+ * ==================================== */
 $mq-breakpoints: (
 	'mobile': 414px,
 	'mobileLandscape': 736px,
 	'tablet': 1024px,
 	'desktop': 1280px,
 	'wide': 1920px
-);
+) !default;
 
-$max-columns: 12;
-$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+$max-columns: 12 !default;
+$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide) !default;
 
-/*
+/* ====================================
 	TYPOGRAPHY VARIABLES
-*/
+ * ==================================== */
 
-$heading-color: getColor('accent-500');
+$heading-color: getColor('accent-500') !default;
 
-/*
+/* ====================================
 	SITE HEADER
-*/
-$site-header--bg-color: getColor('primary', $coreColors);
+ * ==================================== */
+// for screen widths >= 1024; < 1024 == center;
+$site-header--text-position: left;
+$site-header--bg-color: getColor('primary', $coreColors) !default;
+$site-title-a--color: getColor('accent-100') !default;
 
-/*
-	SITE NAV
-*/
-$site-nav--bg-color: getColor('tertiary-400');
-$site-nav-hover--bg-color: getColor('accent-400');
-$site-nav-active--bg-color: getColor('primary-400');
+/* ====================================
+	SITE-WIDE NAV
+ * ==================================== */
+$site-nav--bg-color: getColor('tertiary-400') !default;
+$site-nav-hover--bg-color: getColor('accent-400') !default;
+$site-nav-active--bg-color: getColor('primary-400') !default;
 

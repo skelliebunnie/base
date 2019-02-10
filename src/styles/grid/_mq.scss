@@ -1,0 +1,109 @@
+// sm (xs is for anything smaller);
+@include mq($from: 'mobileLandscape') {
+	@for $i from 1 through $max-columns {
+		.row#{$i}-sm > .col,
+		.col-sm-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+	}
+}
+
+// md; 1st time .text-columns is defined
+@include mq($from: 'tablet') {
+	.grid { display: grid; }
+
+	.row {
+		flex-flow: row wrap;
+		align-items: stretch;
+	}
+
+	.row-vertical { flex-flow: column nowrap; }
+
+	@for $i from 1 through $max-columns {
+		.row#{$i} { flex-flow: row wrap; }
+	}
+
+	// any DEFAULT .col smaller than 50% should be just set to 50%;
+	@for $i from 1 through ($max-columns / 2) {
+		.row#{$i} > .col,
+		.col-#{$i} {
+			flex: 1 0 50%;
+		}
+	}
+
+	// any DEFAULT .col larger than 50% can be set to whatever %
+	@for $i from ($max-columns / 2 + 1) through $max-columns {
+		.row#{$i} > .col { flex: 1 0 (100% / $i); }
+		.col-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+	}
+
+	// any SPECIFIED .col should be set to the correct % width
+	@for $i from 1 through $max-columns {
+		.row#{$i}-md > .col { flex: 1 0 (100% / $i); }
+		.col-md-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+	}
+
+	.text-columns {
+		$max: null;
+		// this just ensures that on tablet size screens, text columns
+		// aren't getting way too small
+		@if $max-columns > 6 { $max: 6; } @else { $max: $max-columns; }
+		@for $i from 1 through $max {
+			&-md-#{$i} { columns: $i; }
+		}
+		// handle anything over the "md max" just in case
+		@for $i from $max + 1 through $max-columns {
+			&-md-#{$i} { columns: $max; }
+		}
+	}
+}
+
+// lg
+@include mq($from: 'desktop') {
+	// starting on desktop, all DEFAULT .col's can be whatever %
+	@for $i from 1 through $max-columns {
+		.row#{$i} > .col { flex: 1 0 (100% / $i); }
+		.col-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+	}
+
+	@for $i from 1 through $max-columns {
+		.row#{$i}-lg > .col { flex: 1 0 (100% / $i); }
+		.col-lg-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+	}
+	// bump up max number of text columns b/c min screen-size is larger
+	.text-columns {
+		$max: null;
+		@if $max-columns > 8 { $max: 8; } @else { $max: $max-columns; }
+		@for $i from 1 through $max {
+			&-lg-#{$i} { columns: $i; }
+		}
+		// handle anything over the "lg max" just in case
+		@for $i from $max + 1 through $max-columns {
+			&-lg-#{$i} { columns: $max; }
+		}
+	}
+}
+
+// xl
+@include mq($from: 'wide') {
+	@for $i from 1 through $max-columns {
+		.row#{$i}-xl > .col { flex: 1 0 (100% / $i); }
+		.col-xl-#{$i} { flex: 1 0 (($i / $max-columns) * 100%); }
+	}
+
+	// still checking to keep text column widths "sane",
+	// but max-columns defaults to 12 so this should provide the full #
+	.text-columns {
+		$max: null;
+		@if $max-columns > 12 { $max: 12; } @else { $max: $max-columns; }
+		@for $i from 1 through $max {
+			&-xl-#{$i} {
+				columns: $i;
+			}
+		}
+		// handle anything over the "xl max" just in case
+		@for $i from $max + 1 through $max-columns {
+			&-md-#{$i} { columns: $max; }
+		}
+	}
+}

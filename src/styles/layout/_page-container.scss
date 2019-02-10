@@ -1,44 +1,71 @@
 .site-header { grid-area: site-header; }
 .site-nav { grid-area: site-nav; }
 .site-sidebar { grid-area: site-sidebar; }
-.site-content { grid-area: site-content; }
+.site-content { 
+	grid-area: site-content;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: start;
+}
 .site-footer { grid-area: site-footer; }
+
+.site-sidebar > .col { padding: 0; }
 
 #page-container {
 	display: grid;
 	width: 100vw;
 	height: 100vh;
-	grid-template-rows: 1.5fr .5fr 8fr 1fr;
-	
-	&.sidebar-left {
-		grid-template-areas:
-			"site-header site-header"
-			"site-sidebar site-nav"
-			"site-sidebar site-content"
-			"site-footer site-footer";
+	grid-template-areas:
+		"site-header"
+		"site-nav"
+		"site-content"
+		"site-sidebar"
+		"site-footer";
 
-		&.sidebar-fullheight {
+	@include mq($from: "tablet") {
+		grid-template-rows: 1.5fr .5fr 8fr 1fr;
+		grid-template-columns: min-content 1fr;
+		grid-template-areas:
+		"site-header site-header"
+		"site-sidebar site-nav"
+		"site-sidebar site-content"
+		"site-footer site-footer";
+
+		&.sidebar-left {
 			grid-template-areas:
-				"site-sidebar site-header"
+				"site-header site-header"
 				"site-sidebar site-nav"
 				"site-sidebar site-content"
-				"site-sidebar site-footer";
+				"site-footer site-footer";
+
+			&.sidebar-fullheight {
+				grid-template-areas:
+					"site-sidebar site-header"
+					"site-sidebar site-nav"
+					"site-sidebar site-content"
+					"site-sidebar site-footer";
+			}
+		}
+
+		&.sidebar-right {
+			grid-template-areas:
+				"site-header site-header"
+				"site-nav site-sidebar"
+				"site-content site-sidebar"
+				"site-footer site-footer";
+
+			&.sidebar-fullheight {
+				grid-template-areas:
+					"site-header site-sidebar"
+					"site-nav site-sidebar"
+					"site-content site-sidebar"
+					"site-footer site-sidebar";
+			}
 		}
 	}
 
-	&.sidebar-right {
-		grid-template-areas:
-			"site-header site-header"
-			"site-nav site-sidebar"
-			"site-content site-sidebar"
-			"site-footer site-footer";
-
-		&.sidebar-fullheight {
-			grid-template-areas:
-				"site-header site-sidebar"
-				"site-nav site-sidebar"
-				"site-content site-sidebar"
-				"site-footer site-sidebar";
-		}
+	@include mq($from: "desktop") {
+		grid-template-columns: max-content 1fr;
 	}
 }

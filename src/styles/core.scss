@@ -2,18 +2,17 @@
 
 // includes functions & mixins related to colors
 // Define palette to use in SETTINGS
-@import "global/color/color";
-
-@import "global/functions",
-				"global/mixins";
+@import "color/color";
 
 @import "settings";
 
-@import "global/grid/grid",
-				"global/grid/sass-mq",
-			  "global/grid/mq";
+@import "grid/grid",
+				"grid/sass-mq",
+			  "grid/mq";
 
-@import "global/typography";
+@import "typography/typography";
+
+@import "components/hr";
 
 // has to be imported after everything else or
 // anything defined in the helper classes will be overridden

@@ -4,36 +4,41 @@
 
 	$colors: (); $primaryHarmonyRange: null; $mapRange: null;
 
-	// if you do this if statement the other way around, it fails on 'none' b/c it tries to run the harmony anyway ... ?
-	@if $harmony != 'none' {
-		$colors: harmony($color: $primaryColor, $colorName: $colorName, $harmony: $harmony);
-	} else {
+	// I FORGOT THE BLOODY '@' SYMBOL BEFORE else
+	@if $harmony == 'none' {
 		$colors: $colorMap;
+
+	} @else {
+		$colors: harmony($color: $primaryColor, $colorName: $colorName, $harmony: $harmony);
 	}
 
 	@if $rangeType == 'tintshade' {
 		$primaryHarmonyRange: tintShade($map: $colors, $scaleColors: $scaleColors);
 		$mapRange: tintShade($map: $colorMap, $scaleColors: $scaleColors);
+
 	} @else if $rangeType == 'rangeAdaptive' or $rangeType == 'adaptive' {
 		$primaryHarmonyRange: rangeAdaptive($map: $colors, $scaleColors: $scaleColors);
 		$mapRange: rangeAdaptive($map: $colorMap, $scaleColors: $scaleColors);
+
 	} @else {
-		
 		$primaryHarmonyRange: rangeDefault($map: $colors, $scaleColors: $scaleColors);
 		$mapRange: rangeDefault($map: $colorMap, $scaleColors: $scaleColors);
 	}
 
 	// if a harmony was generated, add the range of the core colors (less the one used for the harmony)
 	@if $harmony != 'none' {
-		$originalList: map-remove($coreColors, $color);
+		$originalList: map-remove($colors, $color);
+		$originalRange: rangeDefault($originalList, $scaleColors: $scaleColors);
+
 		@if($rangeType == 'tintshade') {
 			$originalRange: tintShade($map: $originalList, $scaleColors: $scaleColors);
-		} @else if ($rangeType == 'rangeAdaptive' or $rangeType == 'adaptive') {
-			$originalRange: rangeAdaptive($originalList, $scaleColors: $scaleColors);
-		} @else {
-			$originalRange: rangeDefault($originalList, $scaleColors: $scaleColors);
+
 		}
-		$rangeMaps: map-merge($originalRange, $mapRange);
+		@if($rangeType == 'rangeAdaptive' or $rangeType == 'adaptive') {
+			$originalRange: rangeAdaptive($originalList, $scaleColors: $scaleColors);
+		}
+
+		$rangeMaps: map-merge($mapRange, $originalRange);
 		$palette: map-merge($rangeMaps, $primaryHarmonyRange) !global;
 	// otherwise (no harmony generated) just merge the mapRange since that *is* the coreColors
 	} @else {

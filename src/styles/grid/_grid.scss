@@ -6,7 +6,8 @@
 }
 
 .grid,
-.row {
+.row,
+.flex {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: stretch;
@@ -16,6 +17,16 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+
+.column {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: stretch;
+	justify-content: center;
 }
 
 .col {
@@ -31,8 +42,13 @@
 		flex-flow: row wrap;
 		align-items: stretch;
 	}
+
 	.row#{$i}-xs > .col,
 	.col-xs-#{$i} {
 		flex: 1 0 (100% / $i);
+	}
+
+	.column.col#{$i} {
+		width: 100% / $i;
 	}
 }

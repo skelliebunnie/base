@@ -432,6 +432,16 @@
 	$compound: adjust-hue($main, 142deg);
 	$palette: ();
 
+	// tetrad = rectangular tetradic harmony
+	// quad(ratic) = square tetradic harmony
+	$tetradType: 0;
+	@if $harmony == 'tetrad' or $harmony == 'tetradic' {
+		$tetradType: 45;
+	} @else if $harmony == 'quad' or $harmony == 'quadratic' { 
+		$tetradType: 90;
+		$harmony: 'tetrad';
+	}
+
 	$luminanceComparison: saturation($color); $l: luminance($color);
 	$sScale: null; $lScale: null;
 	@if($luminanceComparison < 45%) {
@@ -473,9 +483,9 @@
 			unquote("#{$colorName}-triad2"): adjust-hue($main, 240)
 		),
 		"tetrad": (
-			unquote("#{$colorName}-tetrad1"): adjust-hue($main, 90),
+			unquote("#{$colorName}-tetrad1"): adjust-hue($main, $tetradType),
 			unquote("#{$colorName}-tetrad2"): $complement,
-			unquote("#{$colorName}-tetrad3"): adjust-hue($main, 270)
+			unquote("#{$colorName}-tetrad3"): adjust-hue($complement, $tetradType)
 		),
 		"analogous": (
 			unquote("#{$colorName}-analogous1"): adjust-hue($main, 300),

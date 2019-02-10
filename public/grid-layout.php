@@ -4,109 +4,48 @@
 	include "templates/sidebar.php";
 ?>
 	<main class="site-content">
-		<div class="block bg-accent-100">
-			<p>Header color is <strong>PRIMARY</strong></p>
-			<p>Sidebar color is <strong>SECONDARY</strong></p>
-			<p>Footer color is <strong>TERTIARY</strong></p>
-		</div>
 		<h2 class="h2">Row Row6</h2>
-		<div class="row row6">
-			<div class="col block">
-				<h1 class="h1">Heading 1</h1>
-				<p>This block is in the SITE CONTENT section. Background color NEUTRAL.</p>
-				<p>Labore esse mollitia illo, dignissimos eius facere voluptatibus accusamus natus, cum tenetur eligendi illum odit fugiat similique impedit magni dolorem vero consectetur reprehenderit molestiae praesentium quidem adipisci. Quibusdam est incidunt quia aliquid quidem, vel. Nam doloribus ad modi consequuntur magni, placeat optio dicta. Totam dolorum explicabo neque, nihil repudiandae odit rem itaque modi doloribus excepturi quidem eum fugiat quos rerum facilis placeat quaerat omnis obcaecati distinctio sit nisi! Neque, animi quod sit.</p>
+		<p>3 columns on tablets, 5 on desktop (1280+ width), and 6 on wide (1920+)</p>
+		<div class="row row3-md row5-lg row6-xl pad col-no-pad">
+			<div class="col">
+				<h1>Heading 1</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, odit nesciunt architecto tempore in provident minima saepe eveniet adipisci illo, odio dolore quae molestias ea quos, repellendus! Aliquam, eius, quas!</p>
 			</div>
-			<div class="col block">
-				<h2 class="h2">Heading 2</h2>
-				<p>Perspiciatis suscipit ducimus distinctio consequuntur. Nesciunt, tenetur, nulla? Illo amet, quia cum, magnam vero cupiditate, sit sed voluptatum praesentium omnis numquam aliquid, totam! Mollitia veritatis veniam laboriosam, eligendi magnam dignissimos neque libero.</p>
-				<p>Laborum magni consequuntur voluptates voluptatem, nostrum, obcaecati illum fugit odio asperiores repudiandae dolorem. Itaque sequi odio magnam quibusdam, nesciunt quia cum doloremque mollitia porro deleniti, minima voluptates! Voluptas vel delectus neque reprehenderit recusandae eius perferendis illum corrupti voluptate doloremque facere, odio fugit dolores. Aut facere recusandae dignissimos, atque!</p>
+			<div class="col">
+				<h2>Heading 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quos reiciendis minus ut, reprehenderit quidem labore in mollitia itaque quaerat facere distinctio ipsa cupiditate, dolorum laudantium animi vero quis omnis.</p>
+				<p>Aperiam explicabo magnam, libero architecto veniam adipisci, voluptatum ratione obcaecati odit voluptates unde alias quam mollitia minima. Omnis in atque mollitia iste ducimus, odio eligendi officiis hic voluptatibus temporibus repellat.</p>
 			</div>
-			<div class="col block">
-				<h3 class="h3">Heading 3</h3>
-				<p>Vero molestiae quia aliquid molestias autem doloremque unde eum, quod illo, officia expedita neque ea totam numquam dolor itaque necessitatibus ullam repellat suscipit, accusantium fugiat nam. Sint illum ipsa, earum veritatis, est nisi itaque mollitia consectetur odit tempore amet asperiores distinctio incidunt! Doloremque optio aspernatur quis iste blanditiis veritatis autem nulla accusantium mollitia, dicta voluptates voluptate corrupti earum perspiciatis aperiam tempore quae rem, fugiat, nihil dolorum ullam, architecto molestias. Nesciunt quo reprehenderit explicabo, impedit eos enim. Ipsa autem rerum atque?</p>
+			<div class="col">
+				<h3>Heading 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nihil earum ipsa velit maiores, id saepe quas veniam, nam in quibusdam quis! Laudantium accusamus sequi quod, earum. Officiis dolor, dicta.</p>
+				<p>Eaque ipsa, voluptatem ullam accusamus, repellat suscipit eum iure incidunt, eligendi eveniet atque perspiciatis explicabo a eius minus neque ipsum, possimus nemo rem vitae nesciunt. Facere asperiores, molestiae aut ullam.</p>
+				<p>Reprehenderit, explicabo, aliquid. Esse magni adipisci numquam laboriosam veniam labore, similique quae culpa amet facere molestiae quasi molestias delectus sapiente, natus inventore quidem a perferendis possimus nisi qui. Ducimus, eos?</p>
 			</div>
-			<div class="col block">
-				<h4 class="h4">Heading 4</h4>
-				<p>Tempore rem labore quasi corporis animi, enim eos possimus reiciendis. Ratione voluptate sequi molestias aperiam tempore culpa impedit natus molestiae similique, cumque amet repellat, ad! Veritatis facilis, quidem, modi fugiat commodi omnis similique, ipsam, id itaque nam animi odio consequuntur officiis. Maxime sit fugit error ducimus quaerat eius totam magnam voluptatem tempore accusantium expedita cum, excepturi dignissimos veniam iste, omnis illo officiis voluptatibus aperiam earum veritatis quo assumenda velit ipsa. Sapiente, reprehenderit. Provident impedit perferendis dicta assumenda accusantium, quasi rerum.</p>
+			<div class="col">
+				<h4>Heading 4</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, laboriosam, cum! Laborum aspernatur, voluptas illum eum itaque sint deserunt ex quisquam animi vel non, doloribus perferendis ipsum temporibus sapiente minus?</p>
+				<p>Maiores quisquam illum alias suscipit repellendus esse tempora harum autem, voluptas ipsum nostrum eius aut ea sunt officia voluptate, a nobis libero provident consequatur, assumenda accusamus. Id minima, itaque eaque.</p>
+				<p>Expedita laudantium inventore nostrum dolore atque. Reiciendis minus error quibusdam nemo optio! Distinctio incidunt cumque illum reprehenderit accusantium quas, ipsa, deserunt voluptas corrupti cum, in reiciendis asperiores, tenetur dolorem culpa.</p>
+				<p>Illum aut eius deserunt hic, expedita. Placeat quaerat, officia ipsa, vel facere non neque possimus est ducimus, sit tenetur! Sit natus, nulla tenetur voluptas, iusto fugit rem accusantium eligendi blanditiis.</p>
 			</div>
-			<div class="col block">
-				<h5 class="h5">Heading 5</h5>
-				<p>Tempore rem labore quasi corporis animi, enim eos possimus reiciendis. Ratione voluptate sequi molestias aperiam tempore culpa impedit natus molestiae similique, cumque amet repellat, ad! Veritatis facilis, quidem, modi fugiat commodi omnis similique, ipsam, id itaque nam animi odio consequuntur officiis. Maxime sit fugit error ducimus quaerat eius totam magnam voluptatem tempore accusantium expedita cum, excepturi dignissimos veniam iste, omnis illo officiis voluptatibus aperiam earum veritatis quo assumenda velit ipsa. Sapiente, reprehenderit. Provident impedit perferendis dicta assumenda accusantium, quasi rerum.</p>
+			<div class="col">
+				<h5>Heading 5</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero excepturi quibusdam neque quisquam possimus dolorum voluptates omnis non repellat eius expedita, tempore illo, autem aliquam. Iure dolorum aspernatur quia mollitia!</p>
+				<p>Ratione tempore aliquam eveniet est expedita numquam corporis dolor ex illum, laborum, tempora, excepturi fugit quas? Magnam explicabo iusto ex aliquid ipsam, nemo iste iure qui libero odio molestiae, et!</p>
+				<p>Suscipit repellat nesciunt enim laudantium consequatur. Reprehenderit iusto in illum facere fugit ipsum inventore fuga modi sapiente ex. Consectetur provident quis saepe, ad labore, delectus dolore ipsum pariatur perferendis quia.</p>
+				<p>Sit qui saepe a laborum harum maxime voluptatum aliquam perferendis et? Corporis, itaque unde dolore maiores facilis id reiciendis cum sunt, aliquam, provident autem labore qui expedita? Necessitatibus esse, aut.</p>
+				<p>Tempora voluptate nulla odio quia rem, earum, nostrum saepe libero suscipit, praesentium illo. Quasi sit neque officiis nulla repudiandae eius sed mollitia quas nihil exercitationem, deleniti voluptas, amet fuga. Quisquam.</p>
 			</div>
-			<div class="col block">
-				<h6 class="h6">Heading 6</h6>
-				<p>Tempore rem labore quasi corporis animi, enim eos possimus reiciendis. Ratione voluptate sequi molestias aperiam tempore culpa impedit natus molestiae similique, cumque amet repellat, ad! Veritatis facilis, quidem, modi fugiat commodi omnis similique, ipsam, id itaque nam animi odio consequuntur officiis. Maxime sit fugit error ducimus quaerat eius totam magnam voluptatem tempore accusantium expedita cum, excepturi dignissimos veniam iste, omnis illo officiis voluptatibus aperiam earum veritatis quo assumenda velit ipsa. Sapiente, reprehenderit. Provident impedit perferendis dicta assumenda accusantium, quasi rerum.</p>
-			</div>
-		</div> <!-- /row row6 -->
-		<div class="row row3">
-			<div class="col block">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo illum repellat iste architecto perferendis. Similique ratione, debitis natus incidunt dicta sit recusandae architecto voluptatibus eaque, autem possimus quas dolores pariatur.</p>
-			</div>
-			<div class="col block">
-				<p>Ad nulla saepe nemo. Cupiditate nihil eaque ipsa sequi. Excepturi consequatur nihil nulla ratione saepe facilis fuga laboriosam beatae, unde deserunt esse, optio nisi dolorem ex impedit minus obcaecati? Aliquid.</p>
-			</div>
-			<div class="col block">
-				<p>Ea doloribus cupiditate aliquid quod. Optio cum reiciendis dicta temporibus incidunt provident in et impedit doloribus nostrum, excepturi consectetur beatae. Nulla debitis molestiae beatae eveniet iusto corrupti, voluptatibus quis provident.</p>
+			<div class="col">
+				<h6>Heading 6</h6>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quasi debitis possimus saepe distinctio aperiam consequatur maxime ipsam dolor ex atque voluptatem itaque necessitatibus, laboriosam nesciunt, ratione iusto mollitia eum!</p>
+				<p>Sunt itaque, perferendis vitae nostrum ut suscipit soluta! Est explicabo enim qui incidunt soluta nostrum repudiandae odit ad molestiae, omnis eligendi molestias aperiam, laborum temporibus beatae reiciendis. Iste, ipsum, ducimus.</p>
+				<p>Ipsam recusandae commodi, nesciunt ratione in accusamus sit assumenda doloremque doloribus similique sapiente quidem cum eveniet blanditiis saepe reprehenderit quasi tempore quibusdam. Repudiandae ullam vel doloremque maxime, odio consectetur sed.</p>
+				<p>Molestias quas praesentium fugiat, id deserunt quo, esse adipisci necessitatibus laudantium sunt quis hic animi nihil ratione, ullam delectus sapiente vel qui, accusamus itaque! Dolorem quibusdam ipsam impedit, voluptatem laboriosam.</p>
+				<p>Quibusdam ratione laborum quidem nobis excepturi perspiciatis officia tempora possimus deleniti vitae mollitia libero non vel quos ipsam eius consequuntur soluta ipsum molestiae laboriosam, asperiores atque! Voluptate tempora, modi adipisci!</p>
+				<p>Nostrum tenetur consequatur odit qui laboriosam dolores. Dolor repudiandae reiciendis ut, vero commodi architecto blanditiis deleniti eaque quod, ipsam eos nulla sapiente magnam minima accusantium quis quaerat. At, dolorem, tempore!</p>
 			</div>
 		</div>
-<<<<<<< HEAD
-		<div class="col block">
-			<h2 class="h2">Heading 2</h2>
-			<p>Perspiciatis suscipit ducimus distinctio consequuntur. Nesciunt, tenetur, nulla? Illo amet, quia cum, magnam vero cupiditate, sit sed voluptatum praesentium omnis numquam aliquid, totam! Mollitia veritatis veniam laboriosam, eligendi magnam dignissimos neque libero.</p>
-			<p>Laborum magni consequuntur voluptates voluptatem, nostrum, obcaecati illum fugit odio asperiores repudiandae dolorem. Itaque sequi odio magnam quibusdam, nesciunt quia cum doloremque mollitia porro deleniti, minima voluptates! Voluptas vel delectus neque reprehenderit recusandae eius perferendis illum corrupti voluptate doloremque facere, odio fugit dolores. Aut facere recusandae dignissimos, atque!</p>
-		</div>
-		<div class="col block">
-			<h3 class="h3">Heading 3</h3>
-			<p>Vero molestiae quia aliquid molestias autem doloremque unde eum, quod illo, officia expedita neque ea totam numquam dolor itaque necessitatibus ullam repellat suscipit, accusantium fugiat nam. Sint illum ipsa, earum veritatis, est nisi itaque mollitia consectetur odit tempore amet asperiores distinctio incidunt! Doloremque optio aspernatur quis iste blanditiis veritatis autem nulla accusantium mollitia, dicta voluptates voluptate corrupti earum perspiciatis aperiam tempore quae rem, fugiat, nihil dolorum ullam, architecto molestias. Nesciunt quo reprehenderit explicabo, impedit eos enim. Ipsa autem rerum atque?</p>
-		</div>
-		<div class="col block">
-			<h4 class="h4">Heading 4</h4>
-			<p>Tempore rem labore quasi corporis animi, enim eos possimus reiciendis. Ratione voluptate sequi molestias aperiam tempore culpa impedit natus molestiae similique, cumque amet repellat, ad! Veritatis facilis, quidem, modi fugiat commodi omnis similique, ipsam, id itaque nam animi odio consequuntur officiis. Maxime sit fugit error ducimus quaerat eius totam magnam voluptatem tempore accusantium expedita cum, excepturi dignissimos veniam iste, omnis illo officiis voluptatibus aperiam earum veritatis quo assumenda velit ipsa. Sapiente, reprehenderit. Provident impedit perferendis dicta assumenda accusantium, quasi rerum.</p>
-		</div>
-		<div class="col block">
-			<h5 class="h5">Heading 5</h5>
-			<p>Tempore rem labore quasi corporis animi, enim eos possimus reiciendis. Ratione voluptate sequi molestias aperiam tempore culpa impedit natus molestiae similique, cumque amet repellat, ad! Veritatis facilis, quidem, modi fugiat commodi omnis similique, ipsam, id itaque nam animi odio consequuntur officiis. Maxime sit fugit error ducimus quaerat eius totam magnam voluptatem tempore accusantium expedita cum, excepturi dignissimos veniam iste, omnis illo officiis voluptatibus aperiam earum veritatis quo assumenda velit ipsa. Sapiente, reprehenderit. Provident impedit perferendis dicta assumenda accusantium, quasi rerum.</p>
-		</div>
-		<div class="col block">
-			<h6 class="h6">Heading 6</h6>
-			<p>Tempore rem labore quasi corporis animi, enim eos possimus reiciendis. Ratione voluptate sequi molestias aperiam tempore culpa impedit natus molestiae similique, cumque amet repellat, ad! Veritatis facilis, quidem, modi fugiat commodi omnis similique, ipsam, id itaque nam animi odio consequuntur officiis. Maxime sit fugit error ducimus quaerat eius totam magnam voluptatem tempore accusantium expedita cum, excepturi dignissimos veniam iste, omnis illo officiis voluptatibus aperiam earum veritatis quo assumenda velit ipsa. Sapiente, reprehenderit. Provident impedit perferendis dicta assumenda accusantium, quasi rerum.</p>
-		</div>
-	</div> <!-- /row row6 -->
-	<h2 class="h2">Row Row3</h2>
-	<div class="row row3">
-		<div class="col block">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo illum repellat iste architecto perferendis. Similique ratione, debitis natus incidunt dicta sit recusandae architecto voluptatibus eaque, autem possimus quas dolores pariatur.</p>
-		</div>
-		<div class="col block">
-			<p>Ad nulla saepe nemo. Cupiditate nihil eaque ipsa sequi. Excepturi consequatur nihil nulla ratione saepe facilis fuga laboriosam beatae, unde deserunt esse, optio nisi dolorem ex impedit minus obcaecati? Aliquid.</p>
-		</div>
-		<div class="col block">
-			<p>Ea doloribus cupiditate aliquid quod. Optio cum reiciendis dicta temporibus incidunt provident in et impedit doloribus nostrum, excepturi consectetur beatae. Nulla debitis molestiae beatae eveniet iusto corrupti, voluptatibus quis provident.</p>
-		</div>
-	</div>
-	<h2 class="h2">Row With x/6 Columns</h2>
-	<div class="row">
-		<div class="col col-4-6">
-			<h3>Col Col-4-6</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit harum deleniti nam molestiae distinctio, mollitia voluptatem necessitatibus officia, culpa, adipisci illum ipsam dignissimos rem reprehenderit quaerat cupiditate quam tempore? Quaerat.</p>
-		</div>
-		<div class="col col-2-6 bg-accent-200">
-			<h3>Col Col-2-6</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque labore error repellat magnam, ut, iusto animi, cum reiciendis, neque quae exercitationem dolorem ullam. Ullam ipsum modi dolores, quis assumenda cupiditate?</p>
-		</div>
-	</div>
-	<h2 class="h2">Row With x/12 Columns</h2>
-	<div class="row">
-		<div class="col col-4-12">
-			<h3>Col Col-4-12</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ullam officiis sequi expedita asperiores veniam hic molestiae fugit earum voluptates. Dolorem, quo? Voluptate, magni. Maxime, voluptatum reiciendis ipsam in quasi.</p>
-		</div>
-		<div class="col col-8-12 bg-tertiary-200">
-			<h3>Col Col-8-12</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt adipisci similique aperiam vero officia sequi optio non mollitia harum vel impedit a commodi, provident, nemo fuga, exercitationem doloribus dolore velit.</p>
-		</div>
-	</div>
-=======
->>>>>>> f905bf266e557ca6c0569d18d08b3613b31dd15f
 	</main>
 <?php include "templates/footer.php"; ?>

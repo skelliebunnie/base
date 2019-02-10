@@ -14,3 +14,6 @@ body {
 	max-width: 100%;
 	width: 100%;
 }
+
+@import 'global/functions',
+				'global/mixins';
