@@ -1,4 +1,4 @@
-@mixin palette($colorMap: $coreColors, $color: 'primary', $colorName: 'primary', $harmony: 'analogous', $rangeType: 'range', $scaleColors: 17) {
+@mixin palette($colorMap: $coreColors, $color: 'primary', $colorName: 'primary', $harmony: 'analogous', $accent: false, $rangeType: 'range', $scaleColors: 17) {
 
 	$primaryColor: getColor($color,$colorMap);
 
@@ -9,7 +9,7 @@
 		$colors: $colorMap;
 
 	} @else {
-		$colors: harmony($color: $primaryColor, $colorName: $colorName, $harmony: $harmony);
+		$colors: harmony($color: $primaryColor, $colorName: $colorName, $harmony: $harmony, $accent: $accent);
 	}
 
 	@if $rangeType == 'tintshade' {

@@ -1,0 +1,24 @@
+.site-title {
+	@extend .h1;
+	line-height: 1.3rem;
+	padding: map-get($defaults, 'padding');
+	margin: map-get($defaults, 'padding');
+}
+
+.sub-title {
+	line-height: 1rem;
+	padding: map-get($defaults, 'padding');
+	margin: map-get($defaults, 'padding');
+}
+
+.title {
+	padding-left: 1em;
+	margin-left: 0.15em;
+	margin-right: 0.15em;
+	border-top: 3px solid $heading-color;
+	border-bottom: 3px solid $heading-color;
+	@include mq($from: tablet) {
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
+}

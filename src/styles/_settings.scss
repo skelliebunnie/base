@@ -3,7 +3,7 @@
 /* ====================================
 	FONTS
  * ==================================== */
-@import url('https://fonts.googleapis.com/css?family=Asap:700|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Asap:400,700|Montserrat');
 $fonts: (
 	'copy': unquote("'Montserrat', sans-serif"),
 	'heading': unquote("'Asap', sans-serif")
@@ -25,7 +25,7 @@ $coreColors: (
 @import "color/functions";
 @import "color/mixins";
 // quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
-@include palette($coreColors, $color: 'primary', $harmony: 'split', $rangeType: 'default');
+@include palette($coreColors, $color: 'primary', $rangeType: 'adaptive');
 
 /* ====================================
 	GENERAL DEFAULTS
@@ -37,6 +37,32 @@ $defaults: (
 	'border-width': 1px,
 	'color-light': lightenColor(getColor('neutral-100'), 80),
 	'color-dark': darkenColor(getColor('neutral-700'), 80)
+) !default;
+
+$default-pad: map-get($defaults, 'padding');
+$default-margin: map-get($defaults, 'margin');
+$padding-sizes: (
+	'xs': $default-pad * 0.5,
+	'sm': $default-pad * 0.8,
+	'md': $default-pad,
+	'lg': $default-pad * 1.5,
+	'xl': $default-pad * 2
+) !default;
+
+$margin-sizes: (
+	'xs': $default-margin * 0.5,
+	'sm': $default-margin * 0.8,
+	'md': $default-margin,
+	'lg': $default-margin * 1.5,
+	'xl': $default-margin * 2
+) !default;
+
+$hr-sizes: (
+	'xs': 1px,
+	'sm': 2px,
+	'md': 3px,
+	'lg': 5px,
+	'xl': 7px
 ) !default;
 
 /* ====================================
@@ -64,7 +90,10 @@ $heading-color: getColor('accent-500') !default;
  * ==================================== */
 // for screen widths >= 1024; < 1024 == center;
 $site-header--text-position: left;
+
 $site-header--bg-color: getColor('primary', $coreColors) !default;
+$site-header--bg-image: 'https://picsum.photos/1920/800?image=940&gravity=north' !default;
+
 $site-title-a--color: getColor('accent-100') !default;
 
 /* ====================================
@@ -74,3 +103,19 @@ $site-nav--bg-color: getColor('tertiary-400') !default;
 $site-nav-hover--bg-color: getColor('accent-400') !default;
 $site-nav-active--bg-color: getColor('primary-400') !default;
 
+/* ====================================
+	TABLES
+ * ==================================== */
+$table-thead-th--bg-color: getColor('accent-700') !default;
+$table-tbody-th--bg-color: getColor('accent-100') !default;
+$table-tfoot-th--bg-color: getColor('accent-400') !default;
+
+// ZEBRA STRIPES
+$table-striped--bg-color: getColor('accent-100') !default;
+
+// BORDERS
+$table--border-color: getColor('accent-700') !default;
+
+// top, bottom; NON-STANDARD: left, right, top-outside, bottom-outside;
+$caption--caption-side: bottom;
+$caption--text-align: right;

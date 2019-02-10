@@ -34,31 +34,6 @@ $colors: map-values($palette);
 /*
 	TYPOGRAPHY & ALIGNMENT
 */
-$text-positions: ('left', 'center', 'right');
-$border-sides: ('top', 'right', 'bottom', 'left');
-$border-corners: ('top-left', 'top-right', 'bottom-right', 'bottom-left');
-$other: ('around', 'x', 'y');
-
-$pad: map-get($defaults, 'padding');
-$padding-sizes: (
-	'xs': $pad * 0.5,
-	'sm': $pad * 0.8,
-	'md': $pad,
-	'lg': $pad * 1.5,
-	'xl': $pad * 2
-);
-
-$margin: map-get($defaults, 'margin');
-$margin-sizes: (
-	'xs': $margin * 0.5,
-	'sm': $margin * 0.8,
-	'md': $margin,
-	'lg': $margin * 1.5,
-	'xl': $margin * 2
-);
-
-$justify: ('start', 'center', 'end', 'space-between', 'space-around', 'space-evenly');
-$align: ('stretch','center', 'start', 'end');
 
 .text {
 	@each $position in $text-positions {
@@ -89,22 +64,22 @@ $align: ('stretch','center', 'start', 'end');
 .pad {
 	@each $position in $border-sides {
 		&-#{$position} {
-			padding-#{$position}: $pad;
+			padding-#{$position}: $default-pad;
 		}
 	}
 
 	@each $position in $other {
 		&-#{$position} {
 			@if $position == 'around' { 
-				padding: $pad; 
+				padding: $default-pad; 
 			}
 			@if $position == 'x' { 
-				padding-left: $pad;
-				padding-right: $pad;
+				padding-left: $default-pad;
+				padding-right: $default-pad;
 			}
 			@if $position == 'y' {
-				padding-top: $pad;
-				padding-bottom: $pad;
+				padding-top: $default-pad;
+				padding-bottom: $default-pad;
 			}
 		}
 	}
@@ -112,17 +87,12 @@ $align: ('stretch','center', 'start', 'end');
 	@each $size,$pad in $padding-sizes {
 		@each $position in $border-sides {
 			&-#{$size}-#{$position} {
-				padding-#{$position}: $pad;
+				padding-#{$position}: ($pad * 2);
 			}
 		}
 
 		@each $position in $other {
 			&-#{$size}-#{$position} {
-				@if $position == 'top' { padding-top: $pad; }
-				@if $position == 'left' { padding-left: $pad; }
-				@if $position == 'bottom' { padding-bottom: $pad; }
-				@if $position == 'right' { padding-right: $pad; }
-
 				@if $position == 'around' { 
 					padding: $pad; 
 				}
@@ -142,20 +112,20 @@ $align: ('stretch','center', 'start', 'end');
 .margin {
 	@each $position in $border-sides {
 		&-#{$position} {
-			padding-#{$position}: $margin;
+			padding-#{$position}: $default-margin;
 		}
 	}
 
 	@each $position in $other {
 		&-#{$position} {
-			@if $position == 'around' { padding: $margin; }
+			@if $position == 'around' { padding: $default-margin; }
 			@if $position == 'x' { 
-				padding-left: $margin;
-				padding-right: $margin;
+				padding-left: $default-margin;
+				padding-right: $default-margin;
 			}
 			@if $position == 'y' {
-				padding-top: $margin;
-				padding-bottom: $margin;
+				padding-top: $default-margin;
+				padding-bottom: $default-margin;
 			}
 		}
 	}
@@ -163,7 +133,7 @@ $align: ('stretch','center', 'start', 'end');
 	@each $size,$margin in $margin-sizes {
 		@each $position in $border-sides {
 			&-#{$size}-#{$position} {
-				margin: $margin;
+				margin-#{$position}: $margin;
 			}
 		}
 		@each $position in $other {

@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 	max-width: 100%;
 	text-align: center;
-	@include bgImage();
+	@include bgImage($url: $site-header--bg-image);
 	@include overlay();
 
 	@include mq($from: 'tablet') {
@@ -14,4 +14,8 @@
 
 .site-title a {
 	color: $site-title-a--color;
+}
+
+.sub-title {
+	font-weight: 400;
 }

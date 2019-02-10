@@ -1,0 +1,38 @@
+$n: 3;
+@for $i from 1 through 6 {
+$m: map-get($defaults, 'margin'); $p: map-get($defaults, 'padding');
+	h#{$i}, .h#{$i} {
+		font-size: $n * 0.8em;
+		line-height: $n * 0.35em;
+		margin: $m;
+		margin-bottom: $m * 1.2;
+		padding: $p;
+
+		font-family: getVal('heading', $fonts);
+		font-weight: 700;
+		vertical-align: middle;
+		letter-spacing: normal;
+		flex: 1 0 100%;
+	}
+
+	@if($i == 2) {
+		.h2 {
+			margin: 0;
+		}
+	}
+	$n: $n * 0.9;
+}
+.h2 {
+	background-color: $heading-color;
+	color: getContrast($heading-color);
+}
+
+.h3, .h4, .h5 {
+	padding-left: map-get($defaults, 'margin');
+	margin-left: map-get($defaults, 'margin');
+	border-left: 0.35em solid $heading-color;
+}
+
+.h6 {
+	color: getDarkest($heading-color);
+}

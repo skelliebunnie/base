@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title><?php echo($page_title); ?></title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,5 +21,6 @@
 			<li class='nav-item'><a href="./index.php">Home</a></li>
 			<li class='nav-item'><a href="./grid-layout.php">Grid</a></li>
 			<li class='nav-item'><a href="./colors.php">Colors</a></li>
+			<li class='nav-item'><a href="./tables.php">Tables</a></li>
 		</ul>
 	</nav>

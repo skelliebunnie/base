@@ -1,21 +1,16 @@
-$coreColors: (
-	primary: #E0CBA8,
-	secondary: #779FA1,
-	tertiary: #88498F,
-	accent: #FF6542,
-	neutral: #564154,
-);
+// $coreColors: (
+// 	primary: #ECE4B7,
+// 	secondary: #E6AA68,
+// 	tertiary: #7FB069,
+// 	accent: #D36135,
+// 	neutral: #3F3F37
+// );
 
 @import 'settings';
 @import 'global';
 
-$colors: map-values($palette);
-
 %colors {
-	// display: flex;
-	// flex-flow: row wrap;
-	// justify-content: center;
-	// align-items: start;
+	$colors: map-values($palette);
 
 	& p {
 		position: relative;
@@ -128,10 +123,8 @@ $h: 'quad';
 	}
 }
 
-#colors-400 {
-	@include palette($coreColors, $color: 'primary', $harmony: 'compound', $rangeType: 'default');
-
-	$n: 1;
+%colors-400 {
+	$colors: map-values($palette);
 	p {
 		padding: 0;
 		margin: 0;
@@ -147,6 +140,104 @@ $h: 'quad';
 			font-size: 1rem;
 		}
 	}
+}
+
+$clr400: 'primary';
+#analogous-400 {
+	$clr400: 'primary';
+	@include palette($coreColors, $color: $clr400, $harmony: "analogous", $accent: true);
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#compound-400 {
+	$clr400: 'primary';
+	@include palette($coreColors, $color: $clr400, $harmony: "compound", $accent: true);
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#tetrad-400 {
+	$clr400: 'primary';
+	@include palette($coreColors, $color: $clr400, $harmony: "tetrad");
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#quadratic-400 {
+	$clr400: 'primary';
+	@include palette($coreColors, $color: $clr400, $harmony: "quadratic");
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#triad-400 {
+	$clr400: 'primary';
+	@include palette($coreColors, $color: $clr400, $harmony: "triad", $accent: true);
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#split-400 {
+	$clr400: 'primary';
+	@include palette($coreColors, $color: $clr400, $harmony: "split", $accent: true);
+	@extend %colors-400;
+	$n: 1;
 	@each $name,$color in $palette {
 		@if endsWith($name,'400') {
 			p:nth-child(#{$n}) {

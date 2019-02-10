@@ -6,7 +6,10 @@
 				"grid/sass-mq",
 			  "grid/mq";
 
-@import "typography/typography";
+@import "typography/typography",
+				"typography/headers",
+				"typography/titles",
+				"typography/mq";
 
 /* 
 	COMPONENTS 

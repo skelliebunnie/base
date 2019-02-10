@@ -2,7 +2,13 @@
 	border: 0;
 	outline: 0;
 	width: 95%;
-	height: 1px;
+	height: map-get($hr-sizes, 'md');
+}
+
+@each $size,$height in $hr-sizes {
+	.hr-#{$size} {
+		height: $height;
+	}
 }
 
 @each $name,$color in $palette {

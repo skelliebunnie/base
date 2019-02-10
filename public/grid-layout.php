@@ -4,8 +4,12 @@
 	include "templates/sidebar.php";
 ?>
 	<main class="site-content">
-		<h2 class="h2">Row Row6</h2>
-		<p>3 columns on tablets, 5 on desktop (1280+ width), and 6 on wide (1920+)</p>
+		<div class="row">
+			<div class="col col-12 no-pad">
+				<h2 class="h2">Row Row6</h2>
+				<p>3 columns on tablets, 5 on desktop (1280+ width), and 6 on wide (1920+)</p>
+			</div>
+		</div>
 		<div class="row row3-md row5-lg row6-xl pad col-no-pad">
 			<div class="col">
 				<h1>Heading 1</h1>

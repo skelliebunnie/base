@@ -4,9 +4,9 @@
 .site-content { 
 	grid-area: site-content;
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: start;
+	flex-flow: column wrap;
+	justify-content: start;
+	align-items: center;
 }
 .site-footer { grid-area: site-footer; }
 
@@ -16,6 +16,7 @@
 	display: grid;
 	width: 100vw;
 	height: 100vh;
+	grid-template-rows: repeat(auto-fill, min-content);
 	grid-template-areas:
 		"site-header"
 		"site-nav"
@@ -24,7 +25,7 @@
 		"site-footer";
 
 	@include mq($from: "tablet") {
-		grid-template-rows: 1.5fr .5fr 8fr 1fr;
+		grid-template-rows: 1.5fr .5fr 9fr .5fr;
 		grid-template-columns: min-content 1fr;
 		grid-template-areas:
 		"site-header site-header"

@@ -10,9 +10,13 @@
 				"grid/sass-mq",
 			  "grid/mq";
 
-@import "typography/typography";
+@import "typography/typography",
+				"typography/headers",
+				"typography/titles",
+				"typography/mq";
 
-@import "components/hr";
+@import "components/hr",
+				"components/image";
 
 // has to be imported after everything else or
 // anything defined in the helper classes will be overridden

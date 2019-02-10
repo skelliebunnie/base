@@ -426,7 +426,7 @@
 	@return $range;
 }
 
-@function harmony($color, $colorName: "primary", $harmony: "analogous") {
+@function harmony($color, $colorName: "primary", $harmony: "analogous", $accent: false) {
 	$colors: ();
 	$main: $color; $complement: complement($color);
 	$compound: adjust-hue($main, 147deg);
@@ -436,7 +436,7 @@
 	// quad(ratic) = square tetradic harmony
 	$tetradType: 0;
 	@if $harmony == 'tetrad' or $harmony == 'tetradic' {
-		$tetradType: 45;
+		$tetradType: 60;
 	} @else if $harmony == 'quad' or $harmony == 'quadratic' { 
 		$tetradType: 90;
 		$harmony: 'tetrad';
@@ -523,11 +523,16 @@
 				//$hue: 28, 
 				$lightness: $lScale4, 
 				$saturation: $sScale4
-			),
-		)
+			)
+		) // end compound
 	);
 	
 	$colors: map-get($harmonyPalettes, $harmony);
+
+	@if $accent != false and $accent != 'false' and $harmony != 'tetrad' { 
+		$colors: map-merge($colors, (unquote("#{$colorName}-complement"): $complement));
+	}
+
 	$palette: map-merge($palette, $colors);
 
 	@return $palette;
