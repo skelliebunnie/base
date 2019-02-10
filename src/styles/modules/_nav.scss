@@ -1,12 +1,11 @@
+/* ====================================
+		MODULE: NAV
+ * ==================================== */
 nav {
 	padding: 0;
 	margin: 0;
 	width: 100%;
 	box-sizing: border-box;
-}
-
-.site-nav {
-	background-color: $site-nav--bg-color;
 }
 
 .nav {
@@ -43,6 +42,12 @@ nav {
 	}
 	&:active {
 		background-color: $site-nav-active--bg-color;
-		//a { color: getContrast($site-nav-active--bg-color); }
 	}
+}
+
+/* ====================================
+		MODULE: NAV: SITE-NAV
+ * ==================================== */
+.site-nav {
+	background-color: $site-nav--bg-color;
 }

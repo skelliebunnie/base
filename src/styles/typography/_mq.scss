@@ -1,4 +1,6 @@
-// MEDIA QUERIES
+/* ====================================
+		TYPOGRAPHY: MEDIA QUERIES
+ * ==================================== */
 @include mq($from: desktop) {
 	$n: 3;
 	@for $i from 1 through 6 {

@@ -1,3 +1,6 @@
+/* ====================================
+		LAYOUT: GRID AREAS
+ * ==================================== */
 .site-header { grid-area: site-header; }
 .site-nav { grid-area: site-nav; }
 .site-sidebar { grid-area: site-sidebar; }
@@ -12,7 +15,12 @@
 
 .site-sidebar > .col { padding: 0; }
 
+/* ====================================
+		LAYOUT: PAGE CONTAINER
+ * ==================================== */
 #page-container {
+	padding: 0;
+	margin: 0;
 	display: grid;
 	width: 100vw;
 	height: 100vh;
@@ -23,50 +31,6 @@
 		"site-content"
 		"site-sidebar"
 		"site-footer";
-
-	@include mq($from: "tablet") {
-		grid-template-rows: 1.5fr .5fr 9fr .5fr;
-		grid-template-columns: min-content 1fr;
-		grid-template-areas:
-		"site-header site-header"
-		"site-sidebar site-nav"
-		"site-sidebar site-content"
-		"site-footer site-footer";
-
-		&.sidebar-left {
-			grid-template-areas:
-				"site-header site-header"
-				"site-sidebar site-nav"
-				"site-sidebar site-content"
-				"site-footer site-footer";
-
-			&.sidebar-fullheight {
-				grid-template-areas:
-					"site-sidebar site-header"
-					"site-sidebar site-nav"
-					"site-sidebar site-content"
-					"site-sidebar site-footer";
-			}
-		}
-
-		&.sidebar-right {
-			grid-template-areas:
-				"site-header site-header"
-				"site-nav site-sidebar"
-				"site-content site-sidebar"
-				"site-footer site-footer";
-
-			&.sidebar-fullheight {
-				grid-template-areas:
-					"site-header site-sidebar"
-					"site-nav site-sidebar"
-					"site-content site-sidebar"
-					"site-footer site-sidebar";
-			}
-		}
-	}
-
-	@include mq($from: "desktop") {
-		grid-template-columns: max-content 1fr;
-	}
 }
+
+@import "mq";

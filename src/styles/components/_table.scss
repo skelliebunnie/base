@@ -1,3 +1,6 @@
+/* ====================================
+		COMPONENT: TABLE
+ * ==================================== */
 table {
 	table-layout: fixed;
 	width: 100%;
@@ -40,6 +43,9 @@ table {
 	}
 }
 
+/* ====================================
+		COMPONENT: TABLE: BORDERS
+ * ==================================== */
 .header-row-borders {
 	thead tr + tr {
 		border-top: 1px solid getContrast($table-thead-th--bg-color);

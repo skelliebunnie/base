@@ -1,3 +1,6 @@
+/* ====================================
+		TYPOGRAPHY
+ * ==================================== */
 body {
 	font-family: getVal('copy', $fonts);
 	color: getVal('text-dark', $defaults);
@@ -27,6 +30,9 @@ p {
 	line-height: 1.3rem;
 }
 
+/* ====================================
+		TYPOGRAPHY: TEXT COLUMNS
+ * ==================================== */
 .text-columns {
 	$max: null;
 	@if $max-columns > 6 { $max: 6; } @else { $max: $max-columns; }

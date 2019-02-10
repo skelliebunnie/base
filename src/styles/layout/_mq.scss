@@ -1,0 +1,83 @@
+/* ====================================
+		LAYOUT: MEDIA QUERIES: PAGE CONTAINER
+ * ==================================== */
+
+#page-container {
+	@include mq($from: "tablet") {
+		grid-template-rows: 1.5fr .5fr 9fr .5fr;
+		grid-template-columns: min-content 1fr;
+		grid-template-areas:
+		"site-header site-header"
+		"site-sidebar site-nav"
+		"site-sidebar site-content"
+		"site-footer site-footer";
+
+		&.sidebar-left {
+			grid-template-areas:
+				"site-header site-header"
+				"site-sidebar site-nav"
+				"site-sidebar site-content"
+				"site-footer site-footer";
+
+			&.sidebar-fullheight {
+				grid-template-areas:
+					"site-sidebar site-header"
+					"site-sidebar site-nav"
+					"site-sidebar site-content"
+					"site-sidebar site-footer";
+			}
+
+			&.to-header {
+				grid-template-areas:
+					"site-sidebar site-header"
+					"site-sidebar site-nav"
+					"site-sidebar site-content"
+					"site-footer site-footer";
+			}
+
+			&.to-footer {
+				grid-template-areas:
+					"site-header site-header"
+					"site-sidebar site-nav"
+					"site-sidebar site-content"
+					"site-sidebar site-footer";
+			}
+		}
+
+		&.sidebar-right {
+			grid-template-areas:
+				"site-header site-header"
+				"site-nav site-sidebar"
+				"site-content site-sidebar"
+				"site-footer site-footer";
+
+			&.sidebar-fullheight {
+				grid-template-areas:
+					"site-header site-sidebar"
+					"site-nav site-sidebar"
+					"site-content site-sidebar"
+					"site-footer site-sidebar";
+			}
+
+			&.to-header {
+				grid-template-areas:
+					"site-header site-sidebar"
+					"site-nav site-sidebar"
+					"site-content site-sidebar"
+					"site-footer site-footer";
+			}
+
+			&.to-footer {
+				grid-template-areas:
+					"site-header site-header"
+					"site-nav site-sidebar"
+					"site-content site-sidebar"
+					"site-footer site-sidebar";
+			}
+		}
+	}
+
+	@include mq($from: "desktop") {
+		grid-template-columns: max-content 1fr;
+	}
+}

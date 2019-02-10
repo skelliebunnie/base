@@ -1,4 +1,27 @@
-// sm (xs is for anything smaller);
+/* ====================================
+		GRID: MEDIA QUERY: XS - mobile (>= 414px)
+ * ==================================== */
+@include mq($from: 'mobile') {
+	@for $i from 1 through $max-columns {
+		.row#{$i}-xs { 
+			flex-flow: row wrap;
+			align-items: stretch;
+		}
+
+		.row#{$i}-xs > .col,
+		.col-xs-#{$i} {
+			flex: 1 0 (100% / $i);
+		}
+
+		.column.col#{$i} {
+			width: 100% / $i;
+		}
+	}
+}
+
+/* ====================================
+		GRID: MEDIA QUERY: SM - mobileLandscape (>=736px)
+ * ==================================== */
 @include mq($from: 'mobileLandscape') {
 	@for $i from 1 through $max-columns {
 		.row#{$i}-sm > .col,
@@ -8,7 +31,9 @@
 	}
 }
 
-// md; 1st time .text-columns is defined
+/* ====================================
+		GRID: MEDIA QUERY: MD - tablet (>=1024px)
+ * ==================================== */
 @include mq($from: 'tablet') {
 	.grid { display: grid; }
 
@@ -58,7 +83,9 @@
 	}
 }
 
-// lg
+/* ====================================
+		GRID: MEDIA QUERY: LG - desktop (>= 1280px)
+ * ==================================== */
 @include mq($from: 'desktop') {
 	// starting on desktop, all DEFAULT .col's can be whatever %
 	@for $i from 1 through $max-columns {
@@ -84,7 +111,9 @@
 	}
 }
 
-// xl
+/* ====================================
+		GRID: MEDIA QUERY: XL - widescreen (>= 1920)
+ * ==================================== */
 @include mq($from: 'wide') {
 	@for $i from 1 through $max-columns {
 		.row#{$i}-xl > .col { flex: 1 0 (100% / $i); }

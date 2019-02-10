@@ -1,6 +1,10 @@
-/*
-	COLORS
-*/
+/* ====================================
+		HELPERS
+		1. bg, border, text colors
+		2. Typography & alignment
+		3. Padding
+		4. Margin
+ * ==================================== */
 $colorNames: map-keys($palette);
 $colors: map-values($palette);
 
@@ -31,9 +35,9 @@ $colors: map-values($palette);
 .text-dark { color: getVal('color-dark', $defaults); }
 .text-light { color: getVal('color-light', $defaults); }
 
-/*
-	TYPOGRAPHY & ALIGNMENT
-*/
+/* ====================================
+		HELPERS: TYPOGRAPHY & ALIGNMENT
+ * ==================================== */
 
 .text {
 	@each $position in $text-positions {
@@ -53,6 +57,9 @@ $colors: map-values($palette);
 	}
 }
 
+/* ====================================
+		HELPERS: PADDING
+ * ==================================== */
 .no {
 	&-pad { padding: 0; }
 	&-margin { margin: 0; }
@@ -109,6 +116,9 @@ $colors: map-values($palette);
 	}
 }
 
+/* ====================================
+		HELPERS: MARGIN
+ * ==================================== */
 .margin {
 	@each $position in $border-sides {
 		&-#{$position} {

@@ -1,17 +1,13 @@
-// FOR DEFINING VARIABLES THAT CAN BE CHANGED
+//* ====================================
+//		SETTINGS
+//	For defining VARIABLES [& placeholders?] (only)!!
+//	Do NOT define any classes, &c.
+//	Otherwise they'll be repeated on every import
+//* ==================================== */
 
-/* ====================================
-	FONTS
- * ==================================== */
-@import url('https://fonts.googleapis.com/css?family=Asap:400,700|Montserrat');
-$fonts: (
-	'copy': unquote("'Montserrat', sans-serif"),
-	'heading': unquote("'Asap', sans-serif")
-) !default;
-
-/* ====================================
-	COLORS
- * ==================================== */
+//* ====================================
+//		COLORS
+//* ====================================
 // if using a different name for the map, update @include palette();
 $coreColors: (
 	primary: #E0CBA8,
@@ -27,9 +23,19 @@ $coreColors: (
 // quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
 @include palette($coreColors, $color: 'primary', $rangeType: 'adaptive');
 
-/* ====================================
-	GENERAL DEFAULTS
- * ==================================== */
+//* ====================================
+//		FONTS & TYPOGRAPHY
+//* ====================================
+$fonts: (
+	'copy': unquote("'Montserrat', sans-serif"),
+	'heading': unquote("'Asap', sans-serif")
+) !default;
+
+$heading-color: getColor('accent-500') !default;
+
+//* ====================================
+//		GENERAL DEFAULTS
+//* ====================================
 $defaults: (
 	'padding': 0.75rem,
 	'margin': 0.75rem,
@@ -65,9 +71,9 @@ $hr-sizes: (
 	'xl': 7px
 ) !default;
 
-/* ====================================
-	GRID & MEDIA QUERIES
- * ==================================== */
+//* ====================================
+//		GRID & MEDIA-QUERY BREAKPOINTS
+//* ====================================
 $mq-breakpoints: (
 	'mobile': 414px,
 	'mobileLandscape': 736px,
@@ -79,15 +85,9 @@ $mq-breakpoints: (
 $max-columns: 12 !default;
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide) !default;
 
-/* ====================================
-	TYPOGRAPHY VARIABLES
- * ==================================== */
-
-$heading-color: getColor('accent-500') !default;
-
-/* ====================================
-	SITE HEADER
- * ==================================== */
+//* ====================================
+//		SITE HEADER
+//* ====================================
 // for screen widths >= 1024; < 1024 == center;
 $site-header--text-position: left;
 
@@ -96,16 +96,16 @@ $site-header--bg-image: 'https://picsum.photos/1920/800?image=940&gravity=north'
 
 $site-title-a--color: getColor('accent-100') !default;
 
-/* ====================================
-	SITE-WIDE NAV
- * ==================================== */
+//* ====================================
+//		SITE-NAV
+//* ====================================
 $site-nav--bg-color: getColor('tertiary-400') !default;
 $site-nav-hover--bg-color: getColor('accent-400') !default;
 $site-nav-active--bg-color: getColor('primary-400') !default;
 
-/* ====================================
-	TABLES
- * ==================================== */
+//* ====================================
+//		TABLE
+//* ====================================
 $table-thead-th--bg-color: getColor('accent-700') !default;
 $table-tbody-th--bg-color: getColor('accent-100') !default;
 $table-tfoot-th--bg-color: getColor('accent-400') !default;

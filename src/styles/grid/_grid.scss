@@ -1,54 +1,13 @@
-#page-container {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	max-width: 100%;
-}
+/* ====================================
+		GRID
+ * ==================================== */
+@import "grid-base";
 
-.grid,
 .row,
 .flex {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: stretch;
-	align-items: start;
-	max-width: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+	@extend %row;
 }
 
-.column {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: stretch;
-	justify-content: stretch;
-}
+.column { @extend %column; }
 
-.col {
-	flex: 1;
-	width: 100%;
-	padding: 1rem;
-}
-
-// allows for setting less than 50% width for columns on mobile sizes
-// MUST use rowN-xs / col-xs-N to define this!
-@for $i from 1 through $max-columns {
-	.row#{$i}-xs { 
-		flex-flow: row wrap;
-		align-items: stretch;
-	}
-
-	.row#{$i}-xs > .col,
-	.col-xs-#{$i} {
-		flex: 1 0 (100% / $i);
-	}
-
-	.column.col#{$i} {
-		width: 100% / $i;
-	}
-}
+.col { @extend %col; }
