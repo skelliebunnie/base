@@ -4,7 +4,14 @@
 	include "templates/sidebar.php";
 ?>
 <main class="site-content pad-xl-around">
-	<h2>CONTENT HERE</h2>
+	<nav class="nav">
+		<ul class="nav nav-horizontal">
+			<li class="nav-item"><a href="#">Test A</a></li>
+			<li class="nav-item"><a href="#">Test B</a></li>
+			<li class="nav-item"><a href="#">Test C</a></li>
+			<li class="nav-item"><a href="#">Test D</a></li>
+		</ul>
+	</nav>
 	<div class="row row2-sm row4-md row6-lg row8-xl text-center">
 		<div class="col bg-primary-400">Column 1</div>
 		<div class="col bg-secondary-400">Column 2</div>

@@ -14,6 +14,9 @@ $colors: map-values($palette);
 	.bg-#{$name} {
 		background-color: $val;
 		color: getContrast($val);
+		a {
+			color: getContrast($val);
+		}
 	}
 
 	.border-#{$name} { border: 1px solid $val; }
@@ -23,10 +26,12 @@ $colors: map-values($palette);
 .bg-dark {
 	background-color: getVal('color-dark', $defaults);
 	color: getContrast(getVal('color-dark', $defaults));
+	a { color: getContrast(getVal('color-dark', $defaults)); }
 }
 .bg-light {
 	background-color: getVal('color-light', $defaults);
 	color: getContrast(getVal('color-light', $defaults));
+	a { color: getContrast(getVal('color-light', $defaults)); }
 }
 
 .border-dark { border-color: getVal('color-dark', $defaults); }

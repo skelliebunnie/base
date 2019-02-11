@@ -32,17 +32,20 @@ nav {
 	a {
 		flex: 1;
 		padding: map-get($defaults, 'padding');
-		color: getContrast($site-nav--bg-color);
+		
+		.site-nav & {
+			color: getContrast($site-nav--bg-color);
+		}
 	}
 
 	&:hover {
 		cursor: pointer;
-		background-color: $site-nav-hover--bg-color;
-		a { color: getContrast($site-nav-hover--bg-color); }
+
+		.site-nav & { background-color: $site-nav-hover--bg-color; }
+		.site-nav & a { color: getContrast($site-nav-hover--bg-color); }
 	}
-	&:active {
-		background-color: $site-nav-active--bg-color;
-	}
+
+	.site-nav &:active { background-color: $site-nav-active--bg-color; }
 }
 
 /* ====================================

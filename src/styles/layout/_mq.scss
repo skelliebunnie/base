@@ -12,39 +12,111 @@
 		"site-sidebar site-content"
 		"site-footer site-footer";
 
-		&.sidebar-left {
+		&.sidebar-none {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"site-header"
+				"site-nav"
+				"site-content"
+				"site-footer";
+
+			& .site-sidebar {
+				display: none;
+			}
+		}
+
+		&.vertical {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"site-header"
+				"site-nav"
+				"site-content"
+				"site-sidebar"
+				"site-footer";
+		}
+
+		&.sidebar-fullheight {
+			grid-template-areas:
+				"site-sidebar site-header"
+				"site-sidebar site-nav"
+				"site-sidebar site-content"
+				"site-sidebar site-footer";
+		}
+
+		&.to-header {
+			grid-template-areas:
+				"site-sidebar site-header"
+				"site-sidebar site-nav"
+				"site-sidebar site-content"
+				"site-footer site-footer";
+		}
+
+		&.to-footer {
 			grid-template-areas:
 				"site-header site-header"
 				"site-sidebar site-nav"
 				"site-sidebar site-content"
+				"site-sidebar site-footer";
+		}
+
+		&.sidebar-nav {
+			grid-template-areas:
+				"site-header site-header"
+				"site-nav site-content"
 				"site-footer site-footer";
 
 			&.sidebar-fullheight {
 				grid-template-areas:
-					"site-sidebar site-header"
-					"site-sidebar site-nav"
-					"site-sidebar site-content"
-					"site-sidebar site-footer";
+					"site-nav site-header"
+					"site-nav site-content"
+					"site-nav site-footer";
 			}
 
 			&.to-header {
 				grid-template-areas:
-					"site-sidebar site-header"
-					"site-sidebar site-nav"
-					"site-sidebar site-content"
+					"site-nav site-header"
+					"site-nav site-content"
 					"site-footer site-footer";
 			}
 
 			&.to-footer {
 				grid-template-areas:
 					"site-header site-header"
-					"site-sidebar site-nav"
-					"site-sidebar site-content"
-					"site-sidebar site-footer";
+					"site-nav site-content"
+					"site-nav site-footer";
+			}
+
+			&.sidebar-right {
+				grid-template-areas:
+					"site-header site-header"
+					"site-content site-nav"
+					"site-footer site-footer";
+
+				&.sidebar-fullheight {
+					grid-template-areas:
+						"site-header site-nav"
+						"site-content site-nav"
+						"site-footer site-nav";
+				}
+
+				&.to-header {
+					grid-template-areas:
+						"site-header site-nav"
+						"site-content site-nav"
+						"site-footer site-footer";
+				}
+
+				&.to-footer {
+					grid-template-areas:
+						"site-header site-header"
+						"site-content site-nav"
+						"site-footer site-nav";
+				}
 			}
 		}
 
 		&.sidebar-right {
+			grid-template-columns: 1fr min-content;
 			grid-template-areas:
 				"site-header site-header"
 				"site-nav site-sidebar"
@@ -79,5 +151,9 @@
 
 	@include mq($from: "desktop") {
 		grid-template-columns: max-content 1fr;
+
+		&.sidebar-right {
+			grid-template-columns: 1fr max-content;
+		}
 	}
 }

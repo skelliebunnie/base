@@ -9,13 +9,15 @@ body {
 
 a {
 	text-decoration: none;
-	color: getColor('secondary-400');
+	color: $a--color;
 	font-size: 1rem;
 	line-height: 1.3rem;
+
 	&:hover {
-		color: getColor('primary-400');
+		color: $a-hover--color;
 		@include fade();
 	}
+
 	* > & {
 		font-size: inherit;
 		line-height: inherit;
@@ -28,17 +30,4 @@ p {
 	padding: 0 1em $pad;
 	margin: 0;
 	line-height: 1.3rem;
-}
-
-/* ====================================
-		TYPOGRAPHY: TEXT COLUMNS
- * ==================================== */
-.text-columns {
-	$max: null;
-	@if $max-columns > 6 { $max: 6; } @else { $max: $max-columns; }
-	@for $i from 1 through $max {
-		&-#{$i} {
-			columns: $i;
-		}
-	}
 }

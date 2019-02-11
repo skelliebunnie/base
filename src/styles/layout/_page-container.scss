@@ -7,7 +7,7 @@
 .site-content { 
 	grid-area: site-content;
 	display: flex;
-	flex-flow: column wrap;
+	flex-flow: column nowrap;
 	justify-content: start;
 	align-items: center;
 }

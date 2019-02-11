@@ -1,3 +1,4 @@
+/* NAV, GENERAL */
 /* ====================================
 		GRID: PLACEHOLDERS
  * ==================================== */
@@ -5,223 +6,223 @@
 		COMPONENT: HR
  * ==================================== */
 .hr {
-	border: 0;
-	outline: 0;
-	width: 95%;
-	height: 3px; }
+  border: 0;
+  outline: 0;
+  width: 95%;
+  height: 3px; }
 
 .hr-xs {
-	height: 1px; }
+  height: 1px; }
 
 .hr-sm {
-	height: 2px; }
+  height: 2px; }
 
 .hr-md {
-	height: 3px; }
+  height: 3px; }
 
 .hr-lg {
-	height: 5px; }
+  height: 5px; }
 
 .hr-xl {
-	height: 7px; }
+  height: 7px; }
 
 .hr-primary-100 {
-	background-color: #eee2cf; }
+  background-color: #eee2cf; }
 
 .hr-primary-200 {
-	background-color: #e9dac2; }
+  background-color: #e9dac2; }
 
 .hr-primary-300 {
-	background-color: #e5d3b5; }
+  background-color: #e5d3b5; }
 
 .hr-primary-400 {
-	background-color: #E0CBA8; }
+  background-color: #E0CBA8; }
 
 .hr-primary-500 {
-	background-color: #d1b17d; }
+  background-color: #d1b17d; }
 
 .hr-primary-600 {
-	background-color: #c29853; }
+  background-color: #c29853; }
 
 .hr-primary-700 {
-	background-color: #a17a39; }
+  background-color: #a17a39; }
 
 .hr-secondary-100 {
-	background-color: #dce6e7; }
+  background-color: #dce6e7; }
 
 .hr-secondary-200 {
-	background-color: #c7d8d9; }
+  background-color: #c7d8d9; }
 
 .hr-secondary-300 {
-	background-color: #b3cacb; }
+  background-color: #b3cacb; }
 
 .hr-secondary-400 {
-	background-color: #9fbbbd; }
+  background-color: #9fbbbd; }
 
 .hr-secondary-500 {
-	background-color: #8badaf; }
+  background-color: #8badaf; }
 
 .hr-secondary-600 {
-	background-color: #779FA1; }
+  background-color: #779FA1; }
 
 .hr-secondary-700 {
-	background-color: #628b8d; }
+  background-color: #628b8d; }
 
 .hr-tertiary-100 {
-	background-color: #f1e6f2; }
+  background-color: #f1e6f2; }
 
 .hr-tertiary-200 {
-	background-color: #e3cce5; }
+  background-color: #e3cce5; }
 
 .hr-tertiary-300 {
-	background-color: #d3b0d6; }
+  background-color: #d3b0d6; }
 
 .hr-tertiary-400 {
-	background-color: #c293c8; }
+  background-color: #c293c8; }
 
 .hr-tertiary-500 {
-	background-color: #b276b9; }
+  background-color: #b276b9; }
 
 .hr-tertiary-600 {
-	background-color: #a259aa; }
+  background-color: #a259aa; }
 
 .hr-tertiary-700 {
-	background-color: #88498F; }
+  background-color: #88498F; }
 
 .hr-accent-100 {
-	background-color: #ffd7ce; }
+  background-color: #ffd7ce; }
 
 .hr-accent-200 {
-	background-color: #ffc0b2; }
+  background-color: #ffc0b2; }
 
 .hr-accent-300 {
-	background-color: #ffa996; }
+  background-color: #ffa996; }
 
 .hr-accent-400 {
-	background-color: #ff937a; }
+  background-color: #ff937a; }
 
 .hr-accent-500 {
-	background-color: #ff7c5e; }
+  background-color: #ff7c5e; }
 
 .hr-accent-600 {
-	background-color: #FF6542; }
+  background-color: #FF6542; }
 
 .hr-accent-700 {
-	background-color: #ff3e13; }
+  background-color: #ff3e13; }
 
 .hr-neutral-100 {
-	background-color: #ebe4ea; }
+  background-color: #ebe4ea; }
 
 .hr-neutral-200 {
-	background-color: #d7cad6; }
+  background-color: #d7cad6; }
 
 .hr-neutral-300 {
-	background-color: #c0abbe; }
+  background-color: #c0abbe; }
 
 .hr-neutral-400 {
-	background-color: #a98da6; }
+  background-color: #a98da6; }
 
 .hr-neutral-500 {
-	background-color: #926f8f; }
+  background-color: #926f8f; }
 
 .hr-neutral-600 {
-	background-color: #745872; }
+  background-color: #745872; }
 
 .hr-neutral-700 {
-	background-color: #564154; }
+  background-color: #564154; }
 
 .hr-primary-analogous1-100 {
-	background-color: #f2dbe4; }
+  background-color: #f2dbe4; }
 
 .hr-primary-analogous1-200 {
-	background-color: #eecfda; }
+  background-color: #eecfda; }
 
 .hr-primary-analogous1-300 {
-	background-color: #e9c2d1; }
+  background-color: #e9c2d1; }
 
 .hr-primary-analogous1-400 {
-	background-color: #e5b5c7; }
+  background-color: #e5b5c7; }
 
 .hr-primary-analogous1-500 {
-	background-color: #e0a8bd; }
+  background-color: #e0a8bd; }
 
 .hr-primary-analogous1-600 {
-	background-color: #d17d9d; }
+  background-color: #d17d9d; }
 
 .hr-primary-analogous1-700 {
-	background-color: #c2537c; }
+  background-color: #c2537c; }
 
 .hr-primary-analogous2-100 {
-	background-color: #f2dedb; }
+  background-color: #f2dedb; }
 
 .hr-primary-analogous2-200 {
-	background-color: #eed2cf; }
+  background-color: #eed2cf; }
 
 .hr-primary-analogous2-300 {
-	background-color: #e9c7c2; }
+  background-color: #e9c7c2; }
 
 .hr-primary-analogous2-400 {
-	background-color: #e5bbb5; }
+  background-color: #e5bbb5; }
 
 .hr-primary-analogous2-500 {
-	background-color: #e0afa8; }
+  background-color: #e0afa8; }
 
 .hr-primary-analogous2-600 {
-	background-color: #d1887d; }
+  background-color: #d1887d; }
 
 .hr-primary-analogous2-700 {
-	background-color: #c26053; }
+  background-color: #c26053; }
 
 .hr-primary-analogous3-100 {
-	background-color: #eaeecf; }
+  background-color: #eaeecf; }
 
 .hr-primary-analogous3-200 {
-	background-color: #dfe5b5; }
+  background-color: #dfe5b5; }
 
 .hr-primary-analogous3-300 {
-	background-color: #d9e0a8; }
+  background-color: #d9e0a8; }
 
 .hr-primary-analogous3-400 {
-	background-color: #c6d17d; }
+  background-color: #c6d17d; }
 
 .hr-primary-analogous3-500 {
-	background-color: #b4c253; }
+  background-color: #b4c253; }
 
 .hr-primary-analogous3-600 {
-	background-color: #94a139; }
+  background-color: #94a139; }
 
 .hr-primary-analogous3-700 {
-	background-color: #6d762a; }
+  background-color: #6d762a; }
 
 .hr-primary-analogous4-100 {
-	background-color: #daeecf; }
+  background-color: #daeecf; }
 
 .hr-primary-analogous4-200 {
-	background-color: #d1e9c2; }
+  background-color: #d1e9c2; }
 
 .hr-primary-analogous4-300 {
-	background-color: #c7e5b5; }
+  background-color: #c7e5b5; }
 
 .hr-primary-analogous4-400 {
-	background-color: #bde0a8; }
+  background-color: #bde0a8; }
 
 .hr-primary-analogous4-500 {
-	background-color: #9dd17d; }
+  background-color: #9dd17d; }
 
 .hr-primary-analogous4-600 {
-	background-color: #7cc253; }
+  background-color: #7cc253; }
 
 .hr-primary-analogous4-700 {
-	background-color: #60a139; }
+  background-color: #60a139; }
 
 /* ====================================
 		COMPONENT: IMAGE
  * ==================================== */
 img {
-	width: 100%;
-	border: 0;
-	margin: 0;
-	padding: 0; }
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
 /* ====================================
 		COMPONENT: INLINE
@@ -255,39 +256,39 @@ img {
 		COMPONENT: TABLE
  * ==================================== */
 table {
-	table-layout: fixed;
-	width: 100%;
-	border-collapse: collapse;
-	border: 2px solid #ff3e13;
-	outline: 0;
-	margin: 0 auto; }
-	table thead th {
-		background-color: #ff3e13;
-		color: #fbfafb;
-		font-size: 125%; }
-	table tbody th {
-		background-color: #ffd7ce;
-		color: #110d11; }
-	table tfoot th {
-		background-color: #ff937a;
-		color: #110d11; }
-	table th, table td {
-		padding: 0.4em; }
-	table caption {
-		padding: 0.375rem 0.75rem;
-		font-style: italic;
-		font-size: small;
-		text-align: right;
-		caption-side: bottom; }
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #ff3e13;
+  outline: 0;
+  margin: 0 auto; }
+  table thead th {
+    background-color: #ff3e13;
+    color: #fbfafb;
+    font-size: 125%; }
+  table tbody th {
+    background-color: #ffd7ce;
+    color: #110d11; }
+  table tfoot th {
+    background-color: #ff937a;
+    color: #110d11; }
+  table th, table td {
+    padding: 0.4em; }
+  table caption {
+    padding: 0.375rem 0.75rem;
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    caption-side: bottom; }
 
 .striped tbody tr:nth-child(2n-1) {
-	background-color: #ffd7ce; }
+  background-color: #ffd7ce; }
 
 /* ====================================
 		COMPONENT: TABLE: BORDERS
  * ==================================== */
 .header-row-borders thead tr + tr, .row-borders thead tr + tr, .header-borders thead tr + tr, .all-borders thead tr + tr {
-	border-top: 1px solid #fbfafb; }
+  border-top: 1px solid #fbfafb; }
 
 .header-column-borders thead th + th, .column-borders thead th + th, .header-borders thead th + th, .all-borders thead th + th,
 .header-column-borders thead td + td,
@@ -298,10 +299,10 @@ table {
 .column-borders thead th + td,
 .header-borders thead th + td,
 .all-borders thead th + td {
-	border-left: 1px solid #fbfafb; }
+  border-left: 1px solid #fbfafb; }
 
 .body-row-borders tbody tr + tr, .row-borders tbody tr + tr, .body-borders tbody tr + tr, .all-borders tbody tr + tr {
-	border-top: 1px solid #ff3e13; }
+  border-top: 1px solid #ff3e13; }
 
 .body-column-borders tbody th + th, .column-borders tbody th + th, .body-borders tbody th + th, .all-borders tbody th + th,
 .body-column-borders tbody td + td,
@@ -312,19 +313,19 @@ table {
 .column-borders tbody th + td,
 .body-borders tbody th + td,
 .all-borders tbody th + td {
-	border-left: 1px solid #ff3e13; }
+  border-left: 1px solid #ff3e13; }
 
 .body-header-border tbody th {
-	border-right: 1px solid #ff3e13; }
+  border-right: 1px solid #ff3e13; }
 
 .body-header-border tbody th + th {
-	border-top: 1px solid #ff3e13; }
+  border-top: 1px solid #ff3e13; }
 
 .footer-row-borders tfoot tr + tr, .row-borders tfoot tr + tr, .footer-borders tfoot tr + tr, .all-borders tfoot tr + tr {
-	border-top: 1px solid #110d11; }
+  border-top: 1px solid #110d11; }
 
 .footer-row-borders tfoot tr:first-child, .row-borders tfoot tr:first-child, .footer-borders tfoot tr:first-child, .all-borders tfoot tr:first-child {
-	border-top: 1px solid #ff3e13; }
+  border-top: 1px solid #ff3e13; }
 
 .footer-column-borders tfoot th + td, .column-borders tfoot th + td, .footer-borders tfoot th + td, .all-borders tfoot th + td,
 .footer-column-borders tfoot td + td,
@@ -335,16 +336,16 @@ table {
 .column-borders tfoot th + th,
 .footer-borders tfoot th + th,
 .all-borders tfoot th + th {
-	border-left: 1px solid #ff3e13; }
+  border-left: 1px solid #ff3e13; }
 
 .footer-header-border tfoot th:first-child {
-	border-right: 1px solid #ff3e13;
-	border-top: 1px solid #ff3e13; }
+  border-right: 1px solid #ff3e13;
+  border-top: 1px solid #ff3e13; }
 
 .footer-header-border tfoot th:last-child {
-	border-left: 1px solid #ff3e13;
-	border-top: 1px solid #ff3e13; }
+  border-left: 1px solid #ff3e13;
+  border-top: 1px solid #ff3e13; }
 
 .footer-header-border tfoot th + th {
-	border-right: 1px solid #110d11;
-	border-top: 1px solid #ff3e13; }
+  border-right: 1px solid #110d11;
+  border-top: 1px solid #ff3e13; }

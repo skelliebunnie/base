@@ -32,6 +32,8 @@ $fonts: (
 ) !default;
 
 $heading-color: getColor('accent-500') !default;
+$a--color: getColor('tertiary-700') !default;
+$a-hover--color: getColor('accent-700') !default;
 
 //* ====================================
 //		GENERAL DEFAULTS
@@ -83,7 +85,7 @@ $mq-breakpoints: (
 ) !default;
 
 $max-columns: 12 !default;
-$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide) !default;
+//$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide) !default;
 
 //* ====================================
 //		SITE HEADER
@@ -102,6 +104,10 @@ $site-title-a--color: getColor('accent-100') !default;
 $site-nav--bg-color: getColor('tertiary-400') !default;
 $site-nav-hover--bg-color: getColor('accent-400') !default;
 $site-nav-active--bg-color: getColor('primary-400') !default;
+
+/* NAV, GENERAL */
+$nav--color: getColor('tertiary-400');
+$nav-hover--color: getColor('accent-400');
 
 //* ====================================
 //		TABLE
