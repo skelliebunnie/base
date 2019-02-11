@@ -496,6 +496,10 @@ body {
 		GRID: MEDIA QUERY: XS - mobile (>= 414px)
  * ==================================== */
 @media (min-width: 25.875em) {
+  .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .row1-xs {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1043,7 +1047,8 @@ body {
   .col-1 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 8.33333%;
-            flex: 1 0 8.33333%; }
+            flex: 1 0 8.33333%;
+    max-width: 8.33333%; }
   .row2 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 50%;
@@ -1051,7 +1056,8 @@ body {
   .col-2 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 16.66667%;
-            flex: 1 0 16.66667%; }
+            flex: 1 0 16.66667%;
+    max-width: 16.66667%; }
   .row3 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 33.33333%;
@@ -1059,7 +1065,8 @@ body {
   .col-3 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 25%;
-            flex: 1 0 25%; }
+            flex: 1 0 25%;
+    max-width: 25%; }
   .row4 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 25%;
@@ -1067,7 +1074,8 @@ body {
   .col-4 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 33.33333%;
-            flex: 1 0 33.33333%; }
+            flex: 1 0 33.33333%;
+    max-width: 33.33333%; }
   .row5 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 20%;
@@ -1075,7 +1083,8 @@ body {
   .col-5 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 41.66667%;
-            flex: 1 0 41.66667%; }
+            flex: 1 0 41.66667%;
+    max-width: 41.66667%; }
   .row6 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 16.66667%;
@@ -1083,7 +1092,8 @@ body {
   .col-6 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 50%;
-            flex: 1 0 50%; }
+            flex: 1 0 50%;
+    max-width: 50%; }
   .row7 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 14.28571%;
@@ -1091,7 +1101,8 @@ body {
   .col-7 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 58.33333%;
-            flex: 1 0 58.33333%; }
+            flex: 1 0 58.33333%;
+    max-width: 58.33333%; }
   .row8 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 12.5%;
@@ -1099,7 +1110,8 @@ body {
   .col-8 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 66.66667%;
-            flex: 1 0 66.66667%; }
+            flex: 1 0 66.66667%;
+    max-width: 66.66667%; }
   .row9 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 11.11111%;
@@ -1107,7 +1119,8 @@ body {
   .col-9 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 75%;
-            flex: 1 0 75%; }
+            flex: 1 0 75%;
+    max-width: 75%; }
   .row10 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 10%;
@@ -1115,7 +1128,8 @@ body {
   .col-10 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 83.33333%;
-            flex: 1 0 83.33333%; }
+            flex: 1 0 83.33333%;
+    max-width: 83.33333%; }
   .row11 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 9.09091%;
@@ -1123,7 +1137,8 @@ body {
   .col-11 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 91.66667%;
-            flex: 1 0 91.66667%; }
+            flex: 1 0 91.66667%;
+    max-width: 91.66667%; }
   .row12 > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 8.33333%;
@@ -1131,7 +1146,8 @@ body {
   .col-12 {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
-            flex: 1 0 100%; }
+            flex: 1 0 100%;
+    max-width: 100%; }
   .row1-lg > .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;

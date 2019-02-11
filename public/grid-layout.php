@@ -51,5 +51,11 @@
 				<p>Nostrum tenetur consequatur odit qui laboriosam dolores. Dolor repudiandae reiciendis ut, vero commodi architecto blanditiis deleniti eaque quod, ipsam eos nulla sapiente magnam minima accusantium quis quaerat. At, dolorem, tempore!</p>
 			</div>
 		</div>
+		<div class="row border-tertiary-700">
+			<div class="col col-6 border-accent-700">
+				<h3>Col-6</h3>
+				<p>no other cols - this column should be only 1/2 the width of the row, centered</p>
+			</div>
+		</div>
 	</main>
 <?php include "templates/footer.php"; ?>
