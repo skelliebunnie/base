@@ -137,7 +137,7 @@ $h: 'quad';
 $clr400: 'primary';
 #analogous-400 {
 	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "analogous", $accent: true);
+	@include palette($coreColors, $color: $clr400, $harmony: "analogous", $accent: true, $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -155,7 +155,7 @@ $clr400: 'primary';
 
 #compound-400 {
 	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "compound", $accent: true);
+	@include palette($coreColors, $color: $clr400, $harmony: "compound", $accent: true, $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -173,7 +173,7 @@ $clr400: 'primary';
 
 #tetrad-400 {
 	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "tetrad");
+	@include palette($coreColors, $color: $clr400, $harmony: "tetrad", $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -191,7 +191,7 @@ $clr400: 'primary';
 
 #quadratic-400 {
 	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "quadratic");
+	@include palette($coreColors, $color: $clr400, $harmony: "quadratic", $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -209,7 +209,7 @@ $clr400: 'primary';
 
 #triad-400 {
 	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "triad", $accent: true);
+	@include palette($coreColors, $color: $clr400, $harmony: "triad", $accent: true, $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -227,7 +227,7 @@ $clr400: 'primary';
 
 #split-400 {
 	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "split", $accent: true);
+	@include palette($coreColors, $color: $clr400, $harmony: "split", $accent: true, $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {

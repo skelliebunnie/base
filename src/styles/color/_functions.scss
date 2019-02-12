@@ -429,7 +429,6 @@
 @function harmony($color, $colorName: "primary", $harmony: "analogous", $accent: false) {
 	$colors: ();
 	$main: $color; $complement: complement($color);
-	$compound: adjust-hue($main, 147deg);
 	$palette: ();
 
 	// tetrad = rectangular tetradic harmony
@@ -442,51 +441,26 @@
 		$harmony: 'tetrad';
 	}
 
-	// Compound: determine amount to scale saturation
-	$luminanceComparison: saturation($color);
-	$sScale: null;
-	@if($luminanceComparison < 45%) {
-		$sScale: 9;
-	} @else if($luminanceComparison >= 45% and $luminanceComparison < 70%) {
-		$sScale: 14;
-	} @else {
-		$sScale: 45;
-	}
+	$c1: adjust-hue($main, 30deg);
+	$c2: adjust-hue($main, 210deg);
 
-	$sScale1: $sScale * -1; $sScale2: $sScale * -0.53;
-	$sScale3: $sScale * -0.54; $sScale4: $sScale * -1.24;
+	$compound1: change-color($c1, $saturation: clamp(saturation($main) - 10, $min: -30, $max: 50), $lightness: clamp(lightness($main) + 25, $min: -25, $max: 75));
 
-	// Compound: determine amount to scale lightness
-	$l: luminance($color);
-	$lScale: null;
-	@if($l < 0.45) {
-		$lScale: 49;
-	} @else if($l >= 0.45 and $l < 0.7) {
-		$lScale: 34;
-	} @else {
-		$lScale: 22;
-	}
+	$compound2: change-color($c1, $saturation: clamp(saturation($main) - 60, $min: -40, $max: 80), $lightness: clamp(lightness($main) - 60, $min: 40, $max: 90));
 
-	$lScale2: $lScale * -1.12; $lScale3: $lScale * -1.37; $lScale4: $lScale * -1.7;
+	$compound3: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: -30, $max: 55), $lightness: clamp(lightness($main) + 10, $min: 80, $max: 95));
+
+	$compound4: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 30, $max: 90), $lightness: clamp(lightness($main) - 35, $min: 35, $max: 75));
+
 	
-	// Compound: make sure lightness scale is between -100 & 100 for adjust-hue
-	@if $lScale2 < -100 { $lScale2: -100 - $lScale2; }
-	@if $lScale2 > 100 { $lScale2: $lScale2 / 100; }
-
-	@if $lScale3 < -100 { $lScale3: -100 - $lScale3; }
-	@if $lScale3 > 100 { $lScale3: $lScale3 / 100; }
-
-	@if $lScale4 < -100 { $lScale4: -100 - $lScale4; }
-	@if $lScale4 > 100 { $lScale4: $lScale4 / 100; }
-
 	$harmonyPalettes: (
 		"split": (
-			unquote("#{$colorName}-split1"): adjust-hue($main, 150),
-			unquote("#{$colorName}-split2"): adjust-hue($main, 210)
+			unquote("#{$colorName}-split1"): adjust-hue($main, 150deg),
+			unquote("#{$colorName}-split2"): adjust-hue($main, 210deg)
 		),
 		"triad": (
-			unquote("#{$colorName}-triad1"): adjust-hue($main, 120),
-			unquote("#{$colorName}-triad2"): adjust-hue($main, 240)
+			unquote("#{$colorName}-triad1"): adjust-hue($main, 120deg),
+			unquote("#{$colorName}-triad2"): adjust-hue($main, 240deg)
 		),
 		"tetrad": (
 			unquote("#{$colorName}-tetrad1"): adjust-hue($main, $tetradType),
@@ -494,36 +468,16 @@
 			unquote("#{$colorName}-tetrad3"): adjust-hue($complement, $tetradType)
 		),
 		"analogous": (
-			unquote("#{$colorName}-analogous1"): adjust-hue($main, 300),
-			unquote("#{$colorName}-analogous2"): adjust-hue($main, 330),
-			unquote("#{$colorName}-analogous3"): adjust-hue($main, 30),
-			unquote("#{$colorName}-analogous4"): adjust-hue($main, 60)
+			unquote("#{$colorName}-analogous1"): adjust-hue($main, 300deg),
+			unquote("#{$colorName}-analogous2"): adjust-hue($main, 330deg),
+			unquote("#{$colorName}-analogous3"): adjust-hue($main, 30deg),
+			unquote("#{$colorName}-analogous4"): adjust-hue($main, 60deg)
 		),
 		"compound": (
-			unquote("#{$colorName}-compound1"): scale-color(
-				$main, 
-				$hue: 14, 
-				$lightness: $lScale, 
-				$saturation: $sScale1
-			),
-			unquote("#{$colorName}-compound2"): scale-color(
-				$main, 
-				$hue: 21, 
-				$lightness: $lScale2, 
-				$saturation: $sScale2
-			),
-			unquote("#{$colorName}-compound3"): scale-color(
-				$compound, 
-				//$hue: 21, 
-				$lightness: $lScale3, 
-				$saturation: $sScale3
-			),
-			unquote("#{$colorName}-compound4"): scale-color(
-				$compound, 
-				//$hue: 28, 
-				$lightness: $lScale4, 
-				$saturation: $sScale4
-			)
+			unquote("#{$colorName}-compound1"): $compound1,
+			unquote("#{$colorName}-compound2"): $compound2,
+			unquote("#{$colorName}-compound3"): $compound3,
+			unquote("#{$colorName}-compound4"): $compound4
 		) // end compound
 	);
 	

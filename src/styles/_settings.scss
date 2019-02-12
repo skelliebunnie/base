@@ -7,14 +7,15 @@
 
 //* ====================================
 //		COLORS
+//		primary: 2E4057
 //* ====================================
 // if using a different name for the map, update @include palette();
 $coreColors: (
-	primary: #E0CBA8,
-	secondary: #779FA1,
-	tertiary: #88498F,
-	accent: #FF6542,
-	neutral: #564154,
+	primary: #FFFD82,
+	secondary: #FF9B71,
+	tertiary: #E84855,
+	accent: #048BA8,
+	neutral: #2D3047,
 ) !default;
 
 // MUST be imported AFTER defining $coreColors!
