@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Asap:400,700|Montserrat');
 @import "settings";
 
+@import 'global/variables',
+				'global/functions',
+				'global/mixins';
+
 @import "grid/grid",
 				"grid/sass-mq",
 			  "grid/mq";

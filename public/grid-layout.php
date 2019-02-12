@@ -55,6 +55,30 @@
 			<div class="col col-6 border-accent-700">
 				<h3>Col-6</h3>
 				<p>no other cols - this column should be only 1/2 the width of the row, centered</p>
+				<div class="row">
+					<div class="col col-6">
+						<p>Nested Column A</p>
+						<div class="row">
+							<div class="col col-6 no-pad">
+								<p>Nested Child Column I</p>
+							</div>
+							<div class="col col-6 no-pad">
+								<p>Nested Child Column II</p>
+							</div>
+						</div>
+					</div>
+					<div class="col col-6">
+						<p>Nested Column B</p>
+						<div class="row">
+							<div class="col col-6 no-pad">
+								<p>Nested Child Column III</p>
+							</div>
+							<div class="col col-6 no-pad">
+								<p>Nested Child Column IV</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>

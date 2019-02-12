@@ -28,3 +28,10 @@
 	width: 100%;
 	padding: 1rem;
 }
+
+@for $i from 1 through $max-columns {
+	%col-#{$i} {
+		flex: 1 0 (($i / $max-columns) * 100%);
+		max-width: ($i / $max-columns) * 100%;
+	}
+}

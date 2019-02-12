@@ -6,10 +6,10 @@
 <main class="site-content pad-xl-around">
 	<nav class="nav">
 		<ul class="nav nav-horizontal">
-			<li class="nav-item"><a href="#">Test A</a></li>
-			<li class="nav-item"><a href="#">Test B</a></li>
-			<li class="nav-item"><a href="#">Test C</a></li>
-			<li class="nav-item"><a href="#">Test D</a></li>
+			<li class="nav-item bg-primary-400 bg-hover-accent-700"><a href="#">Test A</a></li>
+			<li class="nav-item bg-primary-400 bg-hover-accent-700"><a href="#">Test B</a></li>
+			<li class="nav-item bg-primary-400 bg-hover-accent-700"><a href="#">Test C</a></li>
+			<li class="nav-item bg-primary-400 bg-hover-accent-700"><a href="#">Test D</a></li>
 		</ul>
 	</nav>
 	<div class="row row2-sm row4-md row6-lg row8-xl text-center">

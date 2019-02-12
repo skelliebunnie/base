@@ -1,5 +1,9 @@
-@function getValue($val, $map) {
+@function get($val, $map) {
 	@return map-get($map, $val);
+}
+
+@function fontSize($size) {
+	@return get($size, $font-sizes-copy);
 }
 
 @function endsWith($string, $find) {

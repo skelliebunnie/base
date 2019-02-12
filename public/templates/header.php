@@ -22,5 +22,6 @@
 			<li class='nav-item'><a href="./grid-layout.php">Grid</a></li>
 			<li class='nav-item'><a href="./colors.php">Colors</a></li>
 			<li class='nav-item'><a href="./tables.php">Tables</a></li>
+			<li class='nav-item'><a href="./form.php">Form</a></li>
 		</ul>
 	</nav>

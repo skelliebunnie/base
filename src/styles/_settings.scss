@@ -11,18 +11,19 @@
 //* ====================================
 // if using a different name for the map, update @include palette();
 $coreColors: (
-	primary: #FFFD82,
-	secondary: #FF9B71,
-	tertiary: #E84855,
-	accent: #048BA8,
-	neutral: #2D3047,
+	primary: #EDD4B2,
+	secondary: #388697,
+	tertiary: #4B3B47,
+	accent: #FA8334,
+	neutral: #1E2019,
 ) !default;
 
 // MUST be imported AFTER defining $coreColors!
 @import "color/functions";
 @import "color/mixins";
 // quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
-@include palette($coreColors, $color: 'primary', $rangeType: 'adaptive');
+$range: 'adaptive';
+@include palette($coreColors, $color: 'primary', $rangeType: $range);
 
 //* ====================================
 //		FONTS & TYPOGRAPHY
@@ -32,6 +33,14 @@ $fonts: (
 	'heading': unquote("'Asap', sans-serif")
 ) !default;
 
+$font-sizes-copy: (
+	'xs': 0.5rem,
+	'sm': 0.8rem,
+	'md': 1rem,
+	'lg': 1.3rem,
+	'xl': 2rem
+) !default;
+
 $heading-color: getColor('accent-500') !default;
 $a--color: getColor('tertiary-700') !default;
 $a-hover--color: getColor('accent-700') !default;
@@ -39,13 +48,20 @@ $a-hover--color: getColor('accent-700') !default;
 //* ====================================
 //		GENERAL DEFAULTS
 //* ====================================
+$scale: 0;
+@if $range == 'default' or $range == 'tintshade' {
+	$scale: 65;
+} @else {
+	$scale: 25;
+}
+
 $defaults: (
 	'padding': 0.75rem,
 	'margin': 0.75rem,
 	'gutter': 0.5rem,
 	'border-width': 1px,
-	'color-light': lightenColor(getColor('neutral-100'), 80),
-	'color-dark': darkenColor(getColor('neutral-700'), 80)
+	'color-light': scale-color(getColor('neutral-100'), $lightness:  $scale),
+	'color-dark': scale-color(getColor('neutral-700'), $lightness: -($scale))
 ) !default;
 
 $default-pad: map-get($defaults, 'padding');

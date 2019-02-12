@@ -19,26 +19,54 @@ $colors: map-values($palette);
 		}
 	}
 
+	.bg-hover-#{$name}:hover {
+		background-color: $val;
+		color: getContrast($val);
+		a {
+			color: getContrast($val);
+		}
+	}
+
 	.border-#{$name} { border: 1px solid $val; }
 	.text-#{$name} { color: $val; }
+	.text-hover-#{$name}:hover { color: $val; }
 }
 
-.bg-dark {
-	background-color: getVal('color-dark', $defaults);
-	color: getContrast(getVal('color-dark', $defaults));
-	a { color: getContrast(getVal('color-dark', $defaults)); }
-}
-.bg-light {
-	background-color: getVal('color-light', $defaults);
-	color: getContrast(getVal('color-light', $defaults));
-	a { color: getContrast(getVal('color-light', $defaults)); }
+.bg {
+	&-dark {
+		background-color: getVal('color-dark', $defaults);
+		color: getContrast(getVal('color-dark', $defaults));
+		a { color: getContrast(getVal('color-dark', $defaults)); }
+	}
+
+	&-hover-dark:hover {
+		background-color: getVal('color-dark', $defaults);
+		color: getContrast(getVal('color-dark', $defaults));
+		a { color: getContrast(getVal('color-dark', $defaults)); }
+	}
+	
+	&-light {
+		background-color: getVal('color-light', $defaults);
+		color: getContrast(getVal('color-light', $defaults));
+		a { color: getContrast(getVal('color-light', $defaults)); }
+	}
+
+	&-hover-light:hover {
+		background-color: getVal('color-light', $defaults);
+		color: getContrast(getVal('color-light', $defaults));
+		a { color: getContrast(getVal('color-light', $defaults)); }
+	}
 }
 
-.border-dark { border-color: getVal('color-dark', $defaults); }
-.border-light { border-color: getVal('color-light', $defaults); }
+.border {
+	&-dark { border-color: getVal('color-dark', $defaults); }
+	&-light { border-color: getVal('color-light', $defaults); }
+}
 
-.text-dark { color: getVal('color-dark', $defaults); }
-.text-light { color: getVal('color-light', $defaults); }
+.text {
+	&-dark { color: getVal('color-dark', $defaults); }
+	&-light { color: getVal('color-light', $defaults); }
+}
 
 /* ====================================
 		HELPERS: TYPOGRAPHY & ALIGNMENT

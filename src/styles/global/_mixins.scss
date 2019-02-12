@@ -2,6 +2,10 @@
 	transition: all ease-#{$direction} #{$duration}s;
 }
 
+@mixin translate($direction: Y, $amount: 0) {
+	transform: unquote("translate#{$direction}(#{$amount})");
+}
+
 // MUST specify a URL
 @mixin bgImage($url, $position: center) {
 	background: url($url);
