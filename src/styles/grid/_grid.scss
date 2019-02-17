@@ -3,8 +3,7 @@
  * ==================================== */
 @import "grid-base";
 
-.row,
-.flex {
+.row {
 	@extend %row;
 }
 

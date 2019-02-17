@@ -4,8 +4,10 @@
 .site-header { grid-area: site-header; }
 .site-nav { grid-area: site-nav; }
 .site-sidebar { grid-area: site-sidebar; }
-.site-content { 
+.site-content {
 	grid-area: site-content;
+	padding: 0;
+	margin: 0;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: start;
@@ -32,6 +34,25 @@
 		"site-content"
 		"site-sidebar"
 		"site-footer";
+
+	&.site-nav-none {
+		grid-template-areas:
+			"site-header"
+			"site-content"
+			"site-sidebar"
+			"site-footer";
+
+		.site-header + .site-nav { display: none; }
+	}
+
+	&.sidebar-none {
+		grid-template-areas:
+			"site-header"
+			"site-content"
+			"site-footer";
+
+		&.site-sidebar { display: none; }
+	}
 }
 
 @import "mq";

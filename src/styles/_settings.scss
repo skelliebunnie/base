@@ -18,9 +18,18 @@ $coreColors: (
 	neutral: #1E2019,
 ) !default;
 
+$messageColors: (
+	default: #5D576B,
+	info: #41D3BD,
+	success: #A9E190,
+	alert: #F4F1BB,
+	warn: #ED6A5A
+);
+
 // MUST be imported AFTER defining $coreColors!
 @import "color/functions";
 @import "color/mixins";
+
 // quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
 $range: 'adaptive';
 @include palette($coreColors, $color: 'primary', $rangeType: $range);
@@ -33,7 +42,7 @@ $fonts: (
 	'heading': unquote("'Asap', sans-serif")
 ) !default;
 
-$font-sizes-copy: (
+$font-sizes: (
 	'xs': 0.5rem,
 	'sm': 0.8rem,
 	'md': 1rem,

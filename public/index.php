@@ -30,7 +30,7 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nisi dolorem sit animi molestiae temporibus alias. Eaque et quis iusto optio, cum sit in quidem incidunt. Laboriosam officia nam esse?</p>
 		</div>
 	</div>
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col col-12 text-columns-sm-2 text-columns-lg-4 text-columns-xl-4">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ut qui earum, ipsam sed fuga recusandae? Culpa dolorem quasi animi sunt, iusto iste ipsam impedit accusantium error, porro dicta laudantium.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed pariatur perferendis repellat iusto quod impedit recusandae nisi esse dolores in, voluptatibus placeat nesciunt, amet est maiores? Veritatis itaque enim autem.</p>
@@ -48,6 +48,6 @@
 			<p>Sint consectetur voluptate ipsum dignissimos iusto ad laborum aut consequuntur aspernatur omnis saepe, modi libero fugit earum iure autem obcaecati ratione natus quae? Sapiente, aliquam voluptatibus velit mollitia tenetur expedita!</p>
 			<p>Voluptas est nesciunt modi consequatur quo quae reprehenderit consequuntur odit perspiciatis obcaecati repudiandae quidem consectetur delectus, earum iusto provident porro, officia quis. Alias voluptas repellat qui facere dignissimos quas eveniet?</p>
 		</div>
-	</div>
+	</div> -->
 </main>
 <?php include "templates/footer.php"; ?>

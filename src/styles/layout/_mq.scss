@@ -5,12 +5,24 @@
 #page-container {
 	@include mq($from: "tablet") {
 		grid-template-rows: 1.5fr .5fr 9fr .5fr;
-		grid-template-columns: min-content 1fr;
+		grid-template-columns: minmax(min-content, 15%) 1fr;
 		grid-template-areas:
 		"site-header site-header"
 		"site-sidebar site-nav"
 		"site-sidebar site-content"
 		"site-footer site-footer";
+
+		&.site-nav-none {
+			grid-template-rows: 1.5fr 9.5fr .5fr;
+			grid-template-areas:
+				"site-header site-header"
+				"site-sidebar site-content"
+				"site-footer site-footer";
+
+			 .site-header + .site-nav {
+				display: none;
+			}
+		}
 
 		&.sidebar-none {
 			grid-template-columns: 1fr;
@@ -25,11 +37,26 @@
 			}
 		}
 
+		&.site-nav-none.sidebar-none {
+			grid-template-areas:
+				"site-header"
+				"site-content"
+				"site-footer";
+		}
+
 		&.vertical {
 			grid-template-columns: 1fr;
 			grid-template-areas:
 				"site-header"
 				"site-nav"
+				"site-content"
+				"site-sidebar"
+				"site-footer";
+		}
+
+		&.vertical.site-nav-none {
+			grid-template-areas:
+				"site-header"
 				"site-content"
 				"site-sidebar"
 				"site-footer";
@@ -41,6 +68,13 @@
 				"site-sidebar site-nav"
 				"site-sidebar site-content"
 				"site-sidebar site-footer";
+
+			&.site-nav-none {
+				grid-template-areas:
+					"site-sidebar site-header"
+					"site-sidebar site-content"
+					"site-sidebar site-footer";
+			}
 		}
 
 		&.to-header {
@@ -49,6 +83,12 @@
 				"site-sidebar site-nav"
 				"site-sidebar site-content"
 				"site-footer site-footer";
+			&.site-nav-none {
+				grid-template-areas:
+					"site-sidebar site-header"
+					"site-sidebar site-content"
+					"site-footer site-footer";
+			}
 		}
 
 		&.to-footer {
@@ -57,6 +97,12 @@
 				"site-sidebar site-nav"
 				"site-sidebar site-content"
 				"site-sidebar site-footer";
+			&.site-nav-none {
+				grid-template-areas:
+					"site-header site-header"
+					"site-sidebar site-content"
+					"site-sidebar site-footer";
+			}
 		}
 
 		&.sidebar-nav {
@@ -150,7 +196,7 @@
 	}
 
 	@include mq($from: "desktop") {
-		grid-template-columns: max-content 1fr;
+		grid-template-columns: minmax(min-content, 15%) 1fr;
 
 		&.sidebar-right {
 			grid-template-columns: 1fr max-content;

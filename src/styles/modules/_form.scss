@@ -1,61 +1,19 @@
-/* ====================================
-		MODULE: FORM
- * ==================================== */
+form,
 .form {
-	@extend %row;
+	flex: 1;
+	padding: 1rem;
+	margin: 1rem;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	position: relative;
 }
-
-.fieldset {
-	@extend %row;
-	//display: flex;
-	//flex-flow: row wrap;
-
-	&.vertical {
-		flex-flow: column nowrap;
-	}
-}
-
-// .legend {
-// 	position: absolute;
-// 	top: -0.65rem;
-// 	font-size: fontSize('sm');
-// 	font-style: italic;
-// 	background-color: white;
-// }
 
 .form-group {
-	@extend %col;
-  padding-top: 1.25rem;
+	position: relative;
+	padding: 1rem;
+	padding-top: 1.5rem;
+	flex: 1;
 }
-
-@for $i from 1 through $max-columns {
-	.width-#{$i} {
-		flex: 1 0 (($i / $max-columns) * 100%);
-		max-width: ($i / $max-columns) * 100%;
-	}
-}
-
-// .input {
-// 	box-sizing: border-box;
-// 	flex: 1;
-// }
-
-// .placeholder {
-// 	padding: 0;
-// 	margin: 0;
-//   position: absolute;
-//   top: 0;
-//   font-size: fontSize('sm');
-//   font-weight: bold;
-//   opacity: 1;
-//   color: getColor('secondary-700');
-//   @include translate(Y, 0);
-//   @include fade($duration: 0.2);
-// }
-
-// .input:placeholder-shown + .placeholder {
-// 	padding: 0;
-// 	margin: 0;
-//   opacity: 0;
-//   @include translate(Y, 0.75rem);
-// }

@@ -1,0 +1,206 @@
+/* ====================================
+		HELPERS
+		1. bg, border, text colors
+ * ==================================== */
+$colorNames: map-keys($palette);
+$colors: map-values($palette);
+
+@for $n from 1 through length($colorNames) {
+	$name: nth($colorNames, $n);
+	$val: nth($colors, $n);
+	.bg-#{$name} {
+		background-color: $val;
+		color: getContrast($val);
+		a {
+			color: getContrast($val);
+		}
+	}
+
+	.bg-hover-#{$name}:hover {
+		background-color: $val;
+		color: getContrast($val);
+		a {
+			color: getContrast($val);
+		}
+	}
+
+	.border-#{$name} { border: 1px solid $val; }
+	.text-#{$name} { color: $val; }
+	.text-hover-#{$name}:hover { color: $val; }
+}
+
+.bg {
+	&-dark {
+		background-color: getVal('color-dark', $defaults);
+		color: getContrast(getVal('color-dark', $defaults));
+		a { color: getContrast(getVal('color-dark', $defaults)); }
+	}
+
+	&-hover-dark:hover {
+		background-color: getVal('color-dark', $defaults);
+		color: getContrast(getVal('color-dark', $defaults));
+		a { color: getContrast(getVal('color-dark', $defaults)); }
+	}
+	
+	&-light {
+		background-color: getVal('color-light', $defaults);
+		color: getContrast(getVal('color-light', $defaults));
+		a { color: getContrast(getVal('color-light', $defaults)); }
+	}
+
+	&-hover-light:hover {
+		background-color: getVal('color-light', $defaults);
+		color: getContrast(getVal('color-light', $defaults));
+		a { color: getContrast(getVal('color-light', $defaults)); }
+	}
+
+	&-inherit,
+	&-inherit:hover {
+		background-color: inherit;
+	}
+
+	&-transparent,
+	&-transparent:hover {
+		background-color: transparent;
+	}
+}
+
+.border {
+	&-dark { border-color: getVal('color-dark', $defaults); }
+	&-light { border-color: getVal('color-light', $defaults); }
+	&-inherit { border-color: inherit; }
+	&-transparent { border-color: transparent; }
+}
+
+.text {
+	&-dark { color: getVal('color-dark', $defaults); }
+	&-light { color: getVal('color-light', $defaults); }
+	&-inherit { color: inherit; }
+}
+
+.row.col-no-pad > .col { padding: 0; }
+.row.col-no-margin > .col { margin: 0; }
+
+/* ====================================
+		ADDITIONAL HELPERS
+ * ==================================== */
+.flex {
+	@include flex();
+
+	&-row { @include flex(row); }
+	&-column { @include flex(column); }
+	&-wrap { @include flex($wrap: wrap); }
+	&-nowrap { @include flex($wrap: nowrap); }
+}
+
+.flex-child { flex: 1 0 auto; }
+
+@each $position in $text-positions {
+	.text-#{$position} { text-align: unquote($position); }
+}
+
+@each $type in $justify {
+	.justify-#{$type} { justify-content: unquote($type); }
+}
+
+@each $type in $align {
+	.align-#{$type} { align-items: unquote($type); }
+}
+
+.no-pad { padding: 0 !important; }
+.no-margin { margin: 0 !important; }
+
+//* ====================================
+//*		HELPERS: PADDING
+//* ====================================
+@each $position in $border-sides {
+	.pad-#{$position} {
+		padding-#{$position}: $default-pad;
+	}
+}
+
+@each $position in $other {
+	.pad-#{$position} {
+		@if $position == 'around' { 
+			padding: $default-pad; 
+		}
+		@if $position == 'x' { 
+			padding-left: $default-pad;
+			padding-right: $default-pad;
+		}
+		@if $position == 'y' {
+			padding-top: $default-pad;
+			padding-bottom: $default-pad;
+		}
+	}
+}
+
+@each $size,$pad in $padding-sizes {
+	@each $position in $border-sides {
+		.pad-#{$size}-#{$position} {
+			padding-#{$position}: map-get($padding-sizes, quote($size));
+		}
+	}
+
+	@each $position in $other {
+		.pad-#{$size}-#{$position} {
+			@if $position == 'around' { 
+				padding: map-get($padding-sizes, quote($size)); 
+			}
+			@if $position == 'x' { 
+				padding-left: map-get($padding-sizes, quote($size));
+				padding-right: map-get($padding-sizes, quote($size));
+			}
+			@if $position == 'y' {
+				padding-top: map-get($padding-sizes, quote($size));
+				padding-bottom: map-get($padding-sizes, quote($size));
+			}
+		}
+	}
+}
+
+//* ====================================
+//*		HELPERS: MARGIN
+//* ====================================
+@each $position in $border-sides {
+	.margin-#{$position} {
+		padding-#{$position}: $default-margin;
+	}
+}
+
+@each $position in $other {
+	.margin-#{$position} {
+		@if $position == 'around' { padding: $default-margin; }
+		@if $position == 'x' { 
+			padding-left: $default-margin;
+			padding-right: $default-margin;
+		}
+		@if $position == 'y' {
+			padding-top: $default-margin;
+			padding-bottom: $default-margin;
+		}
+	}
+}
+
+@each $size,$margin in $margin-sizes {
+	@each $position in $border-sides {
+		.margin-#{$size}-#{$position} {
+			margin-#{$position}: map-get($margin-sizes, quote($size));
+		}
+	}
+	@each $position in $other {
+		.margin-#{$size}-#{$position} {
+			@if $position == 'around' { 
+				margin: map-get($margin-sizes, quote($size)); 
+			}
+			@if $position == 'x' { 
+				margin-left: map-get($margin-sizes, quote($size));
+				margin-right: map-get($margin-sizes, quote($size));
+			}
+			@if $position == 'y' {
+				margin-top: map-get($margin-sizes, quote($size));
+				margin-bottom: map-get($margin-sizes, quote($size));
+			}
+		}
+	}
+}

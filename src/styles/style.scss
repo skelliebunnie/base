@@ -3,12 +3,13 @@
 @import url('https://fonts.googleapis.com/css?family=Asap:400,700|Montserrat');
 @import "settings";
 
-@import 'global/variables',
+@import	'global/sass-mq',
+				'global/variables',
 				'global/functions',
-				'global/mixins';
+				'global/mixins',
+				'global/helpers';
 
 @import "grid/grid",
-				"grid/sass-mq",
 			  "grid/mq";
 
 @import "typography/typography",
@@ -23,6 +24,7 @@
 	- Grouped into: Inline, Input, Media, Messaging, Table, Lists
 */
 @import "components/hr",
+				"components/card",
 				"components/image",
 				"components/inline",
 				"components/input",
@@ -50,4 +52,4 @@
 // has to be imported after everything else or
 // anything defined in the helper classes will be overridden
 // by corresponding definitions in subsequent classes
-@import "global/helpers";
+@import "settings-helpers";

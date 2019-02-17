@@ -8,3 +8,95 @@
 		textarea, select, checkbox, radio;
 		datalist, meter, progress
  * ==================================== */
+
+input, textarea,
+select {
+	flex: 1 0 100%;
+	width: 100%;
+	border: 0;
+	outline: 0;
+}
+
+.input {
+	border-bottom: 1px solid tomato;
+	transition: all 0.2s ease-in;
+	padding: 0.75rem;
+	background-color: #eee;
+
+	&:active,
+	&:focus {
+		background-color: #fefefe;
+	}
+
+	&::placeholder {
+		color: tomato;
+		opacity: 0.75;
+	}
+
+	&:placeholder-shown + .placeholder {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+}
+
+.input-textarea {
+	padding: 0.5rem;
+	border-radius: 0.15rem;
+	border: 1px solid tomato;
+	background-color: #eee;
+
+	&:active,
+	&:focus {
+		background-color: #fefefe;
+	}
+}
+
+.placeholder {
+	position: absolute;
+	top: 0;
+	font-size: small;
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 0.2s ease-out;
+	z-index: -1;
+	padding: 0;
+	margin: 0 0 0.5rem;
+	color: tomato;
+}
+
+// .input:placeholder-shown + .placeholder,
+// .input-textarea:placeholder-shown + .placeholder {
+// 	opacity: 0;
+// 	transform: translateY(1rem);
+// }
+
+.btn {
+	//$colorMap: $coreColors, $color: 'primary', $colorName: 'primary', $harmony: 'analogous', $accent: false, $rangeType: 'range', $scaleColors: 17
+	@include localPalette($messageColors, 'success', 'success', 'none', false, 'adaptive');
+
+	background-color: #333;
+	color: white;
+	border-radius: 0.15rem;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+
+	@extend %pad-md-around;
+
+	$keys: map-keys($messageColors);
+	@each $name in $keys {
+		&-#{$name} {
+			background-color: getColor("#{$name}-700", $localPalette);
+			color: getContrast(getColor("#{$name}-700", $localPalette));
+			&:hover {
+				background-color: getColor("#{$name}-400", $localPalette);
+				color: getContrast(getColor("#{$name}-400", $localPalette));
+			}
+		}
+	}
+}
+
+a.btn {
+	@extend %pad-xs-y;
+	@extend %pad-md-x;
+}

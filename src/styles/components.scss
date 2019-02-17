@@ -2,13 +2,16 @@
 
 @import "settings";
 
-@import 'global/variables',
+@import	'global/sass-mq',
+				'global/variables',
 				'global/functions',
-				'global/mixins';
+				'global/mixins',
+				'global/helpers';
 
 @import "grid/grid-base";
 
 @import "components/hr",
+				"components/card",
 				"components/image",
 				"components/inline",
 				"components/input",

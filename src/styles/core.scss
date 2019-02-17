@@ -5,17 +5,18 @@
 @import url('https://fonts.googleapis.com/css?family=Asap:400,700|Montserrat');
 @import "settings";
 
-@import 'global/variables',
+@import	'global/sass-mq',
+				'global/variables',
 				'global/functions',
-				'global/mixins';
+				'global/mixins',
+				'global/helpers';
 
 @import "grid/grid",
-				"grid/sass-mq",
-			  "grid/mq";
+				"grid/mq";
 
 @import "typography/typography",
 				"typography/headers",
 				"typography/titles",
 				"typography/mq";
 
-@import "global/helpers";
+@import "settings-helpers";

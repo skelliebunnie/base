@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="page-container" class="sidebar-fullheight">
+<div id="page-container" class="sidebar-none">
 	<header class="site-header row">
 		<div class="col col-12">
 			<h1 class="site-title"><a href="./index.php">BASE FRAMEWORK</a></h1>

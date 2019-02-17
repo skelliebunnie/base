@@ -1,4 +1,6 @@
-@mixin palette($colorMap: $coreColors, $color: 'primary', $colorName: 'primary', $harmony: 'analogous', $accent: false, $rangeType: 'range', $scaleColors: 17) {
+@mixin localPalette($colorMap: $coreColors, $color: 'primary', $colorName: $color, $harmony: 'analogous', $accent: false, $rangeType: 'range', $scaleColors: 17) {
+
+	$localPalette: () !global !default;
 
 	$primaryColor: getColor($color,$colorMap);
 
@@ -39,12 +41,111 @@
 		}
 
 		$rangeMaps: map-merge($mapRange, $originalRange);
+
+		$localPalette: map-merge($rangeMaps, $primaryHarmonyRange) !global;
+		//$localPalette: append($localPalette, $palette) !global;
+	// otherwise (no harmony generated) just merge the mapRange since that *is* the coreColors
+	} @else {
+		$localPalette: map-merge($mapRange, $primaryHarmonyRange) !global;
+		//$localPalette: append($localPalette, $palette) !global;
+	}
+}
+
+@mixin palette($colorMap: $coreColors, $color: 'primary', $colorName: 'primary', $harmony: 'analogous', $accent: false, $rangeType: 'range', $scaleColors: 17) {
+	$primaryColor: getColor($color,$colorMap);
+
+	$colors: (); $primaryHarmonyRange: null; $mapRange: null;
+
+	// I FORGOT THE BLOODY '@' SYMBOL BEFORE else
+	@if $harmony == 'none' {
+		$colors: $colorMap;
+
+	} @else {
+		$colors: harmony($color: $primaryColor, $colorName: $colorName, $harmony: $harmony, $accent: $accent);
+	}
+
+	@if $rangeType == 'tintshade' {
+		$primaryHarmonyRange: tintShade($map: $colors, $scaleColors: $scaleColors);
+		$mapRange: tintShade($map: $colorMap, $scaleColors: $scaleColors);
+
+	} @else if $rangeType == 'rangeAdaptive' or $rangeType == 'adaptive' {
+		$primaryHarmonyRange: rangeAdaptive($map: $colors, $scaleColors: $scaleColors);
+		$mapRange: rangeAdaptive($map: $colorMap, $scaleColors: $scaleColors);
+
+	} @else {
+		$primaryHarmonyRange: rangeDefault($map: $colors, $scaleColors: $scaleColors);
+		$mapRange: rangeDefault($map: $colorMap, $scaleColors: $scaleColors);
+	}
+
+	// if a harmony was generated, add the range of the core colors (less the one used for the harmony)
+	@if $harmony != 'none' {
+		$originalList: map-remove($colors, $color);
+		$originalRange: rangeDefault($originalList, $scaleColors: $scaleColors);
+
+		@if($rangeType == 'tintshade') {
+			$originalRange: tintShade($map: $originalList, $scaleColors: $scaleColors);
+
+		}
+		@if($rangeType == 'rangeAdaptive' or $rangeType == 'adaptive') {
+			$originalRange: rangeAdaptive($originalList, $scaleColors: $scaleColors);
+		}
+
+		$rangeMaps: map-merge($mapRange, $originalRange);
+
 		$palette: map-merge($rangeMaps, $primaryHarmonyRange) !global;
 	// otherwise (no harmony generated) just merge the mapRange since that *is* the coreColors
 	} @else {
 		$palette: map-merge($mapRange, $primaryHarmonyRange) !global;
 	}
 }
+
+// @mixin palette($colorMap: $coreColors, $color: 'primary', $colorName: 'primary', $harmony: 'analogous', $accent: false, $rangeType: 'range', $scaleColors: 17) {
+
+// 	$primaryColor: getColor($color,$colorMap);
+
+// 	$colors: (); $primaryHarmonyRange: null; $mapRange: null;
+
+// 	// I FORGOT THE BLOODY '@' SYMBOL BEFORE else
+// 	@if $harmony == 'none' {
+// 		$colors: $colorMap;
+
+// 	} @else {
+// 		$colors: harmony($color: $primaryColor, $colorName: $colorName, $harmony: $harmony, $accent: $accent);
+// 	}
+
+// 	@if $rangeType == 'tintshade' {
+// 		$primaryHarmonyRange: tintShade($map: $colors, $scaleColors: $scaleColors);
+// 		$mapRange: tintShade($map: $colorMap, $scaleColors: $scaleColors);
+
+// 	} @else if $rangeType == 'rangeAdaptive' or $rangeType == 'adaptive' {
+// 		$primaryHarmonyRange: rangeAdaptive($map: $colors, $scaleColors: $scaleColors);
+// 		$mapRange: rangeAdaptive($map: $colorMap, $scaleColors: $scaleColors);
+
+// 	} @else {
+// 		$primaryHarmonyRange: rangeDefault($map: $colors, $scaleColors: $scaleColors);
+// 		$mapRange: rangeDefault($map: $colorMap, $scaleColors: $scaleColors);
+// 	}
+
+// 	// if a harmony was generated, add the range of the core colors (less the one used for the harmony)
+// 	@if $harmony != 'none' {
+// 		$originalList: map-remove($colors, $color);
+// 		$originalRange: rangeDefault($originalList, $scaleColors: $scaleColors);
+
+// 		@if($rangeType == 'tintshade') {
+// 			$originalRange: tintShade($map: $originalList, $scaleColors: $scaleColors);
+
+// 		}
+// 		@if($rangeType == 'rangeAdaptive' or $rangeType == 'adaptive') {
+// 			$originalRange: rangeAdaptive($originalList, $scaleColors: $scaleColors);
+// 		}
+
+// 		$rangeMaps: map-merge($mapRange, $originalRange);
+// 		$palette: map-merge($rangeMaps, $primaryHarmonyRange) !global;
+// 	// otherwise (no harmony generated) just merge the mapRange since that *is* the coreColors
+// 	} @else {
+// 		$palette: map-merge($mapRange, $primaryHarmonyRange) !global;
+// 	}
+// }
 
 @mixin newPalette($baseColor: getColor('primary', $coreColors), $map: $coreColors) {
 	$newPalette: () !global;

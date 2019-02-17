@@ -31,3 +31,11 @@ p {
 	margin: 0;
 	line-height: 1.3rem;
 }
+
+.note {
+	font-size: map-get($font-sizes, "sm");
+	color: getColor('neutral-400');
+	padding: 0 map-get($padding-sizes, 'sm');
+	margin: 0 map-get($padding-sizes, 'sm');
+	font-style: italic;
+}

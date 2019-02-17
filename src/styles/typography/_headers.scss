@@ -7,9 +7,11 @@ $m: map-get($defaults, 'margin'); $p: map-get($defaults, 'padding');
 	h#{$i}, .h#{$i} {
 		font-size: $n * 0.8em;
 		line-height: $n * 0.35em;
-		margin: $m;
-		margin-bottom: $m * 1.2;
-		padding: $p;
+		margin: map-get($margin-sizes, 'sm');
+		padding: map-get($padding-sizes, 'sm');
+		//margin: $m;
+		//margin-bottom: $m * 1.2;
+		//padding: $p;
 
 		font-family: getVal('heading', $fonts);
 		font-weight: 700;
