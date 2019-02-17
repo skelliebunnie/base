@@ -1652,17 +1652,23 @@ h6, .h6 {
  * ==================================== */
 @media (min-width: 80em) {
   h1, .h1, .site-title {
-    font-size: 3em; }
+    font-size: 2.4em;
+    line-height: 1.5em; }
   h2, .h2 {
-    font-size: 2.55em; }
+    font-size: 2.04em;
+    line-height: 1.275em; }
   h3, .h3 {
-    font-size: 2.1675em; }
+    font-size: 1.734em;
+    line-height: 1.08375em; }
   h4, .h4 {
-    font-size: 1.84237em; }
+    font-size: 1.4739em;
+    line-height: 0.92119em; }
   h5, .h5 {
-    font-size: 1.56602em; }
+    font-size: 1.25282em;
+    line-height: 0.78301em; }
   h6, .h6 {
-    font-size: 1.33112em; }
+    font-size: 1.06489em;
+    line-height: 0.66556em; }
   .title {
     padding-top: 0.5em;
     padding-bottom: 0.5em; }
