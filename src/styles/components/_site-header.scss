@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 	max-width: 100%;
 	text-align: center;
-	@include bgImage($url: $site-header--bg-image);
+	@include bgImage($url: $site-header--bg-image, $position: $site-header--bg-position);
 	@include overlay();
 
 	@include mq($from: 'tablet') {

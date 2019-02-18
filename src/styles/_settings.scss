@@ -37,9 +37,10 @@ $range: 'adaptive';
 //* ====================================
 //		FONTS & TYPOGRAPHY
 //* ====================================
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900|Raleway:400,700');
 $fonts: (
 	'copy': unquote("'Montserrat', sans-serif"),
-	'heading': unquote("'Asap', sans-serif")
+	'heading': unquote("'Raleway', sans-serif")
 ) !default;
 
 $font-sizes: (
@@ -120,7 +121,8 @@ $max-columns: 12 !default;
 $site-header--text-position: left;
 
 $site-header--bg-color: getColor('primary', $coreColors) !default;
-$site-header--bg-image: 'https://picsum.photos/1920/800?image=940&gravity=north' !default;
+$site-header--bg-image: '../images/succulents.jpg' !default;
+$site-header--bg-position: top !default;
 
 $site-title-a--color: getColor('accent-100') !default;
 

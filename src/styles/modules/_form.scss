@@ -11,9 +11,30 @@ form,
 	position: relative;
 }
 
+.fieldset {
+	@extend %row;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
 .form-group {
+	@extend %col;
 	position: relative;
 	padding: 1rem;
 	padding-top: 1.5rem;
-	flex: 1;
+	margin: 0;
+}
+
+@for $i from 1 through $max-columns {
+	.fieldset#{$i} > .form-group {
+		flex: 1 0 nth($rowcolwidths, $i);
+		max-width: nth($rowcolwidths, $i);
+	}
+
+	.width-#{$i} {
+		flex: 1 0 nth($colwidths, $i);
+		max-width: nth($colwidths, $i);
+	}
 }

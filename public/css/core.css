@@ -7,7 +7,7 @@
      * 3. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import url("https://fonts.googleapis.com/css?family=Asap:400,700|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900|Raleway:400,700");
 html {
 	font-family: sans-serif;
 	/* 1 */
@@ -1541,7 +1541,7 @@ h1, .h1, .site-title {
 	line-height: 1.05em;
 	margin: 0.6rem;
 	padding: 0.6rem;
-	font-family: 'Asap', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	vertical-align: middle;
 	letter-spacing: normal;
@@ -1554,7 +1554,7 @@ h2, .h2 {
 	line-height: 0.945em;
 	margin: 0.6rem;
 	padding: 0.6rem;
-	font-family: 'Asap', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	vertical-align: middle;
 	letter-spacing: normal;
@@ -1570,7 +1570,7 @@ h3, .h3 {
 	line-height: 0.8505em;
 	margin: 0.6rem;
 	padding: 0.6rem;
-	font-family: 'Asap', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	vertical-align: middle;
 	letter-spacing: normal;
@@ -1583,7 +1583,7 @@ h4, .h4 {
 	line-height: 0.76545em;
 	margin: 0.6rem;
 	padding: 0.6rem;
-	font-family: 'Asap', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	vertical-align: middle;
 	letter-spacing: normal;
@@ -1596,7 +1596,7 @@ h5, .h5 {
 	line-height: 0.68891em;
 	margin: 0.6rem;
 	padding: 0.6rem;
-	font-family: 'Asap', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	vertical-align: middle;
 	letter-spacing: normal;
@@ -1609,7 +1609,7 @@ h6, .h6 {
 	line-height: 0.62001em;
 	margin: 0.6rem;
 	padding: 0.6rem;
-	font-family: 'Asap', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	vertical-align: middle;
 	letter-spacing: normal;

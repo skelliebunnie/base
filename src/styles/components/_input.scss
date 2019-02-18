@@ -1,20 +1,29 @@
 /* ====================================
 		COMPONENT: INPUT
-		label, keygen, legend
-		text, email, password, date, tel,
-		button, color, datetime-local, file,
-		image, month, number, range, reset,
-		search, submit, time, url, week;
+		label, keygen, legend;
+		text, email, password, url, tel,
+		number, color, file, image;
+		datetime-local, month, date, time, week;
 		textarea, select, checkbox, radio;
-		datalist, meter, progress
+		datalist, meter, progress, range;
+		reset; search
+		submit
  * ==================================== */
 
-input, textarea,
-select {
+/* ====================================
+		COMPONENT: INPUT: text, textarea,
+		email, password, tel, number, url
+ * ==================================== */
+input, textarea {
 	flex: 1 0 100%;
 	width: 100%;
 	border: 0;
 	outline: 0;
+
+	& + &,
+	.placeholder + & {
+		margin-top: 1rem;
+	}
 }
 
 .input {
@@ -64,14 +73,10 @@ select {
 	color: tomato;
 }
 
-// .input:placeholder-shown + .placeholder,
-// .input-textarea:placeholder-shown + .placeholder {
-// 	opacity: 0;
-// 	transform: translateY(1rem);
-// }
-
+/* ====================================
+		COMPONENT: INPUT: BUTTON
+ * ==================================== */
 .btn {
-	//$colorMap: $coreColors, $color: 'primary', $colorName: 'primary', $harmony: 'analogous', $accent: false, $rangeType: 'range', $scaleColors: 17
 	@include localPalette($messageColors, 'success', 'success', 'none', false, 'adaptive');
 
 	background-color: #333;

@@ -7,6 +7,7 @@
      * 3. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900|Raleway:400,700");
 html {
 	font-family: sans-serif;
 	/* 1 */
@@ -670,7 +671,7 @@ a.btn {
 
 /* ====================================
 		COMPONENT: CARD
-		card, block
+		card, block, hero
  * ==================================== */
 .card {
 	display: -webkit-box;
@@ -683,6 +684,14 @@ a.btn {
 	background-color: #e8e9e3;
 	border-radius: 0.15rem;
 	border: 1px solid #c7cbbd; }
+
+.hero {
+	background-color: #e3e5de;
+	border-radius: 0.15rem;
+	border: 1px solid #889072;
+	color: #060605;
+	margin: 2rem;
+	padding: 2rem 34rem; }
 
 /* ====================================
 		COMPONENT: IMAGE
@@ -701,22 +710,30 @@ img {
  * ==================================== */
 /* ====================================
 		COMPONENT: INPUT
-		label, keygen, legend
-		text, email, password, date, tel,
-		button, color, datetime-local, file,
-		image, month, number, range, reset,
-		search, submit, time, url, week;
+		label, keygen, legend;
+		text, email, password, url, tel,
+		number, color, file, image;
+		datetime-local, month, date, time, week;
 		textarea, select, checkbox, radio;
-		datalist, meter, progress
+		datalist, meter, progress, range;
+		reset; search
+		submit
  * ==================================== */
-input, textarea,
-select {
+/* ====================================
+		COMPONENT: INPUT: text, textarea,
+		email, password, tel, number, url
+ * ==================================== */
+input, textarea {
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 0 100%;
 	        flex: 1 0 100%;
 	width: 100%;
 	border: 0;
 	outline: 0; }
+	input + input,
+	.placeholder + input, textarea + input,
+	.placeholder + textarea, input + textarea, textarea + textarea {
+		margin-top: 1rem; }
 
 .input {
 	border-bottom: 1px solid tomato;
@@ -762,6 +779,9 @@ select {
 	margin: 0 0 0.5rem;
 	color: tomato; }
 
+/* ====================================
+		COMPONENT: INPUT: BUTTON
+ * ==================================== */
 .btn {
 	background-color: #333;
 	color: white;
@@ -812,6 +832,211 @@ select {
 		COMPONENT: MESSAGING
 		info/notice, success, error, warn; 'chat'
  * ==================================== */
+.msg {
+	padding: 0.75rem;
+	text-align: center;
+	border-radius: 0.15rem; }
+	.msg-default {
+		border: 1px solid #a39eb0;
+		background-color: #eae8ed;
+		color: #060605; }
+		.msg-default:hover {
+			border: 1px solid #5D576B;
+			background-color: #a39eb0;
+			color: #f9faf8; }
+	.msg-info {
+		border: 1px solid #41D3BD;
+		background-color: #95e7da;
+		color: #060605; }
+		.msg-info:hover {
+			border: 1px solid #1d7d6e;
+			background-color: #41D3BD;
+			color: #060605; }
+	.msg-success {
+		border: 1px solid #A9E190;
+		background-color: #cfeec1;
+		color: #060605; }
+		.msg-success:hover {
+			border: 1px solid #50a22c;
+			background-color: #A9E190;
+			color: #060605; }
+	.msg-alert {
+		border: 1px solid #e2da4d;
+		background-color: #f6f3c5;
+		color: #060605; }
+		.msg-alert:hover {
+			border: 1px solid #615c10;
+			background-color: #e2da4d;
+			color: #060605; }
+	.msg-warn {
+		border: 1px solid #f2968b;
+		background-color: #fad8d4;
+		color: #060605; }
+		.msg-warn:hover {
+			border: 1px solid #e8432e;
+			background-color: #f2968b;
+			color: #060605; }
+	.msg-default {
+		border: 1px solid #a39eb0;
+		background-color: #eae8ed;
+		color: #060605; }
+		.msg-default:hover {
+			border: 1px solid #5D576B;
+			background-color: #a39eb0;
+			color: #f9faf8; }
+	.msg-info {
+		border: 1px solid #41D3BD;
+		background-color: #95e7da;
+		color: #060605; }
+		.msg-info:hover {
+			border: 1px solid #1d7d6e;
+			background-color: #41D3BD;
+			color: #060605; }
+	.msg-success {
+		border: 1px solid #A9E190;
+		background-color: #cfeec1;
+		color: #060605; }
+		.msg-success:hover {
+			border: 1px solid #50a22c;
+			background-color: #A9E190;
+			color: #060605; }
+	.msg-alert {
+		border: 1px solid #e2da4d;
+		background-color: #f6f3c5;
+		color: #060605; }
+		.msg-alert:hover {
+			border: 1px solid #615c10;
+			background-color: #e2da4d;
+			color: #060605; }
+	.msg-warn {
+		border: 1px solid #f2968b;
+		background-color: #fad8d4;
+		color: #060605; }
+		.msg-warn:hover {
+			border: 1px solid #e8432e;
+			background-color: #f2968b;
+			color: #060605; }
+	.msg-default {
+		border: 1px solid #a39eb0;
+		background-color: #eae8ed;
+		color: #060605; }
+		.msg-default:hover {
+			border: 1px solid #5D576B;
+			background-color: #a39eb0;
+			color: #f9faf8; }
+	.msg-info {
+		border: 1px solid #41D3BD;
+		background-color: #95e7da;
+		color: #060605; }
+		.msg-info:hover {
+			border: 1px solid #1d7d6e;
+			background-color: #41D3BD;
+			color: #060605; }
+	.msg-success {
+		border: 1px solid #A9E190;
+		background-color: #cfeec1;
+		color: #060605; }
+		.msg-success:hover {
+			border: 1px solid #50a22c;
+			background-color: #A9E190;
+			color: #060605; }
+	.msg-alert {
+		border: 1px solid #e2da4d;
+		background-color: #f6f3c5;
+		color: #060605; }
+		.msg-alert:hover {
+			border: 1px solid #615c10;
+			background-color: #e2da4d;
+			color: #060605; }
+	.msg-warn {
+		border: 1px solid #f2968b;
+		background-color: #fad8d4;
+		color: #060605; }
+		.msg-warn:hover {
+			border: 1px solid #e8432e;
+			background-color: #f2968b;
+			color: #060605; }
+	.msg-default {
+		border: 1px solid #a39eb0;
+		background-color: #eae8ed;
+		color: #060605; }
+		.msg-default:hover {
+			border: 1px solid #5D576B;
+			background-color: #a39eb0;
+			color: #f9faf8; }
+	.msg-info {
+		border: 1px solid #41D3BD;
+		background-color: #95e7da;
+		color: #060605; }
+		.msg-info:hover {
+			border: 1px solid #1d7d6e;
+			background-color: #41D3BD;
+			color: #060605; }
+	.msg-success {
+		border: 1px solid #A9E190;
+		background-color: #cfeec1;
+		color: #060605; }
+		.msg-success:hover {
+			border: 1px solid #50a22c;
+			background-color: #A9E190;
+			color: #060605; }
+	.msg-alert {
+		border: 1px solid #e2da4d;
+		background-color: #f6f3c5;
+		color: #060605; }
+		.msg-alert:hover {
+			border: 1px solid #615c10;
+			background-color: #e2da4d;
+			color: #060605; }
+	.msg-warn {
+		border: 1px solid #f2968b;
+		background-color: #fad8d4;
+		color: #060605; }
+		.msg-warn:hover {
+			border: 1px solid #e8432e;
+			background-color: #f2968b;
+			color: #060605; }
+	.msg-default {
+		border: 1px solid #a39eb0;
+		background-color: #eae8ed;
+		color: #060605; }
+		.msg-default:hover {
+			border: 1px solid #5D576B;
+			background-color: #a39eb0;
+			color: #f9faf8; }
+	.msg-info {
+		border: 1px solid #41D3BD;
+		background-color: #95e7da;
+		color: #060605; }
+		.msg-info:hover {
+			border: 1px solid #1d7d6e;
+			background-color: #41D3BD;
+			color: #060605; }
+	.msg-success {
+		border: 1px solid #A9E190;
+		background-color: #cfeec1;
+		color: #060605; }
+		.msg-success:hover {
+			border: 1px solid #50a22c;
+			background-color: #A9E190;
+			color: #060605; }
+	.msg-alert {
+		border: 1px solid #e2da4d;
+		background-color: #f6f3c5;
+		color: #060605; }
+		.msg-alert:hover {
+			border: 1px solid #615c10;
+			background-color: #e2da4d;
+			color: #060605; }
+	.msg-warn {
+		border: 1px solid #f2968b;
+		background-color: #fad8d4;
+		color: #060605; }
+		.msg-warn:hover {
+			border: 1px solid #e8432e;
+			background-color: #f2968b;
+			color: #060605; }
+
 /* ====================================
 		COMPONENT: TABLE
  * ==================================== */
