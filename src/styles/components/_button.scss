@@ -1,0 +1,38 @@
+/* ====================================
+		COMPONENT: BUTTON
+ * ==================================== */
+.btn {
+	@include localPalette($messageColors, 'success', 'success', 'none', false, 'adaptive');
+
+	background-color: #333;
+	color: white;
+	border-radius: 0.15rem;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	padding: map-get($defaults, 'margin');
+
+	$keys: map-keys($messageColors);
+	@each $name in $keys {
+		&-#{$name} {
+			background-color: getColor("#{$name}-700", $localPalette);
+			color: getContrast(getColor("#{$name}-700", $localPalette));
+			&:hover {
+				background-color: getColor("#{$name}-400", $localPalette);
+				color: getContrast(getColor("#{$name}-400", $localPalette));
+			}
+		}
+	}
+}
+
+// a.btn {
+// 	@extend %pad-xs-y;
+// 	@extend %pad-md-x;
+// }
+
+@each $size in $sizes {
+	.btn-#{$size} {
+		font-size: map-get($font-sizes, $size);
+		padding: (map-get($font-sizes, $size) * 2) (map-get($font-sizes, $size) * 4);
+	}
+}

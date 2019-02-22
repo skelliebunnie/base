@@ -110,6 +110,11 @@ $colors: map-values($palette);
 .no-pad { padding: 0 !important; }
 .no-margin { margin: 0 !important; }
 
+@each $name,$size in $font-sizes {
+	.font-size-#{$name} { @extend %font-size-#{$name}; }
+	.line-height-#{$name} { @extend %line-height-#{$name}; }
+}
+
 //* ====================================
 //*		HELPERS: PADDING
 //* ====================================

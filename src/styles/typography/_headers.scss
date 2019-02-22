@@ -18,6 +18,8 @@ $m: map-get($defaults, 'margin'); $p: map-get($defaults, 'padding');
 		vertical-align: middle;
 		letter-spacing: normal;
 		flex: 1 0 100%;
+
+		& > a { color: inherit; }
 	}
 
 	@if($i == 2) {

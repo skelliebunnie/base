@@ -9,6 +9,16 @@
 			font-size: $n * 0.8em;
 			line-height: $n * 0.5em;
 		}
+
+		@each $name,$size in $font-sizes {
+			&.font-size-#{$name} {
+				font-size: ($n / 0.8) * $size;
+			}
+			&.line-height-#{$name} {
+				line-height: ($n / 0.5) * $size;
+			}
+		}
+
 		$n: $n * 0.85;
 	}
 

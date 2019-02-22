@@ -72,36 +72,3 @@ input, textarea {
 	margin: 0 0 0.5rem;
 	color: tomato;
 }
-
-/* ====================================
-		COMPONENT: INPUT: BUTTON
- * ==================================== */
-.btn {
-	@include localPalette($messageColors, 'success', 'success', 'none', false, 'adaptive');
-
-	background-color: #333;
-	color: white;
-	border-radius: 0.15rem;
-	border: 0;
-	outline: 0;
-	cursor: pointer;
-
-	@extend %pad-md-around;
-
-	$keys: map-keys($messageColors);
-	@each $name in $keys {
-		&-#{$name} {
-			background-color: getColor("#{$name}-700", $localPalette);
-			color: getContrast(getColor("#{$name}-700", $localPalette));
-			&:hover {
-				background-color: getColor("#{$name}-400", $localPalette);
-				color: getContrast(getColor("#{$name}-400", $localPalette));
-			}
-		}
-	}
-}
-
-a.btn {
-	@extend %pad-xs-y;
-	@extend %pad-md-x;
-}
