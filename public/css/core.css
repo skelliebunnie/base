@@ -1701,7 +1701,7 @@ h6, .h6 {
 @media (min-width: 80em) {
   h1, .h1, .site-title {
     font-size: 2.4em;
-    line-height: 1.5em; }
+    line-height: 1.26em; }
   .font-size-xs {
     font-size: 1.875rem; }
   .line-height-xs {
@@ -1724,7 +1724,7 @@ h6, .h6 {
     line-height: 12rem; }
   h2, .h2 {
     font-size: 2.04em;
-    line-height: 1.275em; }
+    line-height: 1.26em; }
   .font-size-xs {
     font-size: 1.59375rem; }
   .line-height-xs {
@@ -1747,7 +1747,7 @@ h6, .h6 {
     line-height: 10.2rem; }
   h3, .h3 {
     font-size: 1.734em;
-    line-height: 1.08375em; }
+    line-height: 1.26em; }
   .font-size-xs {
     font-size: 1.35469rem; }
   .line-height-xs {
@@ -1770,7 +1770,7 @@ h6, .h6 {
     line-height: 8.67rem; }
   h4, .h4 {
     font-size: 1.4739em;
-    line-height: 0.92119em; }
+    line-height: 1.26em; }
   .font-size-xs {
     font-size: 1.15148rem; }
   .line-height-xs {
@@ -1793,7 +1793,7 @@ h6, .h6 {
     line-height: 7.3695rem; }
   h5, .h5 {
     font-size: 1.25282em;
-    line-height: 0.78301em; }
+    line-height: 1.26em; }
   .font-size-xs {
     font-size: 0.97876rem; }
   .line-height-xs {
@@ -1816,7 +1816,7 @@ h6, .h6 {
     line-height: 6.26407rem; }
   h6, .h6 {
     font-size: 1.06489em;
-    line-height: 0.66556em; }
+    line-height: 1.26em; }
   .font-size-xs {
     font-size: 0.83195rem; }
   .line-height-xs {
