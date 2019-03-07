@@ -7,7 +7,7 @@
      * 3. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900|Raleway:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,900|Assistant:400,700");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -444,36 +444,6 @@ body {
 	* Remember to update @include palette in SETTINGS if you change the color names in the map, or if you switch to using an alternate naming scheme! Otherwise the mixin won't be able to find the colors and you'll get an error.
 */
 /* NAV, GENERAL */
-.font-size-xs {
-  font-size: 0.5rem; }
-
-.line-height-xs {
-  line-height: 0.55rem; }
-
-.font-size-sm {
-  font-size: 0.8rem; }
-
-.line-height-sm {
-  line-height: 0.88rem; }
-
-.font-size-md {
-  font-size: 1rem; }
-
-.line-height-md {
-  line-height: 1.1rem; }
-
-.font-size-lg {
-  font-size: 1.3rem; }
-
-.line-height-lg {
-  line-height: 1.43rem; }
-
-.font-size-xl {
-  font-size: 2rem; }
-
-.line-height-xl {
-  line-height: 2.2rem; }
-
 /* ====================================
 		GRID
  * ==================================== */
@@ -1535,7 +1505,7 @@ body {
 		TYPOGRAPHY
  * ==================================== */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 1px; }
 
 a {
@@ -1571,7 +1541,7 @@ h1, .h1, .site-title {
   line-height: 1.05em;
   margin: 0.6rem;
   padding: 0.6rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-weight: 700;
   vertical-align: middle;
   letter-spacing: normal;
@@ -1586,7 +1556,7 @@ h2, .h2 {
   line-height: 0.945em;
   margin: 0.6rem;
   padding: 0.6rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-weight: 700;
   vertical-align: middle;
   letter-spacing: normal;
@@ -1604,7 +1574,7 @@ h3, .h3 {
   line-height: 0.8505em;
   margin: 0.6rem;
   padding: 0.6rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-weight: 700;
   vertical-align: middle;
   letter-spacing: normal;
@@ -1619,7 +1589,7 @@ h4, .h4 {
   line-height: 0.76545em;
   margin: 0.6rem;
   padding: 0.6rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-weight: 700;
   vertical-align: middle;
   letter-spacing: normal;
@@ -1634,7 +1604,7 @@ h5, .h5 {
   line-height: 0.68891em;
   margin: 0.6rem;
   padding: 0.6rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-weight: 700;
   vertical-align: middle;
   letter-spacing: normal;
@@ -1649,7 +1619,7 @@ h6, .h6 {
   line-height: 0.62001em;
   margin: 0.6rem;
   padding: 0.6rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Assistant', sans-serif;
   font-weight: 700;
   vertical-align: middle;
   letter-spacing: normal;
@@ -3221,6 +3191,12 @@ h6, .h6 {
 .text-inherit {
   color: inherit; }
 
+.text-bold {
+  font-weight: bold; }
+
+.text-italic {
+  font-style: italic; }
+
 .row.col-no-pad > .col {
   padding: 0; }
 
@@ -3340,6 +3316,39 @@ h6, .h6 {
 .no-margin {
   margin: 0 !important; }
 
+.font-size-xs {
+  font-size: 0.5rem; }
+
+.line-height-xs {
+  line-height: 0.55rem; }
+
+.font-size-sm {
+  font-size: 0.8rem; }
+
+.line-height-sm {
+  line-height: 0.88rem; }
+
+.font-size-md {
+  font-size: 1rem; }
+
+.line-height-md {
+  line-height: 1.1rem; }
+
+.font-size-lg {
+  font-size: 1.3rem; }
+
+.line-height-lg {
+  line-height: 1.43rem; }
+
+.font-size-xl {
+  font-size: 2rem; }
+
+.line-height-xl {
+  line-height: 2.2rem; }
+
+/* ====================================
+		HELPERS: PADDING
+ * ==================================== */
 .pad-top {
   padding-top: 0.75rem; }
 
@@ -3478,6 +3487,9 @@ h6, .h6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
 
+/* ====================================
+		HELPERS: MARGIN
+ * ==================================== */
 .margin-top {
   padding-top: 0.75rem; }
 

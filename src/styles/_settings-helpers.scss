@@ -76,6 +76,9 @@ $colors: map-values($palette);
 	&-dark { color: getVal('color-dark', $defaults); }
 	&-light { color: getVal('color-light', $defaults); }
 	&-inherit { color: inherit; }
+
+	&-bold { font-weight: bold; }
+	&-italic { font-style: italic; }
 }
 
 .row.col-no-pad > .col { padding: 0; }
@@ -110,14 +113,15 @@ $colors: map-values($palette);
 .no-pad { padding: 0 !important; }
 .no-margin { margin: 0 !important; }
 
+
 @each $name,$size in $font-sizes {
-	.font-size-#{$name} { @extend %font-size-#{$name}; }
-	.line-height-#{$name} { @extend %line-height-#{$name}; }
+	.font-size-#{$name} { font-size: $size; }
+	.line-height-#{$name} { line-height: $size * 1.1; }
 }
 
-//* ====================================
-//*		HELPERS: PADDING
-//* ====================================
+/* ====================================
+		HELPERS: PADDING
+ * ==================================== */
 @each $position in $border-sides {
 	.pad-#{$position} {
 		padding-#{$position}: $default-pad;
@@ -164,9 +168,9 @@ $colors: map-values($palette);
 	}
 }
 
-//* ====================================
-//*		HELPERS: MARGIN
-//* ====================================
+/* ====================================
+		HELPERS: MARGIN
+ * ==================================== */
 @each $position in $border-sides {
 	.margin-#{$position} {
 		padding-#{$position}: $default-margin;

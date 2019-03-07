@@ -37,10 +37,10 @@ $range: 'adaptive';
 //* ====================================
 //		FONTS & TYPOGRAPHY
 //* ====================================
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900|Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,900|Assistant:400,700');
 $fonts: (
-	'copy': unquote("'Montserrat', sans-serif"),
-	'heading': unquote("'Raleway', sans-serif")
+	'copy': unquote("'Open Sans', sans-serif"),
+	'heading': unquote("'Assistant', sans-serif")
 ) !default;
 
 $font-sizes: (
