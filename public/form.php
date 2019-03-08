@@ -1,5 +1,5 @@
 <?php 
-	$page_title = "BASE: Form & Form Elements";
+	$page_title = "BASE: Forms";
 	include "templates/header.php";
 	include "templates/sidebar.php";
 ?>

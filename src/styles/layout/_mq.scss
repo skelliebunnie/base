@@ -77,7 +77,7 @@
 			}
 		}
 
-		&.to-header {
+		&.sidebar-to-header {
 			grid-template-areas:
 				"site-sidebar site-header"
 				"site-sidebar site-nav"
@@ -91,7 +91,7 @@
 			}
 		}
 
-		&.to-footer {
+		&.sidebar-to-footer {
 			grid-template-areas:
 				"site-header site-header"
 				"site-sidebar site-nav"
