@@ -1,9 +1,18 @@
 /* ====================================
 		LAYOUT: GRID AREAS
  * ==================================== */
-.site-header { grid-area: site-header; }
-.site-nav { grid-area: site-nav; }
-.site-sidebar { grid-area: site-sidebar; }
+.site-header { 
+	grid-area: site-header;
+}
+
+.site-nav { 
+	grid-area: site-nav;
+}
+
+.site-sidebar { 
+	grid-area: site-sidebar;
+}
+
 .site-content {
 	grid-area: site-content;
 	padding: 0;
@@ -26,7 +35,7 @@
 	margin: 0;
 	max-width: 100%;
 	width: 100vw;
-	height: 100vh;
+	// height: 100vh;
 	min-height: 100vh;
 	justify-content: center;
 	align-items: space-between;

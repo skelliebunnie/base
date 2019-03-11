@@ -4,7 +4,7 @@
 
 #page-container {
 	@include mq($from: "tablet") {
-		grid-template-rows: 1.5fr .5fr 9fr .5fr;
+		grid-template-rows: min-content min-content 1fr min-content;
 		grid-template-columns: minmax(min-content, 15%) 1fr;
 		grid-template-areas:
 		"site-header site-header"
@@ -13,7 +13,7 @@
 		"site-footer site-footer";
 
 		&.site-nav-none {
-			grid-template-rows: 1.5fr 9.5fr .5fr;
+			// grid-template-rows: 1.5fr 9.5fr .5fr;
 			grid-template-areas:
 				"site-header site-header"
 				"site-sidebar site-content"

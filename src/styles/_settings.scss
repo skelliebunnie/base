@@ -7,15 +7,15 @@
 
 //* ====================================
 //		COLORS
-//		beige: 2E4057
+//		dust: 2E4057
 //* ====================================
 // if using a different name for the map, update @include palette();
 $coreColors: (
-	'beige': #B2AA8E,
-	'blue': #03B5AA,
-	'yellow': #DBFE87,
-	'purple': #7A306C,
-	'neutral': #151515,
+	'dust': #EDD3C4,
+	'lilac': #C8ADC0,
+	'slate': #7765E3,
+	'carmine': #EF3E36,
+	'neutral': #080708,
 ) !default;
 
 $messageColors: (
@@ -34,7 +34,7 @@ $messageColors: (
 
 // quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
 $range: 'static';
-@include palette($color: 'beige', $complement-name: 'violet', $rangeType: $range, $staticDepth: 9);
+@include palette($color: 'dust', $complement-name: 'violet', $rangeType: $range, $staticDepth: 9);
 
 // @debug $palette;
 
@@ -42,9 +42,9 @@ $range: 'static';
 //* ====================================
 //		FOR COLOR-CHARTS ONLY
 //* ====================================
-$clr: 'beige';
+$clr: 'dust';
 $h: 'analogous';
-$clr400: 'beige';
+$clr400: 'dust';
 
 //* ====================================
 //		FONTS & TYPOGRAPHY
@@ -63,9 +63,9 @@ $font-sizes: (
 	'xl': 2rem
 ) !default;
 
-$heading-color: getColor('purple-500') !default;
-$a--color: getColor('yellow-700') !default;
-$a-hover--color: getColor('purple-700') !default;
+$heading-color: getColor('carmine-500') !default;
+$a--color: getColor('slate-700') !default;
+$a-hover--color: getColor('carmine-700') !default;
 
 //* ====================================
 //		GENERAL DEFAULTS
@@ -132,37 +132,37 @@ $max-columns: 12 !default;
 // for screen widths >= 1024; < 1024 == center;
 $site-header--text-position: left;
 
-$site-header--bg-color: getColor('beige', $coreColors) !default;
+$site-header--bg-color: getColor('dust', $coreColors) !default;
 $site-header--bg-image: '../images/succulents.jpg' !default;
 $site-header--bg-position: top !default;
 
-$site-title-a--color: getColor('purple-100') !default;
+$site-title-a--color: getColor('carmine-100') !default;
 
 //* ====================================
 //		SITE-NAV
 //* ====================================
-$site-nav--bg-color: getColor('purple-700') !default;
-$site-nav-hover--bg-color: getColor('beige-analogous3-400') !default;
-$site-nav-active--bg-color: getColor('beige-analogous3-200') !default;
+$site-nav--bg-color: getColor('carmine-700') !default;
+$site-nav-hover--bg-color: getColor('dust-analogous3-400') !default;
+$site-nav-active--bg-color: getColor('dust-analogous3-200') !default;
 
-$site-nav-currentpg--bg-color: getColor('purple-400') !default;
+$site-nav-currentpg--bg-color: getColor('carmine-400') !default;
 
 /* NAV, GENERAL */
-$nav--color: getColor('yellow-400');
-$nav-hover--color: getColor('purple-400');
+$nav--color: getColor('slate-400');
+$nav-hover--color: getColor('carmine-400');
 
 //* ====================================
 //		TABLE
 //* ====================================
-$table-thead-th--bg-color: getColor('purple-700') !default;
-$table-tbody-th--bg-color: getColor('purple-100') !default;
-$table-tfoot-th--bg-color: getColor('purple-400') !default;
+$table-thead-th--bg-color: getColor('carmine-700') !default;
+$table-tbody-th--bg-color: getColor('carmine-100') !default;
+$table-tfoot-th--bg-color: getColor('carmine-400') !default;
 
 // ZEBRA STRIPES
-$table-striped--bg-color: getColor('purple-100') !default;
+$table-striped--bg-color: getColor('carmine-100') !default;
 
 // BORDERS
-$table--border-color: getColor('purple-700') !default;
+$table--border-color: getColor('carmine-700') !default;
 
 // top, bottom; NON-STANDARD: left, right, top-outside, bottom-outside;
 $caption--caption-side: bottom;
