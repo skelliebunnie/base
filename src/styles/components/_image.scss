@@ -3,7 +3,58 @@
  * ==================================== */
 img {
 	width: 100%;
-	border: 0;
+	height: auto;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	border: 0;
+}
+
+.credit {
+	position: relative;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	padding: 0.12rem 0.24rem;
+	font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+	font-size: ms(-1);
+	font-weight: bold;
+	line-height: 1.2;
+	display: inline-block;
+	border-radius: 0.25rem;
+	span {
+		display: inline-block;
+		padding: 0.12rem 0.2rem;
+	}
+	.icon {
+		height: ms(-1);
+		width: auto;
+		position: relative;
+		vertical-align: middle;
+		top: -1px;
+		fill: white;
+	}
+}
+
+.img-credit {
+	$margin: 0.4rem;
+	position: relative;
+	overflow: hidden;
+	.credit-container {
+		position: absolute;
+		bottom: $margin;
+		left: -10rem;
+		right: 0;
+		opacity: 0;
+		transition: all 0.4s ease-in-out;
+	}
+
+	&:hover {
+		cursor: crosshair;
+		.credit-container {
+			opacity: 1;
+			bottom: $margin;
+			left: $margin;
+		}
+	}
 }

@@ -36,5 +36,8 @@
 			<li class='nav-item <?php if($page_title=='BASE: Typography') { echo "active"; } ?>'>
 				<a href="./typography.php">Typography</a>
 			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Gallery') { echo "active"; } ?>'>
+				<a href="./gallery.php">Gallery</a>
+			</li>
 		</ul>
 	</nav>

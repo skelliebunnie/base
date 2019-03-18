@@ -1,0 +1,139 @@
+/* ====================================
+    MODULE: GALLERY
+ * ==================================== */
+.gallery {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+  
+  li {
+    display: inline;
+    height: auto;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  figure {
+    display: inline-block;
+    font-size: ms(0);
+    line-height: ms(1);
+  }
+  
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+
+  &-thumbs-sm li > figure,
+  &-thumbs-sm li > img {
+    width: 17vw;
+    max-width: 17vw;
+  }
+  &-thumbs-md li > figure,
+  &-thumbs-md li > img {
+    width: 24vw;
+    max-width: 24vw;
+  }
+  &-thumbs-lg li > figure,
+  &-thumbs-lg li > img {
+    width: 36vw;
+    max-width: 36vw;
+  }
+  &.gutters {
+     padding: 0.7rem;
+    li > img,
+    li > figure {
+      margin: 0.7rem;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .gallery-#{$i} li:nth-child(#{$i}n):after {
+    content: "\A";
+    white-space: pre;
+  }
+  .gallery-#{$i} li > figure,
+  .gallery-#{$i} li > img {
+    max-width: (90% / $i);
+    height: auto;
+  }
+}
+
+.gallery-masonry {
+  display: block;
+  list-style-type: none;
+  text-indent: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: 0;
+  font-size: 0;
+  column-gap: 0px;
+
+  li {
+    display: block;
+    list-style-position: inside;
+    margin: 0; 
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    width: 100%;
+  }
+
+  li > img,
+  li >  figure {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  &.gutters {
+    column-gap: 0.875rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+
+    > li figure,
+    > li img {
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+    }
+    > li:first-child figure,
+    > li:first-child img {
+      padding-top: 0.35rem;
+    }
+    > li + li figure,
+    > li + li img {
+      padding-top: 0.35rem;
+    }
+  }
+// breakpoints:
+//  mobile:     425px     26.5625em
+//  tablet-sm:  640px     40em
+//  tablet:     768px     48em
+//  tablet-wd:  1024px    64em
+//  desktop:    1280px    80em
+//  4k:         2840px    177.5em
+  @include mq($until: tablet) {
+    column-count: 1;
+  }
+  @include mq($from: tablet, $until: desktop) {
+    column-count: 3;
+  }
+  @include mq($from: tablet) {
+    column-count: 5;
+  }
+  @for $i from 1 through 8 {
+    &.count-#{$i} {
+      column-count: $i;
+    }
+  }
+}
