@@ -13,7 +13,7 @@
 		"site-footer site-footer";
 
 		&.site-nav-none {
-			// grid-template-rows: 1.5fr 9.5fr .5fr;
+			grid-template-rows: min-content 1fr min-content;
 			grid-template-areas:
 				"site-header site-header"
 				"site-sidebar site-content"
