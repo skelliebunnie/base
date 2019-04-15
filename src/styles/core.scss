@@ -1,21 +1,21 @@
 @import "global";
 
-@import "color/test";
+//@import "color/test";
 
-//@import "settings";
+@import "settings";
 
-// @import	'global/sass-mq',
-// 				'global/variables',
-// 				'global/functions',
-// 				'global/mixins',
-// 				'global/helpers';
+@import	'global/sass-mq',
+				'global/variables',
+				'global/functions',
+				'global/mixins',
+				'global/helpers';
 
-// @import "grid/grid",
-// 				"grid/mq";
+@import "grid/grid",
+				"grid/mq";
 
-// @import "typography/typography",
-// 				"typography/headers",
-// 				"typography/titles",
-// 				"typography/mq";
+@import "typography/typography",
+				"typography/headers",
+				"typography/titles",
+				"typography/mq";
 
-// @import "settings-helpers";
+@import "settings-helpers";

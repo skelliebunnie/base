@@ -30,8 +30,6 @@ $messageColors: (
 @import "color/functions";
 @import "color/mixins";
 
-//@debug luminance(#fefefe) * 100%;
-
 // quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
 $range: 'static';
 @include palette($color: 'dust', $complement-name: 'violet', $rangeType: $range, $staticDepth: 9);
