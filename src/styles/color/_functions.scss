@@ -503,7 +503,8 @@
 @function harmony($color, $colorName: "primary", $harmony: "analogous", $include-complement: false, $complement-name: "#{$colorName}-complement") {
 	$colors: ();
 
-	$main: $color; $complement: complement($color);
+	$main: $color; $complement: complement($main);
+	
 	$palette: ();
 
 	// tetrad = rectangular tetradic harmony

@@ -1,6 +1,7 @@
-@mixin palette($colorMap: $coreColors, $color: 'primary', $colorName: $color, $harmony: 'analogous', $include-complement: false, $complement-name: "#{$color}-complement", $rangeType: 'range', $scaleColors: 17, $staticDepth: 7) {
+@mixin palette($color: #777, $colorMap: $coreColors, $colorName: $color, $harmony: 'analogous', $include-complement: false, $complement-name: "#{$color}-complement", $rangeType: 'range', $scaleColors: 17, $staticDepth: 7) {
+	$palette: ();
 	
-	$primaryColor: getColor($color,$colorMap);
+	$primaryColor: getColor($color, $colorMap);
 
 	$colors: (); $primaryHarmonyRange: null; $mapRange: null;
 
@@ -57,7 +58,7 @@
 
 	$localPalette: () !global !default;
 
-	$primaryColor: getColor($color,$colorMap);
+	$primaryColor: map-get($colorMap, $color);
 
 	$colors: (); $primaryHarmonyRange: null; $mapRange: null;
 

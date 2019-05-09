@@ -39,5 +39,8 @@
 			<li class='nav-item <?php if($page_title=='BASE: Gallery') { echo "active"; } ?>'>
 				<a href="./gallery.php">Gallery</a>
 			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Fancy') { echo "active"; } ?>'>
+				<a href="./fancy.php">Fancy</a>
+			</li>
 		</ul>
 	</nav>
