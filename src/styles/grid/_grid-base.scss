@@ -57,4 +57,10 @@ $rowcolwidths: ();
 		flex: 1 0 nth($colwidths, $i);
 		max-width: nth($colwidths, $i);
 	}
+
+	.row-vertical %col-#{$i},
+	.row-vertical %container-#{$i} {
+		flex: 1 0 100%;
+		max-height: nth($colwidths, $i);
+	}
 }
