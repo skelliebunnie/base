@@ -1,12 +1,12 @@
 /* ====================================
 		TYPOGRAPHY: HEADERS
  * ==================================== */
-$n: 3;
+$n: 3; $ln: 3;
 @for $i from 1 through 6 {
 $m: map-get($defaults, 'margin'); $p: map-get($defaults, 'padding');
 	h#{$i}, .h#{$i} {
 		font-size: $n * 0.8em;
-		line-height: $n * 0.35em;
+		line-height: $ln * 0.4;
 		margin: map-get($margin-sizes, 'sm');
 		padding: map-get($padding-sizes, 'sm');
 		//margin: $m;
@@ -27,6 +27,13 @@ $m: map-get($defaults, 'margin'); $p: map-get($defaults, 'padding');
 			margin: 0;
 		}
 	}
+
+	@if ($i > 3) {
+		$nl: $n * 1.2;
+	} @else {
+		$nl: $n * 0.9;
+	}
+
 	$n: $n * 0.9;
 }
 .h2 {
