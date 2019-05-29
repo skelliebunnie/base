@@ -20,7 +20,8 @@
 }
 
 #colors-default {
-	@include palette($coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'default', $include-complement: true, $complement-name: 'violet', $scaleColors: 21);
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'default', $include-complement: true, $complement-name: 'violet', $scaleColors: 21);
+
 	@extend %colors;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -68,7 +69,7 @@
 }
 
 #colors-adaptive {
-	@include palette($coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'adaptive', $include-complement: true, $complement-name: 'violet', $scaleColors: 21);
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'adaptive', $include-complement: true, $complement-name: 'violet', $scaleColors: 21);
 	@extend %colors;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -119,7 +120,7 @@
 
 #colors-static {
 	$d: 9;
-	@include palette($coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'static', $include-complement: true, $complement-name: 'violet', $staticDepth: $d);
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'static', $include-complement: true, $complement-name: 'violet', $staticDepth: $d);
 	@extend %colors;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -164,7 +165,7 @@
 
 
 #analogous-400 {
-	@include palette($coreColors, $color: $clr400, $harmony: "analogous", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "analogous", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -181,7 +182,7 @@
 }
 
 #compound-400 {
-	@include palette($coreColors, $color: $clr400, $harmony: "compound", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "compound", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -198,7 +199,7 @@
 }
 
 #tetrad-400 {
-	@include palette($coreColors, $color: $clr400, $harmony: "tetrad", $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "tetrad", $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -215,7 +216,7 @@
 }
 
 #quadratic-400 {
-	@include palette($coreColors, $color: $clr400, $harmony: "quadratic", $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "quadratic", $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -232,7 +233,7 @@
 }
 
 #triad-400 {
-	@include palette($coreColors, $color: $clr400, $harmony: "triad", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "triad", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -249,7 +250,7 @@
 }
 
 #split-400 {
-	@include palette($coreColors, $color: $clr400, $harmony: "split", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "split", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
