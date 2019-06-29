@@ -1,4 +1,14 @@
 COLOR PALETTES:
+
+
+$SpaceBrights: (
+	carmine: #ea5330
+	grape: #564787
+	blue: 3891a6
+	ivory: #fefef0
+	neutral: #343434
+);
+
 $HeatherSpring: (
 	primary: #92b4a7,
 	secondary: #bdc4a7,
