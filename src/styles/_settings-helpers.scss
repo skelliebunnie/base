@@ -27,6 +27,18 @@ $colors: map-values($palette);
 	.border-#{$name} { border: 1px solid $val; }
 	.text-#{$name} { color: $val; }
 	.text-hover-#{$name}:hover { color: $val; }
+
+	.box-shadow-#{$name}-xs { box-shadow: 1px 1px 2px -1px $val; }
+	.box-shadow-#{$name}-sm { box-shadow: 1px 1px 1px $val; }
+	.box-shadow-#{$name}-md { box-shadow: 2px 2px 3px $val; }
+	.box-shadow-#{$name}-lg { box-shadow: 3px 3px 5px $val; }
+	.box-shadow-#{$name}-xl { box-shadow: 4px 4px 7px $val; }
+
+	.text-shadow-#{$name}-xs { text-shadow: 1px 1px 2px -1px $val; }
+	.text-shadow-#{$name}-sm { text-shadow: 1px 1px 1px $val; }
+	.text-shadow-#{$name}-md { text-shadow: 2px 2px 3px $val; }
+	.text-shadow-#{$name}-lg { text-shadow: 3px 3px 5px $val; }
+	.text-shadow-#{$name}-xl { text-shadow: 4px 4px 7px $val; }
 }
 
 .bg {
@@ -76,13 +88,20 @@ $colors: map-values($palette);
 	&-dark { color: getVal('color-dark', $defaults); }
 	&-light { color: getVal('color-light', $defaults); }
 	&-inherit { color: inherit; }
+
+	&-bold { font-weight: bold; }
+	&-italic { font-style: italic; }
+
+	@each $name,$size in $font-sizes {
+		&-#{$name} { 
+			font-size: $size;
+			line-height: $size * 1.2;
+		}
+	}
 }
 
-.row.col-no-pad > .col { padding: 0; }
-.row.col-no-margin > .col { margin: 0; }
-
 /* ====================================
-		ADDITIONAL HELPERS
+		HELPERS: FLEX & ALIGNMENT
  * ==================================== */
 .flex {
 	@include flex();
@@ -110,9 +129,19 @@ $colors: map-values($palette);
 .no-pad { padding: 0 !important; }
 .no-margin { margin: 0 !important; }
 
-//* ====================================
-//*		HELPERS: PADDING
-//* ====================================
+
+@each $name,$size in $font-sizes {
+	.font-size-#{$name} { font-size: $size; }
+	.line-height-#{$name} { line-height: $size * 1.1; }
+}
+
+.center { margin: 0 auto; }
+
+/* ====================================
+		HELPERS: PADDING
+ * ==================================== */
+.row.col-no-pad > .col { padding: 0; }
+
 @each $position in $border-sides {
 	.pad-#{$position} {
 		padding-#{$position}: $default-pad;
@@ -159,9 +188,11 @@ $colors: map-values($palette);
 	}
 }
 
-//* ====================================
-//*		HELPERS: MARGIN
-//* ====================================
+/* ====================================
+		HELPERS: MARGIN
+ * ==================================== */
+.row.col-no-margin > .col { margin: 0; }
+
 @each $position in $border-sides {
 	.margin-#{$position} {
 		padding-#{$position}: $default-margin;

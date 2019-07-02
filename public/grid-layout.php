@@ -1,5 +1,5 @@
 <?php 
-	$page_title = "GRID LAYOUT";
+	$page_title = "BASE: Grid";
 	include "templates/header.php";
 	include "templates/sidebar.php";
 ?>

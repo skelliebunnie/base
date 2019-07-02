@@ -1,5 +1,7 @@
 @import "global";
 
+//@import "color/test";
+
 @import "settings";
 
 @import	'global/sass-mq',
@@ -10,10 +12,5 @@
 
 @import "grid/grid",
 				"grid/mq";
-
-@import "typography/typography",
-				"typography/headers",
-				"typography/titles",
-				"typography/mq";
 
 @import "settings-helpers";

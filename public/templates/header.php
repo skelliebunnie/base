@@ -18,11 +18,29 @@
 	</header>
 	<nav class="site-nav">
 		<ul class="nav nav-horizontal">
-			<li class='nav-item'><a href="./index.php">Home</a></li>
-			<li class='nav-item'><a href="./grid-layout.php">Grid</a></li>
-			<li class='nav-item'><a href="./colors.php">Colors</a></li>
-			<li class='nav-item'><a href="./tables.php">Tables</a></li>
-			<li class='nav-item'><a href="./form.php">Form</a></li>
-			<li class='nav-item'><a href="./typography.php">Typography</a></li>
+			<li class='nav-item <?php if($page_title=='BASE: Index' || $page_title=='index') { echo "active"; } ?>'>
+				<a href="./index.php">Home</a>
+			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Grid') { echo "active"; } ?>'>
+				<a href="./grid-layout.php">Grid</a>
+			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Colors') { echo "active"; } ?>'>
+				<a href="./colors.php">Colors</a>
+			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Tables') { echo "active"; } ?>'>
+				<a href="./tables.php">Tables</a>
+			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Forms') { echo "active"; } ?>'>
+				<a href="./form.php">Form</a>
+			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Typography') { echo "active"; } ?>'>
+				<a href="./typography.php">Typography</a>
+			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Gallery') { echo "active"; } ?>'>
+				<a href="./gallery.php">Gallery</a>
+			</li>
+			<li class='nav-item <?php if($page_title=='BASE: Fancy') { echo "active"; } ?>'>
+				<a href="./fancy.php">Fancy</a>
+			</li>
 		</ul>
 	</nav>

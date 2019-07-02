@@ -23,6 +23,7 @@
 	- Grouped into: Inline, Input, Media, Messaging, Table, Lists
 */
 @import "components/hr",
+				"components/button",
 				"components/card",
 				"components/image",
 				"components/inline",
@@ -41,6 +42,7 @@
 	- Grouped into: Blocks, Block-Lists, Nav, Form, Figure
 */
 @import "modules/figure",
+				"modules/gallery",
 				"modules/form",
 				"modules/module-lists",
 				"modules/nav",

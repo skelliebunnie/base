@@ -6,7 +6,7 @@
 
 	& p {
 		position: relative;
-		flex: 1 0 (100% / 7);
+		flex: 1 0 auto; //(100% / 7)
 		padding: 0;
 		margin: 0;
 		line-height: 1rem;
@@ -18,11 +18,10 @@
 		align-items: center;
 	}
 }
-$clr: 'primary';
-$h: 'quad';
 
 #colors-default {
-	@include palette($coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'default');
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'default', $include-complement: true, $complement-name: 'violet', $scaleColors: 21);
+
 	@extend %colors;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -70,16 +69,20 @@ $h: 'quad';
 }
 
 #colors-adaptive {
-	@include palette($coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'adaptive', $include-complement: true, $complement-name: 'violet', $scaleColors: 21);
 	@extend %colors;
 	$n: 1;
 	@each $name,$color in $palette {
 		p:nth-child(#{$n}) {
 			background-color: $color;
 			color: getContrast($color);
+
+			$core: map-values($coreColors);
+
+			$colorName: str-slice($name,1, (str-length($name) - 4));
 			
-			@if hasValue($coreColors, $color) and map-has-key($coreColors, str-slice($name,1, (str-length($name) - 4))) {
-				border: 2px solid black;
+			@if( index($core, $color) ) {
+				border: 2px solid getContrast($color);
 			}
 
 			@if map-has-key($coreColors, str-slice($name, 1, (str-length($name) - 4))) {
@@ -115,6 +118,32 @@ $h: 'quad';
 	}
 }
 
+#colors-static {
+	$d: 9;
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'static', $include-complement: true, $complement-name: 'violet', $staticDepth: $d);
+	@extend %colors;
+	$n: 1;
+	@each $name,$color in $palette {
+		p:nth-child(#{$n}) {
+			background-color: $color;
+			color: getContrast($color);
+
+			$core: map-values($coreColors);
+
+			$colorName: str-slice($name,1, (str-length($name) - 4));
+			
+			@if( index($core, $color) ) {
+				border: 2px solid getContrast($color);
+			}
+
+			&:after {
+				content: "#{$name}";
+			}
+		}
+		$n: $n + 1;
+	}
+}
+
 %colors-400 {
 	$colors: map-values($palette);
 	p {
@@ -134,10 +163,9 @@ $h: 'quad';
 	}
 }
 
-$clr400: 'primary';
+
 #analogous-400 {
-	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "analogous", $accent: true, $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "analogous", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -154,8 +182,7 @@ $clr400: 'primary';
 }
 
 #compound-400 {
-	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "compound", $accent: true, $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "compound", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -172,8 +199,7 @@ $clr400: 'primary';
 }
 
 #tetrad-400 {
-	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "tetrad", $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "tetrad", $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -190,8 +216,7 @@ $clr400: 'primary';
 }
 
 #quadratic-400 {
-	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "quadratic", $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "quadratic", $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -208,8 +233,7 @@ $clr400: 'primary';
 }
 
 #triad-400 {
-	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "triad", $accent: true, $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "triad", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {
@@ -226,8 +250,7 @@ $clr400: 'primary';
 }
 
 #split-400 {
-	$clr400: 'primary';
-	@include palette($coreColors, $color: $clr400, $harmony: "split", $accent: true, $rangeType: 'adaptive');
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "split", $include-complement: true, $complement-name: 'violet', $rangeType: 'adaptive');
 	@extend %colors-400;
 	$n: 1;
 	@each $name,$color in $palette {

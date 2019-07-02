@@ -31,3 +31,5 @@ node_modules
 
 # Garbage files
 .DS_Store
+
+.htaccess

@@ -294,11 +294,12 @@
 		$color: nth($values,$i);
 		$l: luminance($color);
 		$name: nth($names,$i);
+
 		// make sure colors don't "duplicate"
 		@for $n from 2 through 6 {
 			@if(($scale * $n) > 100) {
 				$scale: $scale * 0.87;
-			} 
+			}
 		}
 
 		@if($l <= $luminanceComparison) {
@@ -380,6 +381,79 @@
 	@return $range;
 }
 
+@function rangeStatic($map, $depth: 7) {
+	$r1: (); $r2: (); $range: ();
+
+	$values: map-values($map);
+	$names: map-keys($map);
+	$c1: null; $c2: null; $c3: null; $c4: null;
+	$c5: null; $c6: null; $c7: null;
+
+	@for $i from 1 through length($names) {
+
+		$color: nth($values,$i);
+		$name: nth($names,$i);
+
+		$min: 5%;
+		$min: 50%;
+		$max: 95%;
+		
+		$c50:  91%;
+		$c100: 87%;
+		$c200: 81%;
+		$c300: 69%;
+		$c400: 57%;
+		$c500: 45%;
+		$c600: 31%;
+		$c700: 21%;
+		$c800: 11%;
+		$c900: 5%;
+
+		// lightest - darkest
+		$c50: change-color($color, $lightness: $c50);
+		$c1: change-color($color, $lightness: $c100); 
+		$c2: change-color($color, $lightness: $c200);
+		$c3: change-color($color, $lightness: $c300); 
+		$c4: change-color($color, $lightness: $c400);
+		$c5: change-color($color, $lightness: $c500); 
+		$c6: change-color($color, $lightness: $c600);
+		$c7: change-color($color, $lightness: $c700);
+		$c8: change-color($color, $lightness: $c800);
+		$c9: change-color($color, $lightness: $c900);
+
+		$r1: (
+			unquote("#{$name}")-100: $c1,
+			unquote("#{$name}")-200: $c2,
+			unquote("#{$name}")-300: $c3,
+			unquote("#{$name}")-400: $c4,
+			unquote("#{$name}")-500: $c5,
+			unquote("#{$name}")-600: $c6,
+			unquote("#{$name}")-700: $c7
+		);
+
+		$r2: (
+			unquote("#{$name}")-50: $c50,
+			unquote("#{$name}")-100: $c1,
+			unquote("#{$name}")-200: $c2,
+			unquote("#{$name}")-300: $c3,
+			unquote("#{$name}")-400: $c4,
+			unquote("#{$name}")-500: $c5,
+			unquote("#{$name}")-600: $c6,
+			unquote("#{$name}")-700: $c7,
+			unquote("#{$name}")-800: $c8,
+			unquote("#{$name}")-900: $c9
+		);
+	
+		@if $depth == 7 {
+			$range: map-merge($range, $r1);
+		} @else {
+			$range: map-merge($range, $r2);
+		}
+	}
+
+	@return $range;
+}
+
 @function rangeDefault($map, $scaleColors: 17) {
 	$r: (); $range: (); 
 	// scale, for lightening/darkening: (-100 - 100[%]) scale
@@ -426,9 +500,11 @@
 	@return $range;
 }
 
-@function harmony($color, $colorName: "primary", $harmony: "analogous", $accent: false) {
+@function harmony($color, $colorName: "primary", $harmony: "analogous", $include-complement: false, $complement-name: "#{$colorName}-complement") {
 	$colors: ();
-	$main: $color; $complement: complement($color);
+
+	$main: $color; $complement: complement($main);
+	
 	$palette: ();
 
 	// tetrad = rectangular tetradic harmony
@@ -483,8 +559,8 @@
 	
 	$colors: map-get($harmonyPalettes, $harmony);
 
-	@if $accent != false and $accent != 'false' and $harmony != 'tetrad' { 
-		$colors: map-merge($colors, (unquote("#{$colorName}-complement"): $complement));
+	@if($include-complement == true or $include-complement == 'true') and $harmony != 'tetrad' { 
+		$colors: map-merge($colors, (unquote("#{$complement-name}"): $complement));
 	}
 
 	$palette: map-merge($palette, $colors);

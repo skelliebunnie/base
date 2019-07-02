@@ -1,32 +1,32 @@
 <?php 
-	$page_title = "BASE";
+	$page_title = "BASE: Index";
 	include "templates/header.php";
 	include "templates/sidebar.php";
 ?>
 <main class="site-content pad-xl-around">
 	<nav class="nav">
 		<ul class="nav nav-horizontal">
-			<li class="nav-item bg-primary-400 bg-hover-accent-700"><a href="#">Test A</a></li>
-			<li class="nav-item bg-primary-400 bg-hover-accent-700"><a href="#">Test B</a></li>
-			<li class="nav-item bg-primary-400 bg-hover-accent-700"><a href="#">Test C</a></li>
-			<li class="nav-item bg-primary-400 bg-hover-accent-700"><a href="#">Test D</a></li>
+			<li class="nav-item bg-alabaster-400 bg-hover-cerulean-700"><a href="#">Test A</a></li>
+			<li class="nav-item bg-alabaster-400 bg-hover-cerulean-700"><a href="#">Test B</a></li>
+			<li class="nav-item bg-alabaster-400 bg-hover-cerulean-700"><a href="#">Test C</a></li>
+			<li class="nav-item bg-alabaster-400 bg-hover-cerulean-700"><a href="#">Test D</a></li>
 		</ul>
 	</nav>
 	<div class="row row2-sm row4-md row6-lg row8-xl text-center">
-		<div class="col bg-primary-400">Column 1</div>
-		<div class="col bg-secondary-400">Column 2</div>
-		<div class="col bg-tertiary-400">Column 3</div>
-		<div class="col bg-accent-400">Column 4</div>
-		<div class="col bg-neutral-400">Column 5</div>
-		<div class="col bg-primary-analogous1-400">Column 6</div>
-		<div class="col bg-primary-analogous2-400">Column 7</div>
-		<div class="col bg-primary-analogous3-400">Column 8</div>
+		<div class="col bg-cerulean-400">Column 1</div>
+		<div class="col bg-tea-400">Column 2</div>
+		<div class="col bg-carmine-400">Column 3</div>
+		<div class="col bg-neutral-400">Column 4</div>
+		<div class="col bg-alabaster-analogous1-400">Column 5</div>
+		<div class="col bg-alabaster-analogous2-400">Column 6</div>
+		<div class="col bg-alabaster-analogous3-400">Column 7</div>
+		<div class="col bg-alabaster-analogous4-400">Column 8</div>
 	</div>
 	<div class="row">
-		<div class="col col-8 bg-primary-100">
+		<div class="col col-8 bg-alabaster-100">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero fuga iure voluptate quam blanditiis doloremque, dicta veniam quibusdam. In eius asperiores quasi natus animi rerum illo molestias architecto, fugit eligendi!</p>
 		</div>
-		<div class="col col-4 bg-primary-700">
+		<div class="col col-4 bg-alabaster-700">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nisi dolorem sit animi molestiae temporibus alias. Eaque et quis iusto optio, cum sit in quidem incidunt. Laboriosam officia nam esse?</p>
 		</div>
 	</div>

@@ -1,10 +1,10 @@
 <?php 
-	$page_title = "COLORS";
+	$page_title = "BASE: Colors";
 	include "templates/header.php";
 	include "templates/sidebar.php";
 ?>
 	<link rel="stylesheet" href="css/color-charts.css">
-	<main class="site-content">
+	<main class="site-content" style="background-color: gainsboro;">
 		<div class="row">
 			<!-- 400 ONLY, ANALOGOUS -->
 			<section class="column col3 pad-x">
@@ -111,25 +111,73 @@
 				</div>
 			</section>
 		</div>
-		<div class="row">
+		<!-- FULL RANGES, DEFAULT & ADAPTIVE -->
+		<div class="row row3">
 			<!-- FULL RANGE, DEFAULT -->
-			<section class="column col2 pad-x pad-md-left">
+			<section class="column col pad-around pad-md-left">
 				<div class="row">
 					<h2>Default Color Ranges</h2>
-					<p>Each color defined in Core Colors is set to &lt;name&gt;-400, and the 3 lighter (300 - 100) and 3 darker (400 - 700) colors are calculated from that central point. The calculations take the luminance of the original (400) color into account.</p>
+					<p>Each of the original 'core colors' is set to 400 (mid), and lighter/darker is assessed from that point, based on the mid colors luminance.</p>
 				</div>
 				<div id="colors-default" class="column col1">
-					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>	
 				</div>
 			</section>
 			<!-- FULL RANGE, ADAPTIVE -->
-			<section class="column col2 pad-x pad-md-right">
+			<section class="column col pad-around pad-md-right">
 				<div class="row">
 					<h2>Adaptive Color Ranges</h2>
-					<p>The luminance of each color defined in Core Colors is assessed, and the color set to the appropriate "range number" (100 - 700, lightest to darkest). Lighter / darker colors are calculated as necessary from that point.</p>
+					<p>The original 'core colors' are placed at 100-700 based on individual luminance. Lighter/Darker colors are calculated from there as necessary.</p>
 				</div>
 				<div id="colors-adaptive" class="column col1">
-					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p>					
+				</div>
+			</section>
+			<!-- FULL RANGE, STATIC -->
+			<section class="column col pad-around pad-md-right">
+				<div class="row">
+					<h2>Static Color Ranges</h2>
+					<p>The lightness of each color is set to a specific amount, ensuring that all colors have the exact same light-dark range. Static range offers "depth" of 7 or 9 [+ {color}-50, for 10 total] (100-700 or 50-900)</p>
+				</div>
+				<div id="colors-static" class="column col1">
+					<!-- green -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- blue -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- yellow -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- red -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- neutral -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- analogous1 -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- analogous2 -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- analogous3 -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- analogous4 -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+					<!-- complement -->
+					<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
 				</div>
 			</section>
 		</div>

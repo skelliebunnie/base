@@ -33,9 +33,7 @@ nav {
 		flex: 1;
 		padding: map-get($defaults, 'padding');
 		
-		.site-nav & {
-			color: getContrast($site-nav--bg-color);
-		}
+		.site-nav & { color: getContrast($site-nav--bg-color); }
 	}
 
 	&:hover {
@@ -46,6 +44,9 @@ nav {
 	}
 
 	.site-nav &:active { background-color: $site-nav-active--bg-color; }
+
+	.site-nav &.active { background-color: $site-nav-currentpg--bg-color; }
+	.site-nav &.active a { color: getContrast($site-nav-currentpg--bg-color); }
 }
 
 /* ====================================

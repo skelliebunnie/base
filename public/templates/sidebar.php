@@ -1,4 +1,4 @@
-<aside class="site-sidebar row row-vertical bg-secondary-400">
+<aside class="site-sidebar row row-vertical bg-neutral-400">
 	<div class="col">
 		<h3>Sidebar</h3>
 		<p>This is the sidebar</p>
