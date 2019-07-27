@@ -1,0 +1,136 @@
+/* ====================================
+		COMPONENT: HERO
+ * ==================================== */
+.hero-container {
+	flex: 1 0 100%;
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+}
+
+.hero {
+	box-sizing: border-box;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	background-color: getColor('primary-400');
+	overflow: auto;
+}
+
+.hero-header {
+	color: white;
+	h1 {
+		font-weight: normal;
+		font-size: 7rem;
+		text-shadow: 3px 0 7px black, 0 3px 7px black, 3px 3px 7px black;
+	}
+	$color: getColor('neutral-700');
+	$rgba: getRGBA($color, 0.5);
+	@include overlay($rgba);
+}
+
+.hero-header-content {
+	font-size: x-large;
+	text-align: center;
+	padding: 0;
+	background-color: rgba(getColor('neutral-700'), 0.90);
+	border: 2px solid getColor('accent-100');
+	border-radius: 0.2rem;
+	p { margin: 0; padding: 1rem 2rem 0.5rem; }
+	a { position: relative; }
+
+	p:only-child {
+		margin: 0;
+		padding: 1rem;
+	}
+}
+
+#special {
+	background-color: getColor('secondary-700');
+	color: white;
+	.col:last-child {
+		font-size: xx-large;
+	}
+}
+
+.hero-section {
+	@extend .hero;
+	position: relative;
+	background-position: center;
+	background-size: cover;
+
+	.row & {
+		min-height: 20rem;
+		color: white;
+		font-size: x-large;
+	}
+}
+
+.hero-content {
+	@extend .col;
+	$color: getColor('primary-700');
+	line-height: 2.5rem;
+	border: 1px solid white;
+	border-radius: 0.2rem;
+	background-color: rgba($color, 0.85);
+
+	h3, h4 {
+		text-align: center;
+		font-family: map-get($fonts, 'copy');
+		text-shadow: 2px 0 5px getColor('neutral-700'), 0 2px 5px getColor('neutral-700'), 2px 2px 5px getColor('neutral-700');
+	}
+
+	p { display: none; }
+
+	&.narrow { max-width: (3 / 12) * 100%; }
+	&.md { max-width: 50%; }
+	&.wide { max-width: (9 / 12) * 100%; }
+}
+
+@include mq($from: 'mobileLandscape') {
+	.hero-content p { display: inline-block; }
+}
+
+@include mq($from: 'tablet') {
+	.hero-content {
+		margin: 1rem auto;
+		min-width: 90%;	
+	}
+
+	.hero-header-content {
+		margin-bottom: 2rem;
+	}
+}
+
+@include mq($from: 'desktop') {
+	.hero-content {
+		&.center {
+			width: 70%;
+			min-width: 70%;
+			margin: 2rem auto 3rem auto;
+		}
+
+		&.left {
+			width: 70%;
+			min-width: 70%;
+			margin: 2rem auto 3rem 1rem;
+		}
+
+		&.right {
+			width: 70%;
+			min-width: 70%;
+			margin: 2rem 1rem 3rem auto;
+		}
+	}
+
+	.hero-header-content {
+		margin-right: 7rem;
+		margin-bottom: 3rem;
+	}
+}
+
+@include mq($from: 'tablet', $until: 'desktop') {
+	.hero-content {
+		h2,h3,h4 { font-size: xx-large; }
+	}
+}

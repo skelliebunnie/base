@@ -1,5 +1,30 @@
 COLOR PALETTES:
 
+$warmRoofTiles: (
+	blue: #3B4A5D,
+	moss: #766537,
+	oak: #efd9b2,
+	espresso: #5d4a3b,
+	neutral: #2b1710
+);
+
+$alabasterTea: (
+	'alabaster': #E6EFE9,
+	'cerulean': #0081AF,
+	'tea': #C2EABA,
+	'carmine': #EF3E36,
+	'neutral': #080708,
+);
+
+$orangeNeonNight: (
+	grayNavy: 2E4057,
+	neonCarrot: F9A03F,
+	persianGreen: 05A8AA,
+	caputMortemWine: 5B2333,
+	cerulean: 0081AF,
+	dahlia: 7B4B94,
+	darkDahlia: 493657
+);
 
 $SpaceBrights: (
 	carmine: #ea5330

@@ -39,3 +39,9 @@ p {
 	margin: 0 map-get($padding-sizes, 'sm');
 	font-style: italic;
 }
+
+@each $name,$size in $font-sizes {
+	.text-#{$name} {
+		font-size: $size;
+	}
+}

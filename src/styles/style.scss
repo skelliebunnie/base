@@ -32,8 +32,6 @@
 				"components/media",
 				"components/messaging",
 				"components/table";
-				
-@import "components/site-header";
 
 /* 
 	MODULES 
@@ -46,7 +44,10 @@
 				"modules/form",
 				"modules/module-lists",
 				"modules/nav",
-				"modules/tile";
+				"modules/panel",
+				"modules/hero";
+/* LAYOUT MODULES */
+@import	"modules/site-header";
 
 @import "layout/page-container";
 
