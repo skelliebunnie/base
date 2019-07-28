@@ -7,7 +7,7 @@
 }
 
 // MUST specify a URL
-@mixin bgImage($url, $position: center) {
+@mixin fullBgImage($url, $position: center) {
 	background: url($url);
 	background-size: cover;
 	background-position: $position;
@@ -15,7 +15,15 @@
 	z-index: 0;
 }
 
-@mixin overlay($color: #000, $alpha: 0.5) {
+@mixin gradientImageBG($imageURL, $direction, $color-stops...) {
+	background-image: linear-gradient($direction, $color-stops), url($imageURL);	
+}
+
+@mixin gradient($direction, $color-stops...) {
+	background-image: linear-gradient($direction, $color-stops);
+}
+
+@mixin overlay($color: rgba(black, 0.5)) {
 	&:after {
 		content: '';
 		position: absolute;
@@ -24,6 +32,19 @@
 		width: 100%;
 		height: 100%;
 		z-index: -1;
-		background: rgba($color, $alpha);
+		background: $color;
+	}
+}
+
+@mixin gradientOverlay($direction,$color-stops...) {
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		@include gradient($direction, $color-stops);
 	}
 }

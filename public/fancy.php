@@ -31,6 +31,7 @@
 		background: red;
 		position: relative;
 		margin: 3rem 0;
+		overflow: hidden;
 	}
 
 	.hex:before {
@@ -43,6 +44,7 @@
 		border-left: 50px solid transparent;
 		border-right: 50px solid  transparent;
 		border-bottom: 25px solid red;
+		overflow: hidden;
 	}
 	.hex:after {
 		content: "";
@@ -54,6 +56,7 @@
 		border-left: 50px solid transparent;
 		border-right: 50px solid  transparent;
 		border-top: 25px solid red;
+		overflow: hidden;
 	}
 
 	div.row.row-hexagons {
@@ -127,11 +130,21 @@
 		</div>
 	</div>
 	<div class="row border-neutral-100 row-hexagons">
-		<div class="hex"></div>
-		<div class="hex"></div>
-		<div class="hex"></div>
-		<div class="hex"></div>
-		<div class="hex"></div>
+		<div class="hex">
+			
+		</div>
+		<div class="hex">
+			
+		</div>
+		<div class="hex">
+			
+		</div>
+		<div class="hex">
+			
+		</div>
+		<div class="hex">
+			
+		</div>
 	</div>
 </main>
 <?php include "templates/footer.php"; ?>

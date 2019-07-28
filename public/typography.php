@@ -38,7 +38,7 @@
 			<h6>Header 6, extended length<br>to check line-height</h6>
 		</section>
 	</article>
-	<article class="row row3 border-top-cerulean-400 border-lg">
+	<article class="row row3 border-top-secondary-400 border-lg">
 		<section class="col">
 			<p>This is <samp>samp text</samp></p>
 			<p>This is <code>code text</code></p>

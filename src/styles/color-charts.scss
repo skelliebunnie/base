@@ -1,0 +1,267 @@
+@import 'settings';
+@import 'global';
+
+%colors {
+	$colors: map-values($palette);
+
+	& p {
+		position: relative;
+		flex: 1 0 auto; //(100% / 7)
+		padding: 0;
+		margin: 0;
+		line-height: 1rem;
+		font-size: 1rem;
+		min-height: 3rem;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+#colors-default {
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'default', $include-complement: true, $complement-name: 'complement', $scaleColors: 21);
+
+	@extend %colors;
+	$n: 1;
+	@each $name,$color in $palette {
+		p:nth-child(#{$n}) {
+			background-color: $color;
+			color: getContrast($color);
+
+			@if endsWith($name, '400') and map-has-key($coreColors, str-slice($name,1, (str-length($name) - 4))) {
+				border: 2px solid black;
+			}
+
+			@if map-has-key($coreColors, str-slice($name, 1, (str-length($name) - 4))) {
+				&:after {
+					content: "#{$name}";
+				}
+			} @else {
+				@if endsWith($name, '100') {
+					&:before {
+						text-align: center;
+						content: "FROM HARMONY FUNCTION";
+						position: relative;
+						display: block;
+						width: 100%;
+						font-weight: bold;
+						margin-bottom: 0.25rem;
+					}
+					&:after {
+						text-align: center;
+						content: "#{$name}";
+						display: block;
+						width: 100%;
+						position: relative;
+					}
+				} @else {
+					&:after {
+						content: "#{$name}";
+					}
+				}
+			}
+
+		}
+
+		$n: $n + 1;
+	}
+}
+
+#colors-adaptive {
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'adaptive', $include-complement: true, $complement-name: 'complement', $scaleColors: 21);
+	@extend %colors;
+	$n: 1;
+	@each $name,$color in $palette {
+		p:nth-child(#{$n}) {
+			background-color: $color;
+			color: getContrast($color);
+
+			$core: map-values($coreColors);
+
+			$colorName: str-slice($name,1, (str-length($name) - 4));
+			
+			@if( index($core, $color) ) {
+				border: 2px solid getContrast($color);
+			}
+
+			@if map-has-key($coreColors, str-slice($name, 1, (str-length($name) - 4))) {
+				&:after {
+					content: "#{$name}";
+				}
+			} @else {
+				@if endsWith($name, '100') {
+					&:before {
+						text-align: center;
+						content: "FROM HARMONY FUNCTION";
+						position: relative;
+						display: block;
+						width: 100%;
+						font-weight: bold;
+						margin-bottom: 0.25rem;
+					}
+					&:after {
+						text-align: center;
+						content: "#{$name}";
+						display: block;
+						width: 100%;
+						position: relative;
+					}
+				} @else {
+					&:after {
+						content: "#{$name}";
+					}
+				}
+			}
+		}
+		$n: $n + 1;
+	}
+}
+
+#colors-static {
+	$d: 9;
+	@include palette($colorMap: $coreColors, $color: "#{$clr}", $harmony: "#{$h}", $rangeType: 'static', $include-complement: true, $complement-name: 'complement', $staticDepth: $d);
+	@extend %colors;
+	$n: 1;
+	@each $name,$color in $palette {
+		p:nth-child(#{$n}) {
+			background-color: $color;
+			color: getContrast($color);
+
+			$core: map-values($coreColors);
+
+			$colorName: str-slice($name,1, (str-length($name) - 4));
+			
+			@if( index($core, $color) ) {
+				border: 2px solid getContrast($color);
+			}
+
+			&:after {
+				content: "#{$name}";
+			}
+		}
+		$n: $n + 1;
+	}
+}
+
+%colors-400 {
+	$colors: map-values($palette);
+	p {
+		padding: 0;
+		margin: 0;
+		min-height: 3rem;
+		text-align: center;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+
+		&:after {
+			line-height: 1rem;
+			font-size: 1rem;
+		}
+	}
+}
+
+
+#analogous-400 {
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "analogous", $include-complement: true, $complement-name: 'complement', $rangeType: 'adaptive');
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#compound-400 {
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "compound", $include-complement: true, $complement-name: 'complement', $rangeType: 'adaptive');
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#tetrad-400 {
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "tetrad", $rangeType: 'adaptive');
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#quadratic-400 {
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "quadratic", $rangeType: 'adaptive');
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#triad-400 {
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "triad", $include-complement: true, $complement-name: 'complement', $rangeType: 'adaptive');
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}
+
+#split-400 {
+	@include palette($colorMap: $coreColors, $color: $clr400, $harmony: "split", $include-complement: true, $complement-name: 'complement', $rangeType: 'adaptive');
+	@extend %colors-400;
+	$n: 1;
+	@each $name,$color in $palette {
+		@if endsWith($name,'400') {
+			p:nth-child(#{$n}) {
+				background-color: $color;
+				color: getContrast($color);
+			}
+
+			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			$n: $n + 1;
+		}
+	}
+}

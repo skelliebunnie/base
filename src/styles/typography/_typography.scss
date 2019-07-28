@@ -77,3 +77,9 @@ cite, .cite {
 	margin: 0 getVal('sm', $padding-sizes);
 	font-style: italic;
 }
+
+@each $name,$size in $font-sizes {
+	.text-#{$name} {
+		font-size: $size;
+	}
+}
