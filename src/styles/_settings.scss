@@ -53,10 +53,11 @@ $clr400: 'alabaster';
 //* ====================================
 //		FONTS & TYPOGRAPHY
 //* ====================================
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,900|Assistant:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,900|Assistant:400,700|Inconsolata&display=swap');
 $fonts: (
 	'copy': unquote("'Open Sans', sans-serif"),
-	'heading': unquote("'Assistant', sans-serif")
+	'heading': unquote("'Assistant', sans-serif"),
+	'mono': unquote("'Inconsolata', monospace")
 ) !default;
 
 $font-sizes: (

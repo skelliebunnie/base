@@ -1,0 +1,20 @@
+/* ====================================
+		GRID: VARIABLES
+ * ==================================== */
+// Lists
+$colwidths: ();
+$rowcolwidths: ();
+
+// Maps
+$colset: ();
+$rowset: ();
+@for $i from 1 through $max-columns {
+	$colwidths: append($colwidths, (($i / $max-columns) * 100%));
+	$rowcolwidths: append($rowcolwidths, (100% / $i));
+
+	$colwidth: ($i: (($i / $max-columns) * 100%));
+	$colset: map-merge($colset, $colwidth);
+
+	$rowcolwidth: ($i: (100% / $i));
+	$rowset: map-merge($rowset, $rowcolwidth);
+}

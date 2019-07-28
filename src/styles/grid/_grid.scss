@@ -1,10 +1,25 @@
 /* ====================================
 		GRID
  * ==================================== */
-@import "grid-base";
+@import "variables",
+				"grid-base",
+				"helpers";
 
-.row {
+.row { @extend %row; }
+
+.row-reverse {
 	@extend %row;
+	flex-flow: row-reverse wrap;
+}
+
+.row-start {
+	@extend %row;
+	justify-content: flex-start;
+}
+
+.row-end {
+	@extend %row;
+	justify-content: flex-end;
 }
 
 .column { @extend %column; }

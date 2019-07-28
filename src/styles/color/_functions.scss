@@ -522,11 +522,11 @@
 
 	$compound1: change-color($c1, $saturation: clamp(saturation($main) - 10, $min: 0, $max: 50), $lightness: clamp(lightness($main) + 25, $min: 0, $max: 75));
 
-	$compound2: change-color($c1, $saturation: clamp(saturation($main) - 60, $min: 0, $max: 80), $lightness: clamp(lightness($main) - 60, $min: 40, $max: 90));
+	$compound2: change-color($c1, $saturation: clamp(saturation($main) - 60, $min: 0, $max: 80), $lightness: clamp(lightness($main) - 60, $min: 30, $max: 70));
 
-	$compound3: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 0, $max: 55), $lightness: clamp(lightness($main) + 10, $min: 80, $max: 95));
+	$compound3: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 0, $max: 55), $lightness: clamp(lightness($main) + 10, $min: 85, $max: 95));
 
-	$compound4: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 30, $max: 90), $lightness: clamp(lightness($main) - 35, $min: 35, $max: 75));
+	$compound4: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 30, $max: 90), $lightness: clamp(lightness($main) - 35, $min: 25, $max: 65));
 
 	
 	$harmonyPalettes: (

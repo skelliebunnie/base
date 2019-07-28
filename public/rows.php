@@ -1,15 +1,23 @@
 <?php 
-	$page_title = "BASE: Grid";
+	$page_title = "BASE: Rows";
 	include "templates/header.php";
 	include "templates/sidebar.php";
 ?>
 	<main class="site-content">
+		<div class="row row-start">
+			<div class="col col-12 no-pad border-carmine-400">
+				<h2 class='no-pad'>Notes</h2>
+				<p><samp>Justify-content</samp> for <code>.row</code> is set to center by default. To align columns to the start or end, use either <code>.row-start</code> /<code> .row-end</code>, or <code>.row.justify-start</code> / <code>.row.justify-end</code></p>
+			</div>
+		</div>
+		<!-- TITLE ROW 1 -->
 		<div class="row">
-			<div class="col col-12 no-pad">
-				<h2 class="h2">Row Row6</h2>
+			<div class="col col-12 no-pad bg-cerulean-400">
+				<h2>Responsive Columns</h2>
 				<p>3 columns on tablets, 5 on desktop (1280+ width), and 6 on wide (1920+)</p>
 			</div>
 		</div>
+		<!-- responsive columns example -->
 		<div class="row row3-md row5-lg row6-xl pad col-no-pad">
 			<div class="col">
 				<h1>Heading 1</h1>
@@ -51,14 +59,18 @@
 				<p>Nostrum tenetur consequatur odit qui laboriosam dolores. Dolor repudiandae reiciendis ut, vero commodi architecto blanditiis deleniti eaque quod, ipsam eos nulla sapiente magnam minima accusantium quis quaerat. At, dolorem, tempore!</p>
 			</div>
 		</div>
-		<div class="row border-tertiary-700">
-			<div class="col col-6 border-accent-700">
+		<!-- nested columns, with "nested" title row (.col.col-12) -->
+		<div class="row bg-alabaster-700">
+			<div class="col col-12 no-pad bg-cerulean-400">
+				<h3>Nested Columns</h3>
+			</div>
+			<div class="col col-6 bg-alabaster-100">
 				<h3>Col-6</h3>
 				<p>no other cols - this column should be only 1/2 the width of the row, centered</p>
 				<div class="row">
-					<div class="col col-6">
+					<div class="col col-6 bg-tea-400">
 						<p>Nested Column A</p>
-						<div class="row">
+						<div class="row bg-alabaster-analogous4-100">
 							<div class="col col-6 no-pad">
 								<p>Nested Child Column I</p>
 							</div>
@@ -67,9 +79,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col col-6">
+					<div class="col col-6 bg-alabaster-analogous2-400">
 						<p>Nested Column B</p>
-						<div class="row">
+						<div class="row bg-alabaster-analogous4-100">
 							<div class="col col-6 no-pad">
 								<p>Nested Child Column III</p>
 							</div>
@@ -79,6 +91,51 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<!-- TITLE ROW 2 -->
+		<div class="row">
+			<div class="col col-12 no-pad bg-cerulean-400">
+				<h2>Push & Pull Examples</h2>
+				<p>"Push" moves column to right, "Pull" moves column to left.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-5 bg-alabaster-200">
+				<h3>Col-5</h3>
+			</div>
+			<div class="col col-3 bg-tea-200">
+				<h3>Col-3</h3>
+			</div>
+			<div class="col col-2 push-2 bg-cerulean-200">
+				<h3>Col-2, Push-2</h3>
+			</div>
+		</div>
+
+		<div class="row border-cerulean-400 border-md">
+			<div class="col col-5 bg-alabaster-200">
+				<h3>Col-5</h3>
+			</div>
+			<div class="col col-3 push-1 bg-tea-200">
+				<h3>Col-3, Push-1</h3>
+			</div>
+			<div class="col col-2 pull-1 bg-cerulean-200">
+				<h3>Col-2, Pull-1</h3>
+			</div>
+		</div>
+
+		<div class="row-reverse border-carmine-400 border-md">
+			<div class="col col-4 bg-alabaster-200">
+				<h3>Col-4</h3>
+				<p>row-reverse</p>
+			</div>
+			<div class="col col-3 push-1 bg-tea-200">
+				<h3>Col-3, Push-1</h3>
+				<p>row-reverse</p>
+			</div>
+			<div class="col col-2 pull-1 bg-cerulean-200">
+				<h3>Col-2, Pull-1</h3>
+				<p>row-reverse</p>
 			</div>
 		</div>
 	</main>

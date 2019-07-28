@@ -21,8 +21,8 @@
 			<li class='nav-item <?php if($page_title=='BASE: Index' || $page_title=='index') { echo "active"; } ?>'>
 				<a href="./index.php">Home</a>
 			</li>
-			<li class='nav-item <?php if($page_title=='BASE: Grid') { echo "active"; } ?>'>
-				<a href="./grid-layout.php">Grid</a>
+			<li class='nav-item <?php if($page_title=='BASE: Rows') { echo "active"; } ?>'>
+				<a href="./rows.php">Rows & Columns</a>
 			</li>
 			<li class='nav-item <?php if($page_title=='BASE: Colors') { echo "active"; } ?>'>
 				<a href="./colors.php">Colors</a>
