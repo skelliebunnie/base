@@ -17,11 +17,11 @@
 //* ====================================
 // if using a different name for the map, update @include palette();
 $coreColors: (
-	'primary': #348aa7,
-	'secondary': #bce784,
-	'tertiary': #fcdfa6,
-	'accent': #d36135,
-	'neutral': #282b28,
+	'primary': #6ec1e4, // #348aa7
+	'secondary': #003a5d, // #bce784; #5E5E5E
+	'tertiary': #61ce70, // #fcdfa6; #d2d2d2
+	'accent': #d36135, // #d36135; #cde7b0
+	'neutral': #7a7a7a,
 ) !default;
 
 $messageColors: (

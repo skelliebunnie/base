@@ -544,10 +544,10 @@
 			unquote("#{$colorName}-tetrad3"): adjust-hue($complement, $tetradType)
 		),
 		"analogous": (
-			unquote("#{$colorName}-analogous1"): adjust-hue($main, 300deg),
+			unquote("#{$colorName}-analogous1"): adjust-hue($main, 285deg),
 			unquote("#{$colorName}-analogous2"): adjust-hue($main, 330deg),
 			unquote("#{$colorName}-analogous3"): adjust-hue($main, 30deg),
-			unquote("#{$colorName}-analogous4"): adjust-hue($main, 60deg)
+			unquote("#{$colorName}-analogous4"): adjust-hue($main, 75deg)
 		),
 		"compound": (
 			unquote("#{$colorName}-compound1"): $compound1,
