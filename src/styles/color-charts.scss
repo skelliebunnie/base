@@ -35,7 +35,7 @@
 
 			@if map-has-key($coreColors, str-slice($name, 1, (str-length($name) - 4))) {
 				&:after {
-					content: "#{$name}";
+					content: "#{$name} ( #{$color} )";
 				}
 			} @else {
 				@if endsWith($name, '100') {
@@ -87,7 +87,7 @@
 
 			@if map-has-key($coreColors, str-slice($name, 1, (str-length($name) - 4))) {
 				&:after {
-					content: "#{$name}";
+					content: "#{$name} ( #{$color} )";
 				}
 			} @else {
 				@if endsWith($name, '100') {
@@ -137,7 +137,7 @@
 			}
 
 			&:after {
-				content: "#{$name}";
+				content: "#{$name} ( #{$color} )";
 			}
 		}
 		$n: $n + 1;
@@ -175,7 +175,7 @@
 				color: getContrast($color);
 			}
 
-			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			p:nth-child(#{$n}):after { content: "#{$name} ( #{$color} )"; }
 			$n: $n + 1;
 		}
 	}
@@ -192,7 +192,7 @@
 				color: getContrast($color);
 			}
 
-			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			p:nth-child(#{$n}):after { content: "#{$name} ( #{$color} )"; }
 			$n: $n + 1;
 		}
 	}
@@ -209,7 +209,7 @@
 				color: getContrast($color);
 			}
 
-			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			p:nth-child(#{$n}):after { content: "#{$name} ( #{$color} )"; }
 			$n: $n + 1;
 		}
 	}
@@ -226,7 +226,7 @@
 				color: getContrast($color);
 			}
 
-			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			p:nth-child(#{$n}):after { content: "#{$name} ( #{$color} )"; }
 			$n: $n + 1;
 		}
 	}
@@ -243,7 +243,7 @@
 				color: getContrast($color);
 			}
 
-			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			p:nth-child(#{$n}):after { content: "#{$name} ( #{$color} )"; }
 			$n: $n + 1;
 		}
 	}
@@ -260,7 +260,7 @@
 				color: getContrast($color);
 			}
 
-			p:nth-child(#{$n}):after { content: "#{$name}"; }
+			p:nth-child(#{$n}):after { content: "#{$name} ( #{$color} )"; }
 			$n: $n + 1;
 		}
 	}
