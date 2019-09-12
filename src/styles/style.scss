@@ -33,8 +33,6 @@
 				"components/messaging",
 				"components/table";
 				
-@import "components/site-header";
-
 /* 
 	MODULES 
 	- Collections of pieces (not always Components)
@@ -48,6 +46,10 @@
 				"modules/nav",
 				"modules/tile";
 
+/*
+	LAYOUT
+*/	
+@import "modules/site-header";
 @import "layout/page-container";
 
 // has to be imported after everything else or
