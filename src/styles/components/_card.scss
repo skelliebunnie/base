@@ -1,6 +1,6 @@
 /* ====================================
 		COMPONENT: CARD
-		card, block, hero
+		card, block, tile
  * ==================================== */
 
 .card {
@@ -13,11 +13,62 @@
 	@extend %margin-xl-around;
 }
 
-.hero {
-	background-color: getColor('neutral-100');
-	border-radius: 0.15rem;
-	border: 1px solid getColor('neutral-400');
-	color: getContrast(getColor('neutral-100'));
-	margin: 2rem;
-	padding: 1rem;
+.block {
+	overflow: auto;
+	&-margin {
+		margin: 1em;
+	}
+	&-padding {
+		padding: 1em;
+	}
+}
+
+.tile {
+	padding: 0.25rem;
+	margin: 1rem;
+	font-size: 1.2rem;
+	line-height: 1.1rem;
+	border-radius: 0.2rem;
+	border: 1px solid;
+	border-color: getColor('cement-700');
+	background-color: getColor('cement-100');
+
+	&-info {
+		border-color: getColor('blueprint-700');
+		background-color: getColor('blueprint-100');
+	}
+
+	&-info-alt {
+		border-color: getColor('blueprint-100');
+		background-color: getColor('blueprint-700');
+		color: white;
+	}
+
+	&-success {
+		border-color: getColor('neonfrog-700');
+		background-color: getColor('neonfrog-100');
+	}
+
+	&-success-alt {
+		border-color: getColor('neonfrog-100');
+		background-color: getColor('neonfrog-700');
+		color: white;
+	}
+
+	&-danger {
+		border-color: getColor('brick-700');
+		background-color: getColor('brick-100');
+	}
+
+	&-danger-alt {
+		border-color: getColor('brick-100');
+		background-color: getColor('brick-700');
+		color: white;
+	}
+
+	&-dark {
+		border-color: getColor('cement-100');
+		background-color: getColor('cement-700');
+		color: white;
+	}
 }

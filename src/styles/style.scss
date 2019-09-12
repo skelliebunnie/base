@@ -32,7 +32,7 @@
 				"components/media",
 				"components/messaging",
 				"components/table";
-				
+
 /* 
 	MODULES 
 	- Collections of pieces (not always Components)
@@ -44,12 +44,15 @@
 				"modules/form",
 				"modules/module-lists",
 				"modules/nav",
-				"modules/tile";
+				"modules/panel",
+				"modules/hero";
+
+/* LAYOUT MODULES */
+@import	"modules/site-header";
 
 /*
 	LAYOUT
 */	
-@import "modules/site-header";
 @import "layout/page-container";
 
 // has to be imported after everything else or

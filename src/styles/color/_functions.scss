@@ -522,11 +522,11 @@
 
 	$compound1: change-color($c1, $saturation: clamp(saturation($main) - 10, $min: 0, $max: 50), $lightness: clamp(lightness($main) + 25, $min: 0, $max: 75));
 
-	$compound2: change-color($c1, $saturation: clamp(saturation($main) - 60, $min: 0, $max: 80), $lightness: clamp(lightness($main) - 60, $min: 40, $max: 90));
+	$compound2: change-color($c1, $saturation: clamp(saturation($main) - 60, $min: 0, $max: 80), $lightness: clamp(lightness($main) - 60, $min: 30, $max: 70));
 
-	$compound3: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 0, $max: 55), $lightness: clamp(lightness($main) + 10, $min: 80, $max: 95));
+	$compound3: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 0, $max: 55), $lightness: clamp(lightness($main) + 10, $min: 85, $max: 95));
 
-	$compound4: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 30, $max: 90), $lightness: clamp(lightness($main) - 35, $min: 35, $max: 75));
+	$compound4: change-color($c2, $saturation: clamp(saturation($main) - 20, $min: 30, $max: 90), $lightness: clamp(lightness($main) - 35, $min: 25, $max: 65));
 
 	
 	$harmonyPalettes: (
@@ -544,10 +544,10 @@
 			unquote("#{$colorName}-tetrad3"): adjust-hue($complement, $tetradType)
 		),
 		"analogous": (
-			unquote("#{$colorName}-analogous1"): adjust-hue($main, 300deg),
+			unquote("#{$colorName}-analogous1"): adjust-hue($main, 285deg),
 			unquote("#{$colorName}-analogous2"): adjust-hue($main, 330deg),
 			unquote("#{$colorName}-analogous3"): adjust-hue($main, 30deg),
-			unquote("#{$colorName}-analogous4"): adjust-hue($main, 60deg)
+			unquote("#{$colorName}-analogous4"): adjust-hue($main, 75deg)
 		),
 		"compound": (
 			unquote("#{$colorName}-compound1"): $compound1,

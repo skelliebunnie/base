@@ -25,17 +25,61 @@ a {
 }
 
 p {
-	$pad: map-get($defaults, 'padding');
-	$margin: map-get($defaults, 'margin');
+	$pad: getVal('padding', $defaults);
+	$margin: getVal('margin', $defaults);
 	padding: 0 1em $pad;
 	margin: 0;
 	line-height: 1.3rem;
 }
 
+code, samp, pre, .mono {
+	font-family: getVal('mono', $fonts);
+}
+
+samp { 
+	padding: 0.15rem 0.4rem;
+	background-color: getColor('neutral-50');
+}
+
+pre {
+	white-space: pre-wrap;
+	padding: 0.3rem 0.6rem 0.5rem 1rem;
+	background-color: getColor('neutral-50');
+	border-left: 4px solid getColor('neutral-700');
+}
+
+blockquote,
+.blockquote {
+	line-height: 1.4rem;
+	font-size: 1.2rem;
+	padding-left: 0.5rem;
+	border-left: 3px solid getColor('alabaster-400');
+}
+
+cite, .cite {
+	display: block;
+	margin-top: 1rem;
+	font-style: normal;
+	&::before {
+		content: "\00bb"; //21b3; 2937; 293f
+		font-size: 2rem;
+		line-height: 1.8rem;
+		font-weight: bold;
+		position: relative;
+		bottom: -2px;
+	}
+}
+
 .note {
-	font-size: map-get($font-sizes, "sm");
+	font-size: getVal("sm", $font-sizes);
 	color: getColor('neutral-400');
-	padding: 0 map-get($padding-sizes, 'sm');
-	margin: 0 map-get($padding-sizes, 'sm');
+	padding: 0 getVal('sm', $padding-sizes);
+	margin: 0 getVal('sm', $padding-sizes);
 	font-style: italic;
+}
+
+@each $name,$size in $font-sizes {
+	.text-#{$name} {
+		font-size: $size;
+	}
 }

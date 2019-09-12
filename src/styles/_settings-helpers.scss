@@ -24,7 +24,25 @@ $colors: map-values($palette);
 		}
 	}
 
-	.border-#{$name} { border: 1px solid $val; }
+	.border-#{$name} { border: 2px solid $val; }
+
+	.border-top-#{$name} { border-top: 2px solid $val; }
+	.border-right-#{$name} { border-right: 2px solid $val; }
+	.border-bottom-#{$name} { border-bottom: 2px solid $val; }
+	.border-left-#{$name} { border-left: 2px solid $val; }
+	.border-x-#{$name} { 
+		border-left: 2px solid $val; 
+		border-right: 2px solid $val; 
+	}
+	.border-y-#{$name} { 
+		border-top: 2px solid $val;
+		border-bottom: 2px solid $val;
+	}
+
+	.border-sm { border-width: 1px; }
+	.border-md { border-width: 3px; }
+	.border-lg { border-width: 5px; }
+
 	.text-#{$name} { color: $val; }
 	.text-hover-#{$name}:hover { color: $val; }
 

@@ -1,6 +1,8 @@
 /* ====================================
 		GRID: PLACEHOLDERS
  * ==================================== */
+@import "variables";
+
 %row {
 	display: flex;
 	flex-flow: column nowrap;
@@ -36,13 +38,6 @@
 	flex-flow: row wrap;
 	width: 100%;
 	padding: 0;
-}
-
-$colwidths: ();
-$rowcolwidths: ();
-@for $i from 1 through $max-columns {
-	$colwidths: append($colwidths, (($i / $max-columns) * 100%));
-	$rowcolwidths: append($rowcolwidths, (100% / $i));
 }
 
 @for $i from 1 through $max-columns {
