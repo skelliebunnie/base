@@ -1,0 +1,52 @@
+@mixin defineShape($shape, $width, $height:100,$content_position:'center') {
+	@if $shape == 'square' or $shape == 'circle' {
+		$height: $width;
+	}
+	$width: $width * 1px; $height: $height * 1px;
+
+	$top: 0; $left: 0;
+	@if $content_position == 'center' {
+		$top: 
+	}
+
+	// The shapes themselves
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: $width;
+	height: $height;
+
+	@if $shape == 'diamond' {
+		height: $height * 0.75;
+		width: $width * 0.75;
+		transform: rotate(45deg) translate(0, $height * 0.15);
+	}
+
+	@if $shape == 'circle' or $shape == 'oval' {
+		border-radius: 50%;
+		width: $width;
+		height: $height;
+	}
+
+	// the contents of the shape
+	> * {
+		position: absolute;
+
+		@if $shape == 'square' or $shape == 'block' {
+			top: $content_position;
+			left: $content_position;
+			height: $height + 10;
+			width: $height + 10;
+		}
+
+		@if $shape == 'diamond' {
+			top: $content_position;
+			left: $content_position;
+			background-image: url('https://picsum.photos/id/1002/800');
+			background-size: cover;
+			height: $height * 2;
+			width: $width * 2;
+		}
+	}
+
+}

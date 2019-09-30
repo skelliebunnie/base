@@ -1,0 +1,16 @@
+/* ====================================
+		COMPONENT: SHAPES
+		Squares, rectangles, circles, &c.
+ * ==================================== */
+
+.square { @include defineShape('square', 100); }
+
+.diamond { @include defineShape('diamond', 100, 100); }
+
+.circle { @include defineShape('circle', 100); }
+
+.oval-vertical { @include defineShape('oval', 100, 200); }
+
+.oval-horizontal { @include defineShape('oval', 200, 100); }
+
+.trapezoid { border-bottom: 100px; border-left: 25px solid transparent; border-right: 25px solid transparent; height: 0; width: 100px; }
