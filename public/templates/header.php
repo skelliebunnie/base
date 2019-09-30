@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="page-container" class="sidebar-none">
-	<header class="site-header row">
+	<header class="site-header">
 		<div class="col col-12">
 			<h1 class="site-title"><a href="./index.php">BASE FRAMEWORK</a></h1>
 			<h3 class="sub-title text-light">This is a subtitle!</h3>

@@ -48,9 +48,13 @@
 				"modules/nav",
 				"modules/panel",
 				"modules/hero";
+
 /* LAYOUT MODULES */
 @import	"modules/site-header";
 
+/*
+	LAYOUT
+*/	
 @import "layout/page-container";
 
 // has to be imported after everything else or
