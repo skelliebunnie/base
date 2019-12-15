@@ -137,3 +137,43 @@ $floweringCactus: (
 	accent: #AAF683,
 	neutral: #c0bcb5,
 );
+
+$softlyGalactic: (
+	primary: 		#a9b3ce, // wild blue yonder
+	secondary: 	#7284a8, // shadow blue
+	tertiary: 	#9e788f, // mountbatten pink
+	accent: 		#7cdedc, // middle blue
+	neutral: 		#474954, // outer space
+);
+
+$mossyRock: (
+	primary: 		#909590, // spanish gray
+	secondary: 	#474a48, // outer space
+	tertiary: 	#537a5a, // middle green
+	accent: 		#9ae19d, // granny smith apple
+	neutral: 		#2C302E, // black leather jacket
+);
+
+$robinHatchling: (
+	primary: 		#ffa69e, // light salmon pink
+	secondary: 	#aa4465, // medium ruby
+	tertiary: 	#861657, // french plum
+	accent: 		#93e1d8, // pale robin egg blue
+	neutral: 		#ddfff7, // light cyan
+);
+
+$supernovaSpace: (
+	primary: 		#c4cbca, // lavender gray
+	secondary: 	#8f8389, // taupe gray
+	tertiary: 	#5c415d, // pineapple
+	accent: 		#e94f37, // carmine pink
+	neutral: 		#393e41, // black olive
+);
+
+$nightSucculent: (
+	primary: 		#ddd1c7, // dust storm
+	secondary: 	#c2cfb2, // silver
+	tertiary: 	#8db580, // dark sea green
+	accent: 		#4b4a67, // independence
+	neutral: 		#7e8987, // mummy's tomb
+) !default;

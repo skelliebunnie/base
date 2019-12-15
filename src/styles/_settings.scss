@@ -4,32 +4,21 @@
 //	Do NOT define any classes, &c.
 //	Otherwise they'll be repeated on every import
 //* ==================================== */
-
-//* ====================================
-//		COLORS
-//		gray navy: 2E4057
-//		neon carrot: F9A03F
-//		persian green: 05A8AA (aquamarine / teal)
-//		caput mortem: 5B2333 (deep wine red)
-//		japanese complement: 493657
-//		cerulean: 0081AF
-//		a (deep) complement: 7B4B94
-//* ====================================
 // if using a different name for the map, update @include palette();
 $coreColors: (
-	'primary': #00a0e0, // #348aa7
-	'secondary': #003a5d, // #bce784; #5E5E5E
-	'tertiary': #9d44b5, // #fcdfa6; #d2d2d2
-	'accent': #f38a32, // #d36135; #cde7b0
-	'neutral': #d3d3d3,
+	'primary': 		#f4f4f9, // white smoke
+	'secondary': 	#bddbae, // tea green, desaturated
+	'tertiary': 	#f9cb40, // sunglow
+	'accent': 		#2d728f, // teal blue
+	'neutral': 		#424b54, // outer space
 ) !default;
 
 $messageColors: (
-	default: #5D576B,
-	info: #41D3BD,
-	success: #A9E190,
-	alert: #F4F1BB,
-	warn: #ED6A5A
+	default: 	#5D576B,
+	info: 		#41D3BD,
+	success: 	#A9E190,
+	alert: 		#F4F1BB,
+	warn: 		#ED6A5A
 );
 
 // MUST be imported AFTER defining $coreColors!
@@ -38,17 +27,9 @@ $messageColors: (
 
 // quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
 $range: 'static';
-@include palette($color: 'primary', $complement-name: 'complement', $rangeType: $range, $staticDepth: 9);
+@include palette($color: 'primary', $complement-name: 'complement', $rangeType: $range, $rangeDepth: 9);
 
 // @debug $palette;
-
-
-//* ====================================
-//		FOR COLOR-CHARTS ONLY
-//* ====================================
-$clr: 'primary';
-$h: 'analogous';
-$clr400: 'primary';
 
 //* ====================================
 //		FONTS & TYPOGRAPHY
