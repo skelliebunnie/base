@@ -22,7 +22,9 @@
 	- Only items that can be used in various contexts
 	- Grouped into: Inline, Input, Media, Messaging, Table, Lists
 */
-@import "components/hr",
+@import "components/mixins",
+				"components/hr",
+				"components/shapes",
 				"components/button",
 				"components/card",
 				"components/image",
@@ -46,9 +48,13 @@
 				"modules/nav",
 				"modules/panel",
 				"modules/hero";
+
 /* LAYOUT MODULES */
 @import	"modules/site-header";
 
+/*
+	LAYOUT
+*/	
 @import "layout/page-container";
 
 // has to be imported after everything else or
