@@ -8,11 +8,6 @@
 //* ====================================
 //*		HELPERS: TYPOGRAPHY & ALIGNMENT
 //* ====================================
-@mixin flex($dir: row, $wrap: wrap) {
-	display: flex;
-	flex-flow: $dir $wrap;
-}
-
 %flex-child { 
 	flex: 1 0 auto;
 }
@@ -31,11 +26,6 @@
 
 %no-pad { padding: 0 !important; }
 %no-margin { margin: 0 !important; }
-
-@each $name,$size in $font-sizes {
-	%font-size-#{$name} { font-size: $size; }
-	%line-height-#{$name} { line-height: $size * 1.1; }
-}
 
 //* ====================================
 //*		HELPERS: PADDING

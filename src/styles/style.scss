@@ -1,12 +1,8 @@
-@import "global";
+@import "global/core";
 
 @import "settings";
 
-@import	'global/sass-mq',
-				'global/variables',
-				'global/functions',
-				'global/mixins',
-				'global/helpers';
+@import	"global/sass-mq";
 
 @import "grid/grid",
 			  "grid/mq";

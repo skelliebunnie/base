@@ -1,3 +1,8 @@
+@mixin flex($dir: row, $wrap: wrap) {
+	display: flex;
+	flex-flow: $dir $wrap;
+}
+
 @mixin fade($direction: 'out', $duration: 0.5) {
 	transition: all ease-#{$direction} #{$duration}s;
 }

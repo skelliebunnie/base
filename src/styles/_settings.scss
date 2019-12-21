@@ -4,32 +4,6 @@
 //	Do NOT define any classes, &c.
 //	Otherwise they'll be repeated on every import
 //* ==================================== */
-// if using a different name for the map, update @include palette();
-$coreColors: (
-	'primary': 		#f4f4f9, // white smoke
-	'secondary': 	#bddbae, // tea green, desaturated
-	'tertiary': 	#f9cb40, // sunglow
-	'accent': 		#2d728f, // teal blue
-	'neutral': 		#424b54, // outer space
-) !default;
-
-$messageColors: (
-	default: 	#5D576B,
-	info: 		#41D3BD,
-	success: 	#A9E190,
-	alert: 		#F4F1BB,
-	warn: 		#ED6A5A
-);
-
-// MUST be imported AFTER defining $coreColors!
-@import "color/functions";
-@import "color/mixins";
-
-// quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
-$range: 'static';
-@include palette($color: 'primary', $complement-name: 'complement', $rangeType: $range, $rangeDepth: 9);
-
-// @debug $palette;
 
 //* ====================================
 //		FONTS & TYPOGRAPHY
@@ -52,65 +26,6 @@ $font-sizes: (
 $heading-color: getColor('accent-500') !default;
 $a--color: getColor('tea-700') !default;
 $a-hover--color: getColor('accent-700') !default;
-
-//* ====================================
-//		GENERAL DEFAULTS
-//* ====================================
-$scale: 0;
-@if $range == 'default' or $range == 'tintshade' {
-	$scale: 65;
-} @else {
-	$scale: 25;
-}
-
-$defaults: (
-	'padding': 0.75rem,
-	'margin': 0.75rem,
-	'gutter': 0.5rem,
-	'border-width': 1px,
-	'color-light': scale-color(getColor('neutral-100'), $lightness:  $scale),
-	'color-dark': scale-color(getColor('neutral-700'), $lightness: -($scale))
-) !default;
-
-$default-pad: map-get($defaults, 'padding');
-$default-margin: map-get($defaults, 'margin');
-$padding-sizes: (
-	'xs': $default-pad * 0.5,
-	'sm': $default-pad * 0.8,
-	'md': $default-pad,
-	'lg': $default-pad * 1.5,
-	'xl': $default-pad * 2
-) !default;
-
-$margin-sizes: (
-	'xs': $default-margin * 0.5,
-	'sm': $default-margin * 0.8,
-	'md': $default-margin,
-	'lg': $default-margin * 1.5,
-	'xl': $default-margin * 2
-) !default;
-
-$hr-sizes: (
-	'xs': 1px,
-	'sm': 2px,
-	'md': 3px,
-	'lg': 5px,
-	'xl': 7px
-) !default;
-
-//* ====================================
-//		GRID & MEDIA-QUERY BREAKPOINTS
-//* ====================================
-$mq-breakpoints: (
-	'mobile': 414px,
-	'mobileLandscape': 736px,
-	'tablet': 1024px,
-	'desktop': 1280px,
-	'wide': 1920px
-) !default;
-
-$max-columns: 12 !default;
-//$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide) !default;
 
 //* ====================================
 //		SITE HEADER

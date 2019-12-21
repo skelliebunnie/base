@@ -420,6 +420,9 @@ template {
 [hidden] {
 	display: none; }
 
+.card {
+	margin: 1.5rem !important; }
+
 /* ====================================
 		== BASE FRAMEWORK == 
 		GLOBAL
@@ -439,9 +442,6 @@ body {
 	width: 100%; }
 
 /* NAV, GENERAL */
-.card {
-	margin: 1.5rem !important; }
-
 /* ====================================
 		GRID
  * ==================================== */

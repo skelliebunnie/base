@@ -1,4 +1,12 @@
-@import 'color/color-settings';
+@import 'global/core';
+
+/*
+	Required only by Color-Charts.scss (for framework demo)
+ */
+$clr: 		'primary'; // 'starting' color
+$h: 			'analogous'; // color harmony
+$clr400: 	'primary'; // 'starting' color name
+$r:				'static'; // color range type for the top examples on the demo 'colors' page.
 
 $core: map-values($coreColors);
 
