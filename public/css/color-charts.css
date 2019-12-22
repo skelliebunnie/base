@@ -2162,18 +2162,18 @@ body {
 	content: "neutral-400 ( #657381 )"; }
 
 #compound-400 p:nth-child(6) {
-	background-color: #8023c2;
+	background-color: #840cd9;
 	color: #f8f8f9; }
 
 #compound-400 p:nth-child(6):after {
-	content: "primary-compound1-400 ( #8023c2 )"; }
+	content: "primary-compound1-400 ( #840cd9 )"; }
 
 #compound-400 p:nth-child(7) {
-	background-color: #7a46a0;
+	background-color: #785195;
 	color: #f8f8f9; }
 
 #compound-400 p:nth-child(7):after {
-	content: "primary-compound2-400 ( #7a46a0 )"; }
+	content: "primary-compound2-400 ( #785195 )"; }
 
 #compound-400 p:nth-child(8) {
 	background-color: #75786e;
