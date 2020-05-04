@@ -176,4 +176,20 @@ $nightSucculent: (
 	tertiary: 	#8db580, // dark sea green
 	accent: 		#4b4a67, // independence
 	neutral: 		#7e8987, // mummy's tomb
-) !default;
+);
+
+$lazyIguana: (
+	'primary': 		#70ae6e, // iguana green
+	'secondary': 	#3c6e71, // myrtle green
+	'tertiary': 	#3f3047, // arsenic
+	'accent': 		#eef36a, // sunny
+	'neutral': 		#30343f, // gunmetal
+);
+
+$melonStars: (
+	'primary': 		#fab3a9, // melon
+	'secondary': 	#70ae6e, // iguana green
+	'tertiary': 	#964262, // quinacridone magenta
+	'accent': 		#ffa55c, // neon carrot
+	'neutral': 		#30343f, // gunmetal
+);
